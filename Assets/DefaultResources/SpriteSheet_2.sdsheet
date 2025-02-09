@@ -1,0 +1,15 @@
+!SpriteSheet
+Id: 5ac2be1f-7f79-47c4-a875-156219620683
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Packing: {}
+Sprites:
+    ce4f18f6e8a4476878907aac3f692e2d:
+        Source: !file ../../Resources/DefaultResources/gun.png
+        Name: gun
+        TextureRegion: {X: 0, Y: 0, Width: 32, Height: 32}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

@@ -1,0 +1,8 @@
+!Texture
+Id: 1432918f-16f4-44a1-9e42-c675f7e9ea32
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../Resources/Crosshair256.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+IsStreamable: false

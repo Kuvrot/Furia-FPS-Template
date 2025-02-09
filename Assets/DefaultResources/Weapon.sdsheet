@@ -1,0 +1,17 @@
+!SpriteSheet
+Id: 29f4d96a-ec7a-46b3-9812-df9f47261083
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Alpha: Mask
+PremultiplyAlpha: false
+Packing: {}
+Sprites:
+    5d18e3330dc2d4474b472211ee5bfc39:
+        Source: !file ../../Resources/DefaultResources/ar.png
+        Name: ar
+        TextureRegion: {X: 0, Y: 0, Width: 240, Height: 135}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

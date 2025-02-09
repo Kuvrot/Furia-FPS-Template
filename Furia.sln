@@ -1,0 +1,15 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+VisualStudioVersion = 16.0.0.0
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furia.Windows", "Furia.Windows\Furia.Windows.csproj", "{4D5A0495-EE9B-4CFD-A72E-74F514C74D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furia.Game", "Furia.Game\Furia.Game.csproj", "{9835E50C-7B77-48CF-9648-79D5B00E7C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furia.Linux", "Furia.Linux\Furia.Linux.csproj", "{174C6101-680C-426C-A653-01865D7AC701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furia.macOS", "Furia.macOS\Furia.macOS.csproj", "{F4DE23DF-4B74-407F-BB81-CE0AAE77EA91}"
+EndProject
+Global
+EndGlobal
