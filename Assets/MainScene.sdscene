@@ -32,9 +32,6 @@ Hierarchy:
         - ref!! 83fb1298-cc62-4d03-89cb-bc0ed52989f1
         - ref!! 5741644e-3138-4b58-85a9-556c4da133ed
         - ref!! ef024f43-5248-4048-bff5-d7eb88cc60a0
-        - ref!! 666b9d59-80fc-473f-b08c-7c3e2ace4f80
-        - ref!! b181ce7c-8eaf-4197-ac95-5b903c4d0800
-        - ref!! 80927f14-ef56-4e0e-aec0-9eac6b3f51ca
         - ref!! a24787ed-9bc6-4a85-85ac-c992f3942305
         - ref!! 72861e7d-c938-48ce-aa98-0ef055e353f6
         - ref!! f34d6492-d66e-47e0-8bc2-05840a602f86
@@ -869,7 +866,9 @@ Hierarchy:
                     faca1631e9b3a24997a6e1832c02baf6: !ModelComponent
                         Id: 3116cafa-b3e9-49a2-97a6-e1832c02baf6
                         Model: 6da8aaae-0ac1-4b3d-bf3f-dc5c9fd41fba:Models/BoxA
-                        Materials: {}
+                        Materials:
+                            f6d948d8df8d5e14faaebe0c43200ea9~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                            6d2f512d53f5d51254c9b93fc68ba5ad~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
                     0c47f45154739545829ea3442ddaa65f: !RigidbodyComponent
                         Id: 51f4470c-7354-4595-829e-a3442ddaa65f
                         CanSleep: false
@@ -1224,7 +1223,9 @@ Hierarchy:
                     faca1631e9b3a24997a6e1832c02baf6: !ModelComponent
                         Id: 0301eae2-7de9-4f54-a07b-a9d0a9d352b1
                         Model: 6da8aaae-0ac1-4b3d-bf3f-dc5c9fd41fba:Models/BoxA
-                        Materials: {}
+                        Materials:
+                            df0be2e50a03c715eacb748ecd422c17~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                            4f882306cc46365fb600d1fd3192fc65~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
                     0c47f45154739545829ea3442ddaa65f: !RigidbodyComponent
                         Id: ed67886c-c8e3-4f14-a692-a4aa374c56d8
                         CanSleep: false
@@ -1592,18 +1593,18 @@ Hierarchy:
                 Components:
                     a612bcf9c375ee083ff1070b6160d282: !TransformComponent
                         Id: 5158b221-f5ab-4b02-bfa1-5f814cd59a2d
-                        Position: {X: -0.5298824, Y: 0.78611755, Z: -2.7401054}
+                        Position: {X: -0.30497256, Y: 0.78611755, Z: -2.7401054}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     790f7c7cbc60796c12b6026cfb261e24: !SpriteComponent
                         Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
-                        Enabled: false
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
                             CurrentFrame: 1
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
+                        RenderGroup: Group1
         -   Entity:
                 Id: 2e093758-c61d-484d-b4f1-e2cfe8d938a4
                 Name: Wall0x2x5
@@ -1635,6 +1636,12 @@ Hierarchy:
                                 Size: {X: 0.1, Y: 2.0, Z: 5.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    f3bfcedb2a9fb79bfc16de0196e40f38*: !SpriteComponent
+                        Id: 5e3e6ea5-0922-46bc-978c-e0916810f11c
+                        SpriteProvider: !SpriteFromTexture
+                            Texture: 5fff24ac-2a6d-4a11-806d-0ff34a667f89:DefaultResources/DefaultTextures/wall_texture5
+                            Center: {X: 0.0, Y: 0.0}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
             Base:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
@@ -2430,6 +2437,8 @@ Hierarchy:
                         Id: 79c1cebd-d690-4e7f-b9d1-d3a9197c95a2
                         Name: null
                         Projection: Perspective
+                        VerticalFieldOfView: 60.0
+                        FarClipPlane: 100.0
                         Slot: f1ef5817-0725-4b1a-abc9-845d101ec0e6
                     7e880022b3b3f743a0686a19d7ecd8e1: !Furia.FpsCamera,Furia.Game
                         Id: 2200887e-b3b3-43f7-a068-6a19d7ecd8e1
@@ -3559,43 +3568,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             cfce75d38d66e24fae426d1f40aa4f8a: ref!! 4114d3a2-80bf-4535-8775-0f56edf13110
-        -   Folder: ShootTheCubes
-            Entity:
-                Id: 666b9d59-80fc-473f-b08c-7c3e2ace4f80
-                Name: BoxE
-                Components:
-                    70e9bb04d768b54998613e8ceefea848: !TransformComponent
-                        Id: 04bbe970-68d7-49b5-9861-3e8ceefea848
-                        Position: {X: -3.0, Y: 1.0, Z: 12.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    c5fb935afd3f0046b45d05fdc2409d10: !ModelComponent
-                        Id: 5a93fbc5-3ffd-4600-b45d-05fdc2409d10
-                        Model: b3ed57b9-1481-4e63-a708-0687a0662919:Models/BoxE
-                        Materials: {}
-                    b5d8a39cf4f10d4594366a9703e4388b: !RigidbodyComponent
-                        Id: 9ca3d8b5-f1f4-450d-9436-6a9703e4388b
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 4.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            3c3019d364912d4f9c6067b0530e9e13: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 671b5ed3-76eb-4364-8ca2-198658b71b7c
                 Name: Wall0x2x5
@@ -3988,6 +3960,7 @@ Hierarchy:
                         Children: {}
                     b85abbb3e8650fe52c4e5e9dd8cb2347: !SpriteComponent
                         Id: 9ee751ea-ae05-4c57-bd2a-203021c6837d
+                        Enabled: false
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 5ac2be1f-7f79-47c4-a875-156219620683:DefaultResources/SpriteSheet_2
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
@@ -4111,7 +4084,9 @@ Hierarchy:
                     c5fb935afd3f0046b45d05fdc2409d10: !ModelComponent
                         Id: 3922b117-723e-46bc-a2f8-e80f0d15e8e0
                         Model: b3ed57b9-1481-4e63-a708-0687a0662919:Models/BoxE
-                        Materials: {}
+                        Materials:
+                            479c9a3934b3b593092ec5d67b783725~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                            8cb54a9b59a8aff7ce747433ee6c2c39~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
                     b5d8a39cf4f10d4594366a9703e4388b: !RigidbodyComponent
                         Id: 23a86426-f0e7-4874-9274-609d8fb4ec24
                         CanSleep: false
@@ -4401,43 +4376,6 @@ Hierarchy:
                 BasePartAsset: 94c8665f-f83f-4f17-8add-2b9e0ec017bc:BlocksPrefabs/Wall0x2x2Window
                 BasePartId: 33a6f301-d9b7-4a2a-b0c9-7771e250fd3e
                 InstanceId: 5f4f919b-b15e-42f9-91ef-59015f4bd43d
-        -   Folder: ShootTheCubes
-            Entity:
-                Id: 80927f14-ef56-4e0e-aec0-9eac6b3f51ca
-                Name: BoxA
-                Components:
-                    ae9d48810854f64c90736b8aa80ccd32: !TransformComponent
-                        Id: dae3c160-3bb1-44c5-a561-7fe379054e0f
-                        Position: {X: -1.0, Y: 1.0, Z: 13.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    faca1631e9b3a24997a6e1832c02baf6: !ModelComponent
-                        Id: 21860fe9-1dd4-4880-aa1e-068c25e79cd4
-                        Model: 6da8aaae-0ac1-4b3d-bf3f-dc5c9fd41fba:Models/BoxA
-                        Materials: {}
-                    0c47f45154739545829ea3442ddaa65f: !RigidbodyComponent
-                        Id: accea782-8df6-4071-b492-cb4cca4e3001
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 4.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            4e347385e0346246992a8fb131995ee8: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 80c9a082-7a05-4c2a-8585-c8565e9c7297
                 Name: GridBase10x10
@@ -5313,7 +5251,9 @@ Hierarchy:
                     c5fb935afd3f0046b45d05fdc2409d10: !ModelComponent
                         Id: 6cee65bb-fa8b-45de-8ebf-83d9867e29d2
                         Model: b3ed57b9-1481-4e63-a708-0687a0662919:Models/BoxE
-                        Materials: {}
+                        Materials:
+                            057554b18dd5eaeec5321047a4528a76~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                            8f3e4cf25c593d66c587d45550aea98a~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
                     b5d8a39cf4f10d4594366a9703e4388b: !RigidbodyComponent
                         Id: fdc5333d-36c5-4982-aa1d-537f8c5ef9e2
                         CanSleep: false
@@ -5847,50 +5787,13 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! e1809313-9a0b-4a4b-b650-289c06fbd802
-        -   Folder: ShootTheCubes
-            Entity:
-                Id: b181ce7c-8eaf-4197-ac95-5b903c4d0800
-                Name: BoxF
-                Components:
-                    b0d1edd9a8132645a0d25f44658b463a: !TransformComponent
-                        Id: d9edd1b0-13a8-4526-a0d2-5f44658b463a
-                        Position: {X: -3.0, Y: 1.0, Z: 14.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    a2a7c8831783434a9a49e615d0aa9897: !ModelComponent
-                        Id: 83c8a7a2-8317-4a43-9a49-e615d0aa9897
-                        Model: 77915076-61da-454b-80bf-746235e38529:Models/BoxF
-                        Materials: {}
-                    81ce6d5479e44d4f9250ca52dc991e16: !RigidbodyComponent
-                        Id: 546dce81-e479-4f4d-9250-ca52dc991e16
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: false
-                        Mass: 4.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
-                        ColliderShapes:
-                            6a73f47825f047468492f55d1215c43a: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: b1c994b5-3745-4e14-84b3-543f53faa09d
                 Name: Hands
                 Components:
                     1fe64d64198b4543bfc6b549158775e4: !TransformComponent
                         Id: 644de61f-8b19-4345-bfc6-b549158775e4
-                        Position: {X: 0.0, Y: -0.2980284, Z: 0.6158998}
+                        Position: {X: 0.0, Y: -0.4884965, Z: 0.6158998}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5906,11 +5809,16 @@ Hierarchy:
                         Animations: {}
                     71355c7daba4f04b8dc4bb2c21b9cac6: !Furia.Player.AnimationController,Furia.Game
                         Id: 7d5c3571-a4ab-4bf0-8dc4-bb2c21b9cac6
+                        autimaticRunAnimation: true
+                        automaticIdleAnimation: true
+                        automaticWalkAnimation: true
+                        automaticReloadAnimation: true
+                        automaticShootAnimation: true
                         AnimationComponent: ref!! 2de1f9e7-358d-48d3-b360-d0f05ad26c60
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
                         AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
                         AnimationShoot: 338a6712-958d-47d5-9024-4e651d04dce6:Animations/Gun_Shoot
-                        AnimationReload: cdf8b336-e326-4da7-ab5b-58697413be12:Animations/Gun_Run-Derived
+                        AnimationReload: e0b722c4-49d4-441f-b935-f6bae4c6703e:Animations/Gun_Reload
                         TimeFactor: 1.0
         -   Entity:
                 Id: b317a133-8ef0-427f-a966-61f6f75c687c
@@ -6694,7 +6602,9 @@ Hierarchy:
                     a2a7c8831783434a9a49e615d0aa9897: !ModelComponent
                         Id: 80f1418d-f817-4d7b-8c30-9859476f999f
                         Model: 77915076-61da-454b-80bf-746235e38529:Models/BoxF
-                        Materials: {}
+                        Materials:
+                            e42c8c1c0b8dbb93ffae197eac81367f~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                            8adde2be57549fe8d88e8bfff2bc9d5c~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
                     81ce6d5479e44d4f9250ca52dc991e16: !RigidbodyComponent
                         Id: 62726783-05b0-46fa-b5c0-9f468d32e913
                         CanSleep: false
@@ -7360,7 +7270,9 @@ Hierarchy:
                     a2a7c8831783434a9a49e615d0aa9897: !ModelComponent
                         Id: bc232068-e6b3-4539-9fb7-a8ce703b3f43
                         Model: 77915076-61da-454b-80bf-746235e38529:Models/BoxF
-                        Materials: {}
+                        Materials:
+                            a5bce3ddc816bca4cfae0a221a213aa5~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                            1de1094c525dd1f40b97554c9706f678~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
                     81ce6d5479e44d4f9250ca52dc991e16: !RigidbodyComponent
                         Id: 6d80131e-3290-447e-b37a-29ff2d9b25e8
                         CanSleep: false

@@ -1,0 +1,8 @@
+!Texture
+Id: 5fff24ac-2a6d-4a11-806d-0ff34a667f89
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/DefaultResources/DefaultTextures/wall_texture5.png
+IsCompressed: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

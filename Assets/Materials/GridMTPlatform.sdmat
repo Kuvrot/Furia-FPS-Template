@@ -10,7 +10,7 @@ Attributes:
         DiffuseMap: !ComputeBinaryColor
             Operator: Add
             LeftChild: !ComputeTextureColor
-                Texture: d14aeb67-c954-4026-8982-cb83c4624dbd:Textures/CheckerGrid1x1
+                Texture: 998764b2-0188-4f92-b4d3-6054e90b4541:DefaultResources/DefaultTextures/wall_texture2
                 FallbackValue:
                     Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                 Scale: {X: 1.0, Y: 1.0}

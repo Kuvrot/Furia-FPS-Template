@@ -6,11 +6,22 @@ using Stride.Core.Collections;
 using Stride.Animations;
 using Stride.Engine;
 using Stride.Engine.Events;
+using System.Numerics;
+using System.Collections.Generic;
 
 namespace Furia.Player
 {
     public class AnimationController : SyncScript, IBlendTreeBuilder
     {
+        [Display("Automate animations")]
+        public bool autimaticRunAnimation = true;
+        public bool automaticIdleAnimation = true;
+        public bool automaticWalkAnimation = true;
+        public bool automaticReloadAnimation = true;
+        public bool automaticShootAnimation = true;
+
+        public List<int> hola;
+
         private readonly EventReceiver<WeaponFiredResult> weaponFiredEvent = new EventReceiver<WeaponFiredResult>(WeaponScript.WeaponFired);
 
         private readonly EventReceiver<bool> isReloadingEvent = new EventReceiver<bool>(WeaponScript.IsReloading);
@@ -132,23 +143,33 @@ namespace Furia.Player
             // State change if necessary
             if (isReloading)
             {
-                if (state != AnimationState.Reloading)
+                if (state != AnimationState.Reloading && automaticReloadAnimation)
                 {
                     currentTime = 0;
                     state = AnimationState.Reloading;
                     currentClip = AnimationReload;
                     currentEvaluator = animEvaluatorReload;
                 }
+                else
+                {
+                    currentTime = 0;
+                    state = AnimationState.Reloading;
+                }
             }
             else
             if (didFire)
             {
-                if (state != AnimationState.Shooting)
+                if (state != AnimationState.Shooting && automaticShootAnimation)
                 {
                     currentTime = 0;
                     state = AnimationState.Shooting;
                     currentClip = AnimationShoot;
                     currentEvaluator = animEvaluatorShoot;
+                }
+                else
+                {
+                    currentTime = 0;
+                    state = AnimationState.Shooting;
                 }
             }
             else
@@ -157,7 +178,7 @@ namespace Furia.Player
                 SwitchToDefaultState();
             }
             else
-            if ((state == AnimationState.Idle || state == AnimationState.Walking) && state != defaultState)
+            if ((state == AnimationState.Idle || state == AnimationState.Walking && automaticWalkAnimation) && state != defaultState)
             {
                 SwitchToDefaultState();
             }

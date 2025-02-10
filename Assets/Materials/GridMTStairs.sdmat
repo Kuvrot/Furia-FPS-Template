@@ -5,12 +5,12 @@ Tags: []
 Attributes:
     MicroSurface: !MaterialGlossinessMapFeature
         GlossinessMap: !ComputeFloat
-            Value: 0.5
+            Value: 0.549
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeBinaryColor
-            Operator: Add
+            Operator: Average
             LeftChild: !ComputeTextureColor
-                Texture: d14aeb67-c954-4026-8982-cb83c4624dbd:Textures/CheckerGrid1x1
+                Texture: b78c042e-045e-48d9-b25f-bf77ed39d64f:DefaultResources/DefaultTextures/wall_texture8
                 FallbackValue:
                     Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                 Scale: {X: 1.0, Y: 1.0}
@@ -18,15 +18,35 @@ Attributes:
                 Swizzle: null
             RightChild: !ComputeColor
                 Value: {R: 0.0, G: 0.27568632, B: 0.43529412, A: 1.0}
-    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat
-            Value: 0.5
+            Value: 0.336
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
         NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
         Environment: !MaterialSpecularMicrofacetEnvironmentGGXLUT {}
+    Emissive: !MaterialEmissiveMapFeature
+        Enabled: false
+        EmissiveMap: !ComputeTextureColor
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
+        Intensity: !ComputeFloat
+            Value: 1.0
+    SubsurfaceScattering: !MaterialSubsurfaceScatteringFeature
+        Translucency: 0.83
+        TranslucencyMap: !ComputeTextureScalar
+            FallbackValue:
+                Value: 1.0
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+        ProfileFunction: !MaterialSubsurfaceScatteringScatteringProfileSkin {}
+        KernelFunction: !MaterialSubsurfaceScatteringScatteringKernelSkin
+            Falloff: {R: 1.0, G: 0.37, B: 0.3}
+            Strength: {R: 0.48, G: 0.41, B: 0.28}
     Overrides:
-        UVScale: {X: 1.0, Y: 1.0}
+        UVScale: {X: 5.0, Y: 5.0}
 Layers: {}

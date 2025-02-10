@@ -34,7 +34,7 @@ Attributes:
         Environment: !MaterialSpecularMicrofacetEnvironmentGGXLUT {}
     Occlusion: !MaterialOcclusionMapFeature
         AmbientOcclusionMap: !ComputeTextureScalar
-            Texture: 201bdecf-da89-4aa5-a203-3a781586aca2:Textures/stride_box_occlusion
+            Texture: b78c042e-045e-48d9-b25f-bf77ed39d64f:DefaultResources/DefaultTextures/wall_texture8
             FallbackValue:
                 Value: 1.0
             Scale: {X: 1.0, Y: 1.0}

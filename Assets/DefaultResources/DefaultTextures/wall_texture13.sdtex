@@ -1,0 +1,8 @@
+!Texture
+Id: 066d4604-2250-426c-a2b3-ff3e4c4883c4
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/DefaultResources/DefaultTextures/wall_texture13.png
+IsCompressed: false
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
