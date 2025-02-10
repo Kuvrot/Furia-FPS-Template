@@ -20,7 +20,8 @@ namespace Furia.Player
         public bool automaticReloadAnimation = true;
         public bool automaticShootAnimation = true;
 
-        public List<int> hola;
+        //[Display("Frames")]
+        public SpriteComponent[] automaticRunFrames , automaticIdleFrames, automaticReloadFrames, automaticShootFrames;
 
         private readonly EventReceiver<WeaponFiredResult> weaponFiredEvent = new EventReceiver<WeaponFiredResult>(WeaponScript.WeaponFired);
 
@@ -61,6 +62,8 @@ namespace Furia.Player
         private AnimationClipEvaluator  currentEvaluator;
         private AnimationClip           currentClip;
 
+        //Automate reload
+        private Vector3 initialPosition;
 
         public override void Start()
         {
@@ -92,6 +95,8 @@ namespace Furia.Player
 
             currentEvaluator    = animEvaluatorIdle;
             currentClip         = AnimationIdle;
+
+            initialPosition = Entity.Transform.Position;
         }
 
         public override void Cancel()
@@ -121,6 +126,7 @@ namespace Furia.Player
 
         public override void Update()
         {
+            
             runSpeedEvent.TryReceive(out runSpeed);
             defaultState = (runSpeed > 0.15f) ? AnimationState.Walking : AnimationState.Idle;
 
@@ -149,6 +155,7 @@ namespace Furia.Player
                     state = AnimationState.Reloading;
                     currentClip = AnimationReload;
                     currentEvaluator = animEvaluatorReload;
+                    Entity.Transform.Position = new Vector3(initialPosition.X, -1.1f, initialPosition.Z);
                 }
                 else
                 {
@@ -156,31 +163,38 @@ namespace Furia.Player
                     state = AnimationState.Reloading;
                 }
             }
-            else
-            if (didFire)
-            {
-                if (state != AnimationState.Shooting && automaticShootAnimation)
+            else 
+            { 
+                if (didFire)
                 {
-                    currentTime = 0;
-                    state = AnimationState.Shooting;
-                    currentClip = AnimationShoot;
-                    currentEvaluator = animEvaluatorShoot;
+                    if (state != AnimationState.Shooting && automaticShootAnimation)
+                    {
+                        currentTime = 0;
+                        state = AnimationState.Shooting;
+                        currentClip = AnimationShoot;
+                        currentEvaluator = animEvaluatorShoot;
+                    }
+                    else
+                    {
+                        currentTime = 0;
+                        state = AnimationState.Shooting;
+                    }
                 }
                 else
+                if (currentClipFinished)
                 {
-                    currentTime = 0;
-                    state = AnimationState.Shooting;
+                    if (state == AnimationState.Reloading)
+                    {
+                        Entity.Transform.Position = initialPosition;
+                    }
+
+                    SwitchToDefaultState();
                 }
-            }
-            else
-            if (currentClipFinished)
-            {
-                SwitchToDefaultState();
-            }
-            else
-            if ((state == AnimationState.Idle || state == AnimationState.Walking && automaticWalkAnimation) && state != defaultState)
-            {
-                SwitchToDefaultState();
+                else
+                if ((state == AnimationState.Idle || state == AnimationState.Walking && automaticWalkAnimation) && state != defaultState)
+                {
+                    SwitchToDefaultState();
+                }
             }
         }
 

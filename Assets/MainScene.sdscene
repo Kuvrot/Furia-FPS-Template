@@ -5766,6 +5766,7 @@ Hierarchy:
                             3874058b00661242806d2e3f4afd55c1: ref!! 8b057438-6600-4212-806d-2e3f4afd55c1
                             ba76ee4f9de9f80c5db924488ec6207a: ref!! c911bff7-a5d8-4394-9989-ed6e2dc3d53f
                             3deeaceca785fb99fa541a4fc233f1de: ref!! 5158b221-f5ab-4b02-bfa1-5f814cd59a2d
+                            561dc7a76fe06e2690407548d45fc5c3: ref!! bee5cfed-c6a9-40d6-936f-7223457ab3c1
                     efd695c8917b8a42a02ea11321380575: !ModelComponent
                         Id: c895d6ef-7b91-428a-a02e-a11321380575
                         Enabled: false
@@ -5814,6 +5815,10 @@ Hierarchy:
                         automaticWalkAnimation: true
                         automaticReloadAnimation: true
                         automaticShootAnimation: true
+                        automaticRunFrames: null
+                        automaticIdleFrames: null
+                        automaticReloadFrames: null
+                        automaticShootFrames: null
                         AnimationComponent: ref!! 2de1f9e7-358d-48d3-b360-d0f05ad26c60
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
                         AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
@@ -5831,6 +5836,24 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             9bd6c2826922c24ba23d41e3a7a958f6: ref!! 83ae7574-5f1d-4107-bcf8-078c169fd647
+        -   Entity:
+                Id: b3461812-6738-473f-92f5-9accf17cb690
+                Name: shotgun
+                Components:
+                    5e76e2f71849b6eb77b9342b9d6f9ea1: !TransformComponent
+                        Id: bee5cfed-c6a9-40d6-936f-7223457ab3c1
+                        Position: {X: 0.24943842, Y: 0.35012686, Z: -2.7401054}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.46821487, Y: 0.46821487, Z: 0.46821487}
+                        Children: {}
+                    1343aada2d799a8fee6fd26557101b8d: !SpriteComponent
+                        Id: 21b74a4e-cc20-47bf-b005-0d44f2a313eb
+                        Enabled: false
+                        SpriteProvider: !SpriteFromTexture
+                            Texture: ff0f05e3-7eac-4355-81e3-ed32ec5c5b3a:DefaultResources/shotgun
+                            Center: {X: 0.0, Y: 0.0}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
         -   Entity:
                 Id: b39e81d8-b1e6-4262-97b5-6e3429db281e
                 Name: Wall0x2x2Window (2)
