@@ -5,7 +5,7 @@ Tags: []
 Source: !file ../../Resources/Animation/Shoot.fbx
 AnimationStack: 0
 ClipDuration:
-    Enabled: true
+    Enabled: false
     StartAnimationTime: 0:00:00:00.0000000
     EndAnimationTime: 0:00:00:00.3666666
 PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
