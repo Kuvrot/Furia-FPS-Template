@@ -7,6 +7,9 @@ Cameras:
     de2e75c3b2b23e54162686363f3f138e:
         Id: f1ef5817-0725-4b1a-abc9-845d101ec0e6
         Name: Main
+    36b2e5cc563b79153a658237526626dc*:
+        Id: 20c7ecf7-e20e-4efe-910a-68bec83d69be
+        Name: WeaponsCamera
 RenderStages:
     47116750c1a5d449b4ad3625f71439b3:
         Id: 50671147-a5c1-49d4-b4ad-3625f71439b3
@@ -122,6 +125,7 @@ SharedRenderers:
         Clear:
             Id: 4bc4b2ca-027e-4e4a-94cb-2912709bef5f
             Color: {R: 0.40491876, G: 0.41189542, B: 0.43775, A: 1.0}
+            Depth*: 2.0
         LightProbes: true
         OpaqueRenderStage: ref!! 50671147-a5c1-49d4-b4ad-3625f71439b3
         TransparentRenderStage: ref!! 0fa30591-02ee-486d-9347-2b6aee83d035
@@ -207,15 +211,45 @@ SharedRenderers:
     ee80a20a9bd99f2d70711114e15fe7ca: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering
         Id: 7f627be4-065f-4541-bfd2-f7e6cef58a96
         DebugRenderStages: {}
+    09a9e604b43a14bd5f1f7e71dab947d0*: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine
+        Id: 0e0fc662-1077-41fb-b640-e0bb3dba278b
+        Clear:
+            Id: e9629c6c-c3a7-43a4-82a6-33e9cb447a87
+            ClearFlags: DepthOnly
+            Color: {R: 0.40392157, G: 0.4117647, B: 0.43529412, A: 1.0}
+        LightProbes: true
+        OpaqueRenderStage: ref!! 50671147-a5c1-49d4-b4ad-3625f71439b3
+        TransparentRenderStage: ref!! 0fa30591-02ee-486d-9347-2b6aee83d035
+        ShadowMapRenderStages: {}
+        GBufferRenderStage: null
+        PostEffects: !PostProcessingEffects ref!! 608bf04d-8640-469d-b710-1ecf6a46f794
+        LightShafts: null
+        VRSettings:
+            Enabled: false
+            RequiredApis: {}
+            Overlays: {}
+            RequestPassthrough: false
+        SubsurfaceScatteringBlurEffect: null
+        MSAALevel: None
+        MSAAResolver: {}
+        BindOpaqueAsResourceDuringTransparentRendering: true
 Game: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
     Id: 76fe87cf-f574-4ad6-85b8-e9a9586be0e2
-    Camera: ref!! f1ef5817-0725-4b1a-abc9-845d101ec0e6
+    Camera*: ref!! f1ef5817-0725-4b1a-abc9-845d101ec0e6
     Child: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
         Id: 82568e46-92e7-421a-8dca-114a74e0cd69
         Children:
             d39c5ddbf8b7d5ca02bafb6496b1cc3c: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 4d409a59-d3c6-4b55-a5c7-4bd9b8886ea5
             01d338078e9b21121ead0868932613dd: !Stride.Rendering.Compositing.DebugRenderer,Stride.Rendering ref!! 7f627be4-065f-4541-bfd2-f7e6cef58a96
-    RenderMask: All
+            33db3ce484cbfa92cbf4d17aa09c3c4e*: !Stride.Rendering.Compositing.SceneCameraRenderer,Stride.Engine
+                Id: b537efa4-55f8-4364-8b2b-a576af2103d9
+                Camera: ref!! 20c7ecf7-e20e-4efe-910a-68bec83d69be
+                Child: !Stride.Rendering.Compositing.SceneRendererCollection,Stride.Rendering
+                    Id: 38b8f22b-717c-440e-b9ab-1b0ab061fd3d
+                    Children:
+                        96edf337de2e5fd0e7a1f17c416a4dcd: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 0e0fc662-1077-41fb-b640-e0bb3dba278b
+                RenderMask: Group1
+    RenderMask*: Group0, Group2, Group3, Group4, Group5, Group6, Group7, Group8, Group9, Group10, Group11, Group12, Group13, Group14, Group15, Group16, Group17, Group18, Group19, Group20, Group21, Group22, Group23, Group24, Group25, Group26, Group27, Group28, Group29, Group30, Group31
 SingleView: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! f73edb54-66b5-4d61-ba47-af960f05d385
 Editor: !Stride.Rendering.Compositing.ForwardRenderer,Stride.Engine ref!! 4d409a59-d3c6-4b55-a5c7-4bd9b8886ea5
 BlockPositions: {}

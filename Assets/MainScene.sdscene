@@ -154,6 +154,24 @@ Hierarchy:
                         Children:
                             4eecb3c27affe3478bcc584553d59e41: ref!! c2b3ec4e-ff7a-47e3-8bcc-584553d59e41
         -   Entity:
+                Id: 0506cdee-f938-4f37-bc9b-d850c71fe783
+                Name: WeaponCamera
+                Components:
+                    7abc64686497909524f4a55d49c029f7: !TransformComponent
+                        Id: b3d41080-630b-4057-863d-c39f5ef1233e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e20acec3322a9bbd6a4e8651b5fe7f56: !CameraComponent
+                        Id: ddf9df97-868d-45f4-a2cf-9ad890c186db
+                        Enabled: false
+                        Name: null
+                        Projection: Perspective
+                        VerticalFieldOfView: 60.0
+                        FarClipPlane: 5.0
+                        Slot: 20c7ecf7-e20e-4efe-910a-68bec83d69be
+        -   Entity:
                 Id: 0634eedb-0d35-4713-9172-3a2d0d2d7ff8
                 Name: Wall0x2x5Window
                 Components:
@@ -1593,9 +1611,9 @@ Hierarchy:
                 Components:
                     a612bcf9c375ee083ff1070b6160d282: !TransformComponent
                         Id: 5158b221-f5ab-4b02-bfa1-5f814cd59a2d
-                        Position: {X: -0.30497256, Y: 0.78611755, Z: -2.7401054}
+                        Position: {X: -0.43377876, Y: 0.81301105, Z: -3.5496562}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children: {}
                     790f7c7cbc60796c12b6026cfb261e24: !SpriteComponent
                         Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
@@ -2166,7 +2184,7 @@ Hierarchy:
                         Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    c743ceab56f65b45899acfd17ce4565d: !Furia.EffectController,Furia.Game
+                    6d272f7d266e6db5e229411fff383654: !Furia.EffectController,Furia.Game
                         Id: abce43c7-f656-455b-899a-cfd17ce4565d
                         TriggerGroup:
                             Name: Gunfire
@@ -2431,6 +2449,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
+                            7660ce96d5667941ff566e0951226e88: ref!! b3d41080-630b-4057-863d-c39f5ef1233e
                             363dfd50bc1faf4cb198d55bc4959a6c: ref!! 50fd3d36-1fbc-4caf-b198-d55bc4959a6c
                             1fe64d64198b4543bfc6b549158775e4: ref!! 644de61f-8b19-4345-bfc6-b549158775e4
                     bdcec17990d67f4eb9d1d3a9197c95a2: !CameraComponent
@@ -2440,12 +2459,12 @@ Hierarchy:
                         VerticalFieldOfView: 60.0
                         FarClipPlane: 100.0
                         Slot: f1ef5817-0725-4b1a-abc9-845d101ec0e6
-                    7e880022b3b3f743a0686a19d7ecd8e1: !Furia.FpsCamera,Furia.Game
+                    24b3a59693872d0694a0450bdb92c054: !Furia.FpsCamera,Furia.Game
                         Id: 2200887e-b3b3-43f7-a068-6a19d7ecd8e1
                         RotationSpeed: 0.02355
                         InvertX: false
                         InvertY: false
-                    e3f466ccb7fa4a4e816d3113bb7c953a: !Furia.Player.WeaponScript,Furia.Game
+                    e1db890dd260e557c115013d78ecec94: !Furia.Player.WeaponScript,Furia.Game
                         Id: cc66f4e3-fab7-4e4a-816d-3113bb7c953a
                         MaxShootDistance: 50.0
                         ShootImpulse: 12.0
@@ -3965,6 +3984,7 @@ Hierarchy:
                             Sheet: 5ac2be1f-7f79-47c4-a875-156219620683:DefaultResources/SpriteSheet_2
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
+                        RenderGroup: Group1
         -   Entity:
                 Id: 70a87224-67c0-402a-a841-8ede0e599426
                 Name: Wall0x2x5
@@ -4935,10 +4955,10 @@ Hierarchy:
                                 Radius: 0.4
                                 LocalOffset: {X: 0.0, Y: 0.95, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    3f1a23a17e66d8489193aa2eca6779e1: !Furia.Player.PlayerController,Furia.Game
+                    10565f1955d8ff15323fc3307bd47d8f: !Furia.Player.PlayerController,Furia.Game
                         Id: a1231a3f-667e-48d8-9193-aa2eca6779e1
                         MaxRunSpeed: 9.0
-                    5cea3fc41b5e1c40865911bd77ee624c: !Furia.Player.PlayerInput,Furia.Game
+                    b0f70abfbb3bef46e49e637e9cf6577d: !Furia.Player.PlayerInput,Furia.Game
                         Id: c43fea5c-5e1b-401c-8659-11bd77ee624c
                         Priority: -1000
                         DeadZone: 0.25
@@ -5641,6 +5661,7 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 60b32f10-3ad5-42dc-9c12-0026f3462be2:Bullets
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group1
         -   Entity:
                 Id: aad66409-dd2e-4daf-be54-a7a93743df7e
                 Name: Box3x1x1
@@ -5808,7 +5829,7 @@ Hierarchy:
                     e7f9e12d8d35d348b360d0f05ad26c60: !AnimationComponent
                         Id: 2de1f9e7-358d-48d3-b360-d0f05ad26c60
                         Animations: {}
-                    71355c7daba4f04b8dc4bb2c21b9cac6: !Furia.Player.AnimationController,Furia.Game
+                    95a016df188f111cf9b67eca80658005: !Furia.Player.AnimationController,Furia.Game
                         Id: 7d5c3571-a4ab-4bf0-8dc4-bb2c21b9cac6
                         autimaticRunAnimation: true
                         automaticIdleAnimation: true
@@ -5822,9 +5843,14 @@ Hierarchy:
                         AnimationComponent: ref!! 2de1f9e7-358d-48d3-b360-d0f05ad26c60
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
                         AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
-                        AnimationShoot: 338a6712-958d-47d5-9024-4e651d04dce6:Animations/Gun_Shoot
+                        AnimationShoot: 1f65e631-c4d4-4e29-8bff-0319912d809a:Animations/shoot_BaseAnimation
                         AnimationReload: e0b722c4-49d4-441f-b935-f6bae4c6703e:Animations/Gun_Reload
                         TimeFactor: 1.0
+                    f65a973d79e8a29eac4f65a2ffa7e44d: !UIComponent
+                        Id: 40556f27-cbed-43eb-8c88-c8e5545c8402
+                        Page: null
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
         -   Entity:
                 Id: b317a133-8ef0-427f-a966-61f6f75c687c
                 Name: Wall0x2x2Window (2)
@@ -5854,6 +5880,7 @@ Hierarchy:
                             Center: {X: 0.0, Y: 0.0}
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
+                        RenderGroup: Group1
         -   Entity:
                 Id: b39e81d8-b1e6-4262-97b5-6e3429db281e
                 Name: Wall0x2x2Window (2)
