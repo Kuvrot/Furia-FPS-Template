@@ -165,7 +165,6 @@ Hierarchy:
                         Children: {}
                     e20acec3322a9bbd6a4e8651b5fe7f56: !CameraComponent
                         Id: ddf9df97-868d-45f4-a2cf-9ad890c186db
-                        Enabled: false
                         Name: null
                         Projection: Perspective
                         VerticalFieldOfView: 60.0
@@ -5844,7 +5843,7 @@ Hierarchy:
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
                         AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
                         AnimationShoot: 1f65e631-c4d4-4e29-8bff-0319912d809a:Animations/shoot_BaseAnimation
-                        AnimationReload: e0b722c4-49d4-441f-b935-f6bae4c6703e:Animations/Gun_Reload
+                        AnimationReload: 00c926e9-a86f-40a8-b993-4cab12902faa:Animations/Reload_Armature_ArmatureAction.001
                         TimeFactor: 1.0
                     f65a973d79e8a29eac4f65a2ffa7e44d: !UIComponent
                         Id: 40556f27-cbed-43eb-8c88-c8e5545c8402
