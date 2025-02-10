@@ -1,4 +1,4 @@
-# FuriaEngine
+# FURIA ENGINE
 A retro FPS game engine 
 
 In a ver early development stage, so PR are not welcome at this moment.
