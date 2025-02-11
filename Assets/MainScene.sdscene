@@ -163,7 +163,8 @@ Hierarchy:
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            51813301d49821c6eafbba882b5a49fe: ref!! c996bfb9-b1d2-4732-a574-486472e16260
                     e20acec3322a9bbd6a4e8651b5fe7f56: !CameraComponent
                         Id: ddf9df97-868d-45f4-a2cf-9ad890c186db
                         Name: null
@@ -1801,6 +1802,20 @@ Hierarchy:
                         Children:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! b1377bda-d47b-46fa-b5aa-1c8f3402c5ab
         -   Entity:
+                Id: 37216fc5-60d5-4ad0-a16b-6f434f3a2125
+                Name: WeaponManager
+                Components:
+                    69ae04978957e2cc37ea369e9fa3343d: !TransformComponent
+                        Id: 3b715fff-154e-409c-8e0b-d3517326e9b9
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    441afffd82cc8d1970b22c33457f770a: !Furia.Player.WeaponManager,Furia.Game
+                        Id: 08c1aa64-481e-48c4-a772-c2675125fceb
+                        enableFlashLight: true
+                        flashLight: null
+        -   Entity:
                 Id: 379ec564-94a3-4deb-b7ba-68d8638c7ed2
                 Name: Box3x1x1 (3)
                 Components:
@@ -2452,6 +2467,7 @@ Hierarchy:
                         Children:
                             7660ce96d5667941ff566e0951226e88: ref!! b3d41080-630b-4057-863d-c39f5ef1233e
                             1fe64d64198b4543bfc6b549158775e4: ref!! 644de61f-8b19-4345-bfc6-b549158775e4
+                            5b20bf30cb7527cf03711cc5bd25f0b2: ref!! 3b715fff-154e-409c-8e0b-d3517326e9b9
                     bdcec17990d67f4eb9d1d3a9197c95a2: !CameraComponent
                         Id: 79c1cebd-d690-4e7f-b9d1-d3a9197c95a2
                         Name: null
@@ -2506,6 +2522,31 @@ Hierarchy:
                 BasePartAsset: c7dcdd06-d013-4ea1-a09a-eefbefc6e5af:BlocksPrefabs/Wall0x2x2
                 BasePartId: f73cb16c-30b9-4200-b872-56885e7023e2
                 InstanceId: 9dd5c4ad-6d7f-4bb8-959e-8fd83fa7cbbc
+        -   Entity:
+                Id: 4ebfb75e-824b-4fda-a52e-9fe82f071769
+                Name: FlashLight
+                Components:
+                    878cd3be3985f5c501cd74d3a1db8d5c: !TransformComponent
+                        Id: c996bfb9-b1d2-4732-a574-486472e16260
+                        Position: {X: 0.0, Y: 0.04872489, Z: 2.1825123}
+                        Rotation: {X: -0.0039752424, Y: 0.0, Z: 0.0, W: 0.99999213}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    d8bed772ec3ed9784895e3f3976912ea: !LightComponent
+                        Id: faebfdd0-7bb2-4ebb-b19c-c80be1118a4f
+                        Enabled: false
+                        Type: !LightSpot
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Range: 15.0
+                            AngleInner: 51.6
+                            AngleOuter: 64.7
+                            UVScale: {X: 1.0, Y: 1.0}
+                            UVOffset: {X: 0.0, Y: 0.0}
+                            Shadow:
+                                BiasParameters:
+                                    DepthBias: 0.001
+                        Intensity: 2.5
         -   Entity:
                 Id: 4eed821a-9fe2-49ba-969e-096733a83ae9
                 Name: Wall0x2x5 (2)
@@ -3943,6 +3984,7 @@ Hierarchy:
                         Children: {}
                     58de7bbb8c1fe447b91985df9d2b457f: !LightComponent
                         Id: bb7bde58-1f8c-47e4-b919-85df9d2b457f
+                        Enabled: false
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
@@ -3973,7 +4015,7 @@ Hierarchy:
                 Components:
                     902734e133f385e058b157d4a9dc681a: !TransformComponent
                         Id: c911bff7-a5d8-4394-9989-ed6e2dc3d53f
-                        Position: {X: -0.18941522, Y: 0.23365355, Z: -2.7997828}
+                        Position: {X: -0.18941522, Y: 0.1441811, Z: -2.7997828}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.96378297, Y: 0.96378297, Z: 0.96378297}
                         Children: {}
@@ -4054,6 +4096,20 @@ Hierarchy:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: fe274548-457a-45e2-bcb2-ceafa1abc4c7
+        -   Entity:
+                Id: 718c62e1-a52c-4b8f-9d2c-eecb8fa30a2d
+                Name: WeaponManager
+                Components:
+                    8ea2d7e3b975f1dac392d1c6898bee42: !TransformComponent
+                        Id: 0fb70d4c-2f22-43ed-8cc3-23eb54cd2171
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7d2bfa698b6e285a5ab215881c9e0c8c: !Furia.Player.WeaponManager,Furia.Game
+                        Id: 7c67e4f1-0ebc-4a4d-949d-1fd5f569964e
+                        enableFlashLight: true
+                        flashLight: null
         -   Entity:
                 Id: 71ffb178-6eae-4180-b19b-26b2b077d6f8
                 Name: Wall0x2x5
@@ -4950,6 +5006,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e7530b9a6be27e47b405f3991f670c13: ref!! 9a0b53e7-e26b-477e-b405-f3991f670c13
+                            9e306722e6b1dc45a2ac3241737fceba: ref!! 0fb70d4c-2f22-43ed-8cc3-23eb54cd2171
                     87c25277a58ea44f81710ca69284e1dd: !CharacterComponent
                         Id: 7752c287-8ea5-4fa4-8171-0ca69284e1dd
                         CollisionGroup: KinematicFilter
@@ -4993,6 +5050,10 @@ Hierarchy:
                         KeysReload:
                             f7748360940667938216bda161f12ed0: E
                             05744cc71fc6762cd1820202d01398ed: R
+                    47bfb80a492da99f3dbe2ddda7af4061: !Furia.Player.WeaponManager,Furia.Game
+                        Id: 5e21fbeb-2870-43b0-af8a-add508396fd3
+                        enableFlashLight: true
+                        flashLight: ref!! faebfdd0-7bb2-4ebb-b19c-c80be1118a4f
         -   Entity:
                 Id: 9758b4f8-356a-4443-9a06-4001ccb9e7c4
                 Name: Wall0x2x5
@@ -7542,6 +7603,7 @@ Hierarchy:
                         Children: {}
                     ac01fe8ecaadef41b216daac5718fc50: !LightComponent
                         Id: 8efe01ac-adca-41ef-b216-daac5718fc50
+                        Enabled: false
                         Type: !LightSkybox
                             Skybox: 2510a57e-ccc7-4bd1-8037-02f4dc724bde:Skybox
                         Intensity: 0.75

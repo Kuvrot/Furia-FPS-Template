@@ -22,41 +22,6 @@ Hierarchy:
                     Texture: 1432918f-16f4-44a1-9e42-c675f7e9ea32:Crosshair256
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
-        -   UIElement: !Button
-                Id: 29fadda9-bbb0-4966-b4cb-3a173f3fec4e
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                Width: 439.0
-                Height: 113.0
-                HorizontalAlignment: Right
-                VerticalAlignment: Bottom
-                Margin: {}
-                MaximumWidth: 3.4028235E+38
-                MaximumHeight: 3.4028235E+38
-                MaximumDepth: 3.4028235E+38
-                Content: !TextBlock ref!! 38c2504c-ba4c-43bb-a894-f6a13f1be2de
-                PressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 2
-                NotPressedImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 1
-                MouseOverImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-        -   UIElement: !TextBlock
-                Id: 38c2504c-ba4c-43bb-a894-f6a13f1be2de
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {}
-                Text: Click me!
-                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
-                TextSize: 20.0
-                TextColor: {R: 240, G: 240, B: 240, A: 255}
-                OutlineColor: {R: 0, G: 0, B: 0, A: 255}
-                OutlineThickness: 0.0
         -   UIElement: !Grid
                 Id: a6ffe3bf-ffd4-4b4d-8f7c-c2281eee6340
                 DependencyProperties: {}
@@ -66,7 +31,6 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Children:
-                    df21b89acd283847e6f9de233d6a265d: !Button ref!! 29fadda9-bbb0-4966-b4cb-3a173f3fec4e
                     d829a6446eb0272dbab2a0963f56f073: !ImageElement ref!! 25c547d0-9eff-4416-8ef5-8dfd4e6a4be0
                 RowDefinitions: {}
                 ColumnDefinitions: {}
