@@ -39,6 +39,7 @@ Hierarchy:
         - ref!! 1c16ce32-59b1-4691-9465-974111982f67
         - ref!! 25bc5b70-bc98-4f51-b245-56c77af74122
         - ref!! 0ceaf263-3374-437f-9232-ef205569f93d
+        - ref!! 796c9d1e-0c4b-4304-a04b-83aceec725b5
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -1616,6 +1617,7 @@ Hierarchy:
                         Children: {}
                     790f7c7cbc60796c12b6026cfb261e24: !SpriteComponent
                         Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
+                        Enabled: false
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
                             CurrentFrame: 1
@@ -2449,7 +2451,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             7660ce96d5667941ff566e0951226e88: ref!! b3d41080-630b-4057-863d-c39f5ef1233e
-                            363dfd50bc1faf4cb198d55bc4959a6c: ref!! 50fd3d36-1fbc-4caf-b198-d55bc4959a6c
                             1fe64d64198b4543bfc6b549158775e4: ref!! 644de61f-8b19-4345-bfc6-b549158775e4
                     bdcec17990d67f4eb9d1d3a9197c95a2: !CameraComponent
                         Id: 79c1cebd-d690-4e7f-b9d1-d3a9197c95a2
@@ -3978,7 +3979,6 @@ Hierarchy:
                         Children: {}
                     b85abbb3e8650fe52c4e5e9dd8cb2347: !SpriteComponent
                         Id: 9ee751ea-ae05-4c57-bd2a-203021c6837d
-                        Enabled: false
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 5ac2be1f-7f79-47c4-a875-156219620683:DefaultResources/SpriteSheet_2
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
@@ -4231,6 +4231,21 @@ Hierarchy:
                 BasePartAsset: c7dcdd06-d013-4ea1-a09a-eefbefc6e5af:BlocksPrefabs/Wall0x2x2
                 BasePartId: f73cb16c-30b9-4200-b872-56885e7023e2
                 InstanceId: 3bab5154-7538-4875-8129-4bcd72743797
+        -   Entity:
+                Id: 796c9d1e-0c4b-4304-a04b-83aceec725b5
+                Name: UI
+                Components:
+                    04bebcb2336e473b97e3c948fcaa9740: !TransformComponent
+                        Id: c3f4044e-48b5-465a-8e4e-5aee5e230dfa
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f3ce3ed98f18b42787987cb00b245795: !UIComponent
+                        Id: 6d1dd95f-20af-41a9-bbad-1f48827c5edb
+                        Page: 659ee37e-091f-4e31-a2f3-8ccd0f43e181:PlayerUI/Page
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
         -   Entity:
                 Id: 79992318-8073-4045-908a-a4342a1f75c0
                 Name: Box3x1x1
@@ -6584,24 +6599,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             674fdd1fb2513d41ab88936773660929: ref!! 7feaea9a-7919-440f-9737-b72e5d52df93
-        -   Entity:
-                Id: db7c521d-deb0-4114-829d-3cfb7dd2aa07
-                Name: Crosshair256
-                Components:
-                    363dfd50bc1faf4cb198d55bc4959a6c: !TransformComponent
-                        Id: 50fd3d36-1fbc-4caf-b198-d55bc4959a6c
-                        Position: {X: 0.0, Y: 0.0, Z: -3.0411577}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.1, Y: 0.1, Z: 0.1}
-                        Children: {}
-                    3db80bf6f7a64d469c3a78e1338ba404: !SpriteComponent
-                        Id: f60bb83d-a6f7-464d-9c3a-78e1338ba404
-                        SpriteProvider: !SpriteFromTexture
-                            Texture: 1432918f-16f4-44a1-9e42-c675f7e9ea32:Crosshair256
-                            Center: {X: 0.0, Y: 0.0}
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                        PremultipliedAlpha: false
-                        IgnoreDepth: true
         -   Entity:
                 Id: dc6d7a05-91c2-403e-8a8f-8f02da796dbd
                 Name: Wall0x2x2

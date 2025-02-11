@@ -155,7 +155,6 @@ namespace Furia.Player
                     state = AnimationState.Reloading;
                     currentClip = AnimationReload;
                     currentEvaluator = animEvaluatorReload;
-                    //Entity.Transform.Position = new Vector3(initialPosition.X, -1.1f, initialPosition.Z);
                 }
                 else
                 {

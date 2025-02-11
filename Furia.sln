@@ -1,15 +1,43 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 16
-VisualStudioVersion = 16.0.0.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 16.0.0.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furia.Windows", "Furia.Windows\Furia.Windows.csproj", "{4D5A0495-EE9B-4CFD-A72E-74F514C74D87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Furia.Windows", "Furia.Windows\Furia.Windows.csproj", "{4D5A0495-EE9B-4CFD-A72E-74F514C74D87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furia.Game", "Furia.Game\Furia.Game.csproj", "{9835E50C-7B77-48CF-9648-79D5B00E7C8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Furia.Game", "Furia.Game\Furia.Game.csproj", "{9835E50C-7B77-48CF-9648-79D5B00E7C8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furia.Linux", "Furia.Linux\Furia.Linux.csproj", "{174C6101-680C-426C-A653-01865D7AC701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Furia.Linux", "Furia.Linux\Furia.Linux.csproj", "{174C6101-680C-426C-A653-01865D7AC701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Furia.macOS", "Furia.macOS\Furia.macOS.csproj", "{F4DE23DF-4B74-407F-BB81-CE0AAE77EA91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Furia.macOS", "Furia.macOS\Furia.macOS.csproj", "{F4DE23DF-4B74-407F-BB81-CE0AAE77EA91}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D5A0495-EE9B-4CFD-A72E-74F514C74D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5A0495-EE9B-4CFD-A72E-74F514C74D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5A0495-EE9B-4CFD-A72E-74F514C74D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5A0495-EE9B-4CFD-A72E-74F514C74D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9835E50C-7B77-48CF-9648-79D5B00E7C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9835E50C-7B77-48CF-9648-79D5B00E7C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9835E50C-7B77-48CF-9648-79D5B00E7C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9835E50C-7B77-48CF-9648-79D5B00E7C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174C6101-680C-426C-A653-01865D7AC701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174C6101-680C-426C-A653-01865D7AC701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174C6101-680C-426C-A653-01865D7AC701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174C6101-680C-426C-A653-01865D7AC701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4DE23DF-4B74-407F-BB81-CE0AAE77EA91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DE23DF-4B74-407F-BB81-CE0AAE77EA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DE23DF-4B74-407F-BB81-CE0AAE77EA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DE23DF-4B74-407F-BB81-CE0AAE77EA91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D45386F-DD2E-4ECB-A617-57F9C9F24AB8}
+	EndGlobalSection
 EndGlobal

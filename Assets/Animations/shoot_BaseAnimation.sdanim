@@ -13,8 +13,8 @@ RepeatMode: LoopInfinite
 Type: !StandardAnimationAssetType {}
 Skeleton: 485859b4-e08c-4a30-93ea-676d3df1c556:Models/mannequinHandModel Skeleton
 RootMotion: false
-PreviewModel: null
+PreviewModel: 617cfcae-7c6b-4c36-9c84-c718e93f06fa:Models/mannequinHandModel
 AnimationTimeMinimum: 0:00:00:00.0000000
 AnimationTimeMaximum: 0:00:00:00.3666600
 ~SourceHashes:
-    83e2f6aa41c33c030221c8ac746eb811~../../Resources/Animations/shoot.fbx: 842eb57baaf428ab28bbabfb00ea811f
+    3984085779571fb18b98b389cc2a9cb9~../../Resources/Animations/shoot.fbx: 842eb57baaf428ab28bbabfb00ea811f
