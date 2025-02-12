@@ -1618,7 +1618,6 @@ Hierarchy:
                         Children: {}
                     790f7c7cbc60796c12b6026cfb261e24: !SpriteComponent
                         Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
-                        Enabled: false
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
                             CurrentFrame: 1
@@ -2196,7 +2195,7 @@ Hierarchy:
                 Components:
                     321d321c570d3e43a2a274d71d7258f5: !TransformComponent
                         Id: 1c321d32-0d57-433e-a2a2-74d71d7258f5
-                        Position: {X: -0.18516532, Y: 0.2284868, Z: -1.9806645}
+                        Position: {X: -0.18516514, Y: 0.2284868, Z: -2.9845731}
                         Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4015,12 +4014,13 @@ Hierarchy:
                 Components:
                     902734e133f385e058b157d4a9dc681a: !TransformComponent
                         Id: c911bff7-a5d8-4394-9989-ed6e2dc3d53f
-                        Position: {X: -0.18941522, Y: 0.1441811, Z: -2.7997828}
+                        Position: {X: 0.23484284, Y: 0.39393514, Z: -3.6720636}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.96378297, Y: 0.96378297, Z: 0.96378297}
                         Children: {}
                     b85abbb3e8650fe52c4e5e9dd8cb2347: !SpriteComponent
                         Id: 9ee751ea-ae05-4c57-bd2a-203021c6837d
+                        Enabled: false
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 5ac2be1f-7f79-47c4-a875-156219620683:DefaultResources/SpriteSheet_2
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
