@@ -37,7 +37,8 @@ namespace Furia.Player
         public float ReloadCooldown { get; set; } = 2.0f;
 
         public SpriteComponent RemainingBullets { get; set; }
-        private int remainingBullets = 0;
+        public int remainingBullets = 0;
+        public int maxBullets = 30;
 
         private void UpdateBulletsLED()
         {
@@ -59,7 +60,7 @@ namespace Furia.Player
                     secondsCountdown -= (float) Game.UpdateTime.Elapsed.TotalSeconds;
                 }
 
-                remainingBullets = 9;
+                remainingBullets = maxBullets;
                 UpdateBulletsLED();
             };
 
@@ -81,7 +82,7 @@ namespace Furia.Player
             if (cooldownRemaining > 0)
                 return; // Can't shoot yet
 
-            if ((remainingBullets == 0 && didShoot) || (remainingBullets < 9 && didReload))
+            if ((remainingBullets == 0 && didShoot) || (remainingBullets <= maxBullets && didReload))
             {
                 ReloadWeapon();
                 return;

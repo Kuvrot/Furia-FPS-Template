@@ -1801,20 +1801,6 @@ Hierarchy:
                         Children:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! b1377bda-d47b-46fa-b5aa-1c8f3402c5ab
         -   Entity:
-                Id: 37216fc5-60d5-4ad0-a16b-6f434f3a2125
-                Name: WeaponManager
-                Components:
-                    69ae04978957e2cc37ea369e9fa3343d: !TransformComponent
-                        Id: 3b715fff-154e-409c-8e0b-d3517326e9b9
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    441afffd82cc8d1970b22c33457f770a: !Furia.Player.WeaponManager,Furia.Game
-                        Id: 08c1aa64-481e-48c4-a772-c2675125fceb
-                        enableFlashLight: true
-                        flashLight: null
-        -   Entity:
                 Id: 379ec564-94a3-4deb-b7ba-68d8638c7ed2
                 Name: Box3x1x1 (3)
                 Components:
@@ -2466,7 +2452,6 @@ Hierarchy:
                         Children:
                             7660ce96d5667941ff566e0951226e88: ref!! b3d41080-630b-4057-863d-c39f5ef1233e
                             1fe64d64198b4543bfc6b549158775e4: ref!! 644de61f-8b19-4345-bfc6-b549158775e4
-                            5b20bf30cb7527cf03711cc5bd25f0b2: ref!! 3b715fff-154e-409c-8e0b-d3517326e9b9
                     bdcec17990d67f4eb9d1d3a9197c95a2: !CameraComponent
                         Id: 79c1cebd-d690-4e7f-b9d1-d3a9197c95a2
                         Name: null
@@ -2481,9 +2466,11 @@ Hierarchy:
                         InvertY: false
                     e1db890dd260e557c115013d78ecec94: !Furia.Player.WeaponScript,Furia.Game
                         Id: cc66f4e3-fab7-4e4a-816d-3113bb7c953a
+                        remainingBullets: 0
+                        maxBullets: 30
                         MaxShootDistance: 50.0
                         ShootImpulse: 12.0
-                        Cooldown: 0.4
+                        Cooldown: 0.1
                         ReloadCooldown: 2.0
                         RemainingBullets: ref!! 722ddea3-2ffa-4dc2-83c3-44dedd18fc64
         -   Entity:
@@ -4097,20 +4084,6 @@ Hierarchy:
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: fe274548-457a-45e2-bcb2-ceafa1abc4c7
         -   Entity:
-                Id: 718c62e1-a52c-4b8f-9d2c-eecb8fa30a2d
-                Name: WeaponManager
-                Components:
-                    8ea2d7e3b975f1dac392d1c6898bee42: !TransformComponent
-                        Id: 0fb70d4c-2f22-43ed-8cc3-23eb54cd2171
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    7d2bfa698b6e285a5ab215881c9e0c8c: !Furia.Player.WeaponManager,Furia.Game
-                        Id: 7c67e4f1-0ebc-4a4d-949d-1fd5f569964e
-                        enableFlashLight: true
-                        flashLight: null
-        -   Entity:
                 Id: 71ffb178-6eae-4180-b19b-26b2b077d6f8
                 Name: Wall0x2x5
                 Components:
@@ -5006,7 +4979,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             e7530b9a6be27e47b405f3991f670c13: ref!! 9a0b53e7-e26b-477e-b405-f3991f670c13
-                            9e306722e6b1dc45a2ac3241737fceba: ref!! 0fb70d4c-2f22-43ed-8cc3-23eb54cd2171
                     87c25277a58ea44f81710ca69284e1dd: !CharacterComponent
                         Id: 7752c287-8ea5-4fa4-8171-0ca69284e1dd
                         CollisionGroup: KinematicFilter
@@ -5727,7 +5699,7 @@ Hierarchy:
                 Components:
                     3874058b00661242806d2e3f4afd55c1: !TransformComponent
                         Id: 8b057438-6600-4212-806d-2e3f4afd55c1
-                        Position: {X: 0.00064765656, Y: 0.17203088, Z: -0.010609664}
+                        Position: {X: -0.17101039, Y: 0.537055, Z: -2.3141527}
                         Rotation: {X: -0.38512552, Y: 1.6653345E-16, Z: -3.366874E-08, W: 0.9228642}
                         Scale: {X: 0.04, Y: 0.04, Z: 0.04}
                         Children: {}
@@ -5735,6 +5707,7 @@ Hierarchy:
                         Id: 722ddea3-2ffa-4dc2-83c3-44dedd18fc64
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 60b32f10-3ad5-42dc-9c12-0026f3462be2:Bullets
+                            CurrentFrame: 9
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         RenderGroup: Group1
         -   Entity:
