@@ -1184,6 +1184,29 @@ Hierarchy:
                 BasePartId: 1c50115c-c05d-4cb6-ab0e-53e44178a7e6
                 InstanceId: 7e6e545c-b8fe-403a-a906-dcd6dc05682c
         -   Entity:
+                Id: 24af2912-a246-4beb-bcf0-32c1a1d7aa47
+                Name: Gun
+                Components:
+                    a9c79a3bf064f945b8cb4a186967953c: !TransformComponent
+                        Id: b82345f9-71e9-4808-addf-6ab8a57fe9e2
+                        Position: {X: -1.2740891E-07, Y: 0.0, Z: 1.457388}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            321d321c570d3e43a2a274d71d7258f5: ref!! 6bc66465-ffa3-4964-8771-d87e425126ba
+                            3874058b00661242806d2e3f4afd55c1: ref!! 2342f015-607f-4540-95bb-31e44a7c8c05
+                            0e0c9ecce2b00fcca715dfb461a87812: ref!! 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
+                    efd695c8917b8a42a02ea11321380575: !ModelComponent
+                        Id: 4d4483f2-1359-44a9-94d6-98c0fa62f0c4
+                        Enabled: false
+                        Model: d0fddf89-afbd-4b4e-afbd-8f20775c0a94:Models/MachinegunModel
+                        IsShadowCaster: false
+                        Materials: {}
+                    39b0129ace88504c8b56a15efbeca890: !ModelNodeLinkComponent
+                        Id: c4cc5bed-513d-4df2-a015-271dda460ab4
+                        Target: null
+                        NodeName: MachinegunBone
+        -   Entity:
                 Id: 251ee4c9-804b-4148-91a6-02a493e53105
                 Name: GridBase10x10
                 Components:
@@ -1618,6 +1641,7 @@ Hierarchy:
                         Children: {}
                     790f7c7cbc60796c12b6026cfb261e24: !SpriteComponent
                         Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
+                        Enabled: false
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
                             CurrentFrame: 1
@@ -2452,6 +2476,7 @@ Hierarchy:
                         Children:
                             7660ce96d5667941ff566e0951226e88: ref!! b3d41080-630b-4057-863d-c39f5ef1233e
                             1fe64d64198b4543bfc6b549158775e4: ref!! 644de61f-8b19-4345-bfc6-b549158775e4
+                            5b8be235588c3467ee6ee40653666888: ref!! b87b1df3-79de-40b5-8183-ad310689e9ec
                     bdcec17990d67f4eb9d1d3a9197c95a2: !CameraComponent
                         Id: 79c1cebd-d690-4e7f-b9d1-d3a9197c95a2
                         Name: null
@@ -2466,11 +2491,11 @@ Hierarchy:
                         InvertY: false
                     e1db890dd260e557c115013d78ecec94: !Furia.Player.WeaponScript,Furia.Game
                         Id: cc66f4e3-fab7-4e4a-816d-3113bb7c953a
-                        remainingBullets: 0
+                        remainingBullets: 9
                         maxBullets: 30
                         MaxShootDistance: 50.0
                         ShootImpulse: 12.0
-                        Cooldown: 0.1
+                        Cooldown: 1.0
                         ReloadCooldown: 2.0
                         RemainingBullets: ref!! 722ddea3-2ffa-4dc2-83c3-44dedd18fc64
         -   Entity:
@@ -2727,6 +2752,49 @@ Hierarchy:
                 BasePartAsset: 3c52f7bb-30ff-4597-9d1f-eaae6884e1cd:BlocksPrefabs/GridBase10x10
                 BasePartId: b045349c-565e-4488-9130-a795b0e3b229
                 InstanceId: bd8d15ec-2ec2-4c39-825f-27a94e765001
+        -   Folder: null
+            Entity:
+                Id: 51f5cc03-985b-4127-b390-5fafb5c2e086
+                Name: Melee
+                Components:
+                    1fe64d64198b4543bfc6b549158775e4: !TransformComponent
+                        Id: b87b1df3-79de-40b5-8183-ad310689e9ec
+                        Position: {X: 0.0, Y: -0.4884965, Z: 0.6158998}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a9c79a3bf064f945b8cb4a186967953c: ref!! b82345f9-71e9-4808-addf-6ab8a57fe9e2
+                            3d9c1cc499067d46a84e5274b42e9de3: ref!! 4a0a6531-29b9-4330-b830-9fc356641412
+                    67e963ed191c3a429b961323f89766e4: !ModelComponent
+                        Id: f000ef79-4246-4ae8-85b0-b481ceff7edc
+                        Model: 617cfcae-7c6b-4c36-9c84-c718e93f06fa:Models/mannequinHandModel
+                        IsShadowCaster: false
+                        Materials: {}
+                    e7f9e12d8d35d348b360d0f05ad26c60: !AnimationComponent
+                        Id: 1856bc4a-bf53-4b8a-9634-418fc8d51891
+                        Animations: {}
+                    95a016df188f111cf9b67eca80658005: !Furia.Player.AnimationController,Furia.Game
+                        Id: afad756b-3426-4f53-944d-88fe250366d7
+                        autimaticRunAnimation: true
+                        automaticIdleAnimation: true
+                        automaticWalkAnimation: true
+                        automaticReloadAnimation: true
+                        automaticShootAnimation: true
+                        automaticRunFrames: null
+                        automaticIdleFrames: null
+                        automaticReloadFrames: null
+                        automaticShootFrames: null
+                        AnimationComponent: ref!! 1856bc4a-bf53-4b8a-9634-418fc8d51891
+                        AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
+                        AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
+                        AnimationShoot: 5aa23db3-f97f-4126-90a8-891a30c23c06:Animations/MeleeAttack_Armature_Armature_Armature_ArmatureAction
+                        AnimationReload: 00c926e9-a86f-40a8-b993-4cab12902faa:Animations/Reload_Armature_ArmatureAction.001
+                        TimeFactor: 1.0
+                    f65a973d79e8a29eac4f65a2ffa7e44d: !UIComponent
+                        Id: de330716-17d3-408d-ae1e-ef0c97b43c07
+                        Page: null
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
         -   Entity:
                 Id: 5289b36b-685b-4b9d-9b61-fef1ecbe8d79
                 Name: GridBase10x10
@@ -4908,6 +4976,24 @@ Hierarchy:
                         Children:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! 88f78894-c2e5-4768-918f-79205b47ea67
         -   Entity:
+                Id: 962ee7a7-2aaa-45e1-8e56-fa822f8e6aab
+                Name: Diamond Axe
+                Components:
+                    01c7a3d1805f77801ee33585c069c3ba: !TransformComponent
+                        Id: 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
+                        Position: {X: 0.7153735, Y: 0.0, Z: -3.558087}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 4.566728, Y: 4.566728, Z: 4.566728}
+                        Children: {}
+                    54b7fb5c205118f6e6a0833693fe2673: !SpriteComponent
+                        Id: 21664524-5603-4409-b75c-1aceb3f559d6
+                        SpriteProvider: !SpriteFromTexture
+                            Texture: 885f5eb4-9ac4-40a9-ad0e-96e0788a05e3:DefaultResources/Diamond Axe
+                            Center: {X: 0.0, Y: 0.0}
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+                        RenderGroup: Group1
+        -   Entity:
                 Id: 964de9e2-c89c-4e1a-b01e-3eaf079e2903
                 Name: Box1x1x1
                 Components:
@@ -5511,6 +5597,23 @@ Hierarchy:
                         Children:
                             8fbe3ebebaeba648ad66f1522376dd74: ref!! be3ebe8f-ebba-48a6-ad66-f1522376dd74
         -   Entity:
+                Id: a740246b-546c-4bed-a65d-757191cf85aa
+                Name: BulletCount
+                Components:
+                    3874058b00661242806d2e3f4afd55c1: !TransformComponent
+                        Id: 2342f015-607f-4540-95bb-31e44a7c8c05
+                        Position: {X: -0.17101039, Y: 0.537055, Z: -2.3141527}
+                        Rotation: {X: -0.38512552, Y: 1.6653345E-16, Z: -3.366874E-08, W: 0.9228642}
+                        Scale: {X: 0.04, Y: 0.04, Z: 0.04}
+                        Children: {}
+                    a3de2d72fa2fc24d83c344dedd18fc64: !SpriteComponent
+                        Id: e8b8f529-d1dc-425d-a890-98115c6903dc
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 60b32f10-3ad5-42dc-9c12-0026f3462be2:Bullets
+                            CurrentFrame: 9
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group1
+        -   Entity:
                 Id: a74f77fb-c03a-485b-ab64-8506d0627856
                 Name: Wall0x2x5
                 Components:
@@ -5756,6 +5859,25 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c444819e77a60441a6144bd7bd8a4a23: ref!! 816c835e-3a47-4ed6-8f9c-3ad8ab35c79e
+        -   Entity:
+                Id: ae78800b-1385-4460-82a2-c518cf108407
+                Name: MagazineModel
+                Components:
+                    3d9c1cc499067d46a84e5274b42e9de3: !TransformComponent
+                        Id: 4a0a6531-29b9-4330-b830-9fc356641412
+                        Position: {X: -1.2728472E-07, Y: 0.0, Z: 1.4559677}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    14266246fced0e4486392429f9504708: !ModelComponent
+                        Id: 7114029d-c7b2-4cff-83cd-69cc44fe1412
+                        Enabled: false
+                        Model: b32868f8-7c02-4ee8-b58d-87f117e62d28:Models/MagazineModel
+                        Materials: {}
+                    1668c7b09aefcc42a71e4470c1bdf8e9: !ModelNodeLinkComponent
+                        Id: 74102b85-00ce-4088-bac3-b1d98d91a734
+                        Target: null
+                        NodeName: MagazineBone
         -   Entity:
                 Id: af04b632-ccdd-41f2-853c-90582d8cc932
                 Name: Stairs1x1x2
@@ -7325,6 +7447,45 @@ Hierarchy:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: 1b074e4d-1d2b-400e-b244-6747cacc7375
+        -   Entity:
+                Id: f2b03cf3-0b9b-4b7a-9161-54112ddd03cd
+                Name: EffectsFeedback
+                Components:
+                    321d321c570d3e43a2a274d71d7258f5: !TransformComponent
+                        Id: 6bc66465-ffa3-4964-8771-d87e425126ba
+                        Position: {X: -0.18516514, Y: 0.2284868, Z: -2.9845731}
+                        Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6d272f7d266e6db5e229411fff383654: !Furia.EffectController,Furia.Game
+                        Id: dbe47557-1c04-4ae2-9ef5-84267c3a1613
+                        TriggerGroup:
+                            Name: Gunfire
+                            TriggerEvents:
+                                cc2e7fd643efee43a5334538e258744d:
+                                    Name: MuzzleFlash
+                                    SourcePrefab: 63dd2441-bad8-4c56-a3c6-2f3a45c54c14:VFXPrefabs/vfx-RichMuzzleFlash
+                                    FollowEntity: true
+                                    Duration: 0.6
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 1.0, Y: 0.0, Z: 0.0, W: -4.371139E-08}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                c2b4a07f896d1143868abfae468c8a51:
+                                    Name: BulletImpact
+                                    SourcePrefab: 1d804030-fb29-4b21-8fa6-899b30a835b7:VFXPrefabs/vfx-RichBulletImpact
+                                    FollowEntity: false
+                                    Duration: 1.0
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                25a41a6e2c1e89449f410d4cd3a33c89:
+                                    Name: DamagedTrail
+                                    SourcePrefab: a4c38004-d483-4d42-bf3b-e841c85c562f:VFXPrefabs/vfx-DamagedTrail
+                                    FollowEntity: true
+                                    Duration: 6.0
+                                    Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
         -   Entity:
                 Id: f33a6287-8497-4cce-a8a6-4984c7880493
                 Name: Wall0x2x5 (6)

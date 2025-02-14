@@ -7,6 +7,7 @@ using Stride.Engine;
 using Stride.Engine.Events;
 using Stride.Physics;
 using Stride.Rendering.Sprites;
+using Vortice.Vulkan;
 
 namespace Furia.Player
 {
@@ -39,6 +40,7 @@ namespace Furia.Player
         public SpriteComponent RemainingBullets { get; set; }
         public int remainingBullets = 0;
         public int maxBullets = 30;
+        public bool infiniteBullets = false;
 
         private void UpdateBulletsLED()
         {
@@ -91,7 +93,12 @@ namespace Furia.Player
             if (!didShoot)
                 return;
 
-            remainingBullets--;
+            
+            if (!infiniteBullets)
+            {
+                remainingBullets--;
+            }
+
             UpdateBulletsLED();
 
             cooldownRemaining = Cooldown;
