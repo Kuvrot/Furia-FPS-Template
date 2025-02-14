@@ -23,5 +23,6 @@ Furia makes developing a retro FPS game easier by providing a stable and flexibl
 - [ ] Neutral NPCs
 - [ ] Ally NPCs
 - [ ] Simple scripting system for triggers
+- [ ] Add sounds
 
  
