@@ -11,7 +11,7 @@ Furia makes developing a retro FPS game easier by providing a stable and flexibl
 - [x] Automatic animations
 - [ ] Sprite animations
 - [x] Flashlight
-- [ ] Automatic mode for weapons
+- [x] Automatic mode for weapons
 - [ ] Melee system (add automatic animations)
 - [ ] Health system
 - [ ] Inventory system
