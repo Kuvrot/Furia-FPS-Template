@@ -8,20 +8,26 @@ using Stride.Engine;
 using Stride.Engine.Events;
 using System.Numerics;
 using System.Collections.Generic;
+using Silk.NET.OpenGL;
+using Stride.Graphics;
 
 namespace Furia.Player
 {
     public class AnimationController : SyncScript, IBlendTreeBuilder
     {
-        [Display("Automate animations")]
         public bool autimaticRunAnimation = true;
         public bool automaticIdleAnimation = true;
         public bool automaticWalkAnimation = true;
         public bool automaticReloadAnimation = true;
         public bool automaticShootAnimation = true;
 
-        //[Display("Frames")]
-        public SpriteComponent[] automaticRunFrames , automaticIdleFrames, automaticReloadFrames, automaticShootFrames;
+
+        public List<Sprite> AutomaticRunFrames = [];
+        public List<Sprite> AutomaticIdleFrames = [];
+        public List<Sprite> AutomaticReloadFrames = [];
+        public List<Sprite> AutomaticShootFrames = [];
+
+        public SpriteComponent sprite;
 
         private readonly EventReceiver<WeaponFiredResult> weaponFiredEvent = new EventReceiver<WeaponFiredResult>(WeaponScript.WeaponFired);
 

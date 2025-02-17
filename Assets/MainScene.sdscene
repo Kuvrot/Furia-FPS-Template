@@ -884,10 +884,8 @@ Hierarchy:
                         Children: {}
                     faca1631e9b3a24997a6e1832c02baf6: !ModelComponent
                         Id: 3116cafa-b3e9-49a2-97a6-e1832c02baf6
-                        Model: 6da8aaae-0ac1-4b3d-bf3f-dc5c9fd41fba:Models/BoxA
-                        Materials:
-                            f6d948d8df8d5e14faaebe0c43200ea9~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
-                            6d2f512d53f5d51254c9b93fc68ba5ad~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
                     0c47f45154739545829ea3442ddaa65f: !RigidbodyComponent
                         Id: 51f4470c-7354-4595-829e-a3442ddaa65f
                         CanSleep: false
@@ -1264,10 +1262,8 @@ Hierarchy:
                         Children: {}
                     faca1631e9b3a24997a6e1832c02baf6: !ModelComponent
                         Id: 0301eae2-7de9-4f54-a07b-a9d0a9d352b1
-                        Model: 6da8aaae-0ac1-4b3d-bf3f-dc5c9fd41fba:Models/BoxA
-                        Materials:
-                            df0be2e50a03c715eacb748ecd422c17~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
-                            4f882306cc46365fb600d1fd3192fc65~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
                     0c47f45154739545829ea3442ddaa65f: !RigidbodyComponent
                         Id: ed67886c-c8e3-4f14-a692-a4aa374c56d8
                         CanSleep: false
@@ -1641,10 +1637,9 @@ Hierarchy:
                         Children: {}
                     790f7c7cbc60796c12b6026cfb261e24: !SpriteComponent
                         Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
-                        Enabled: false
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
-                            CurrentFrame: 1
+                            CurrentFrame: 2
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
                         RenderGroup: Group1
@@ -2498,7 +2493,7 @@ Hierarchy:
                         ShootImpulse: 12.0
                         Cooldown: 1.0
                         ReloadCooldown: 2.0
-                        RemainingBullets: ref!! 722ddea3-2ffa-4dc2-83c3-44dedd18fc64
+                        RemainingBullets: null
         -   Entity:
                 Id: 4ac16211-9c81-4929-9df1-753678c4eb02
                 Name: Wall0x2x2
@@ -2781,10 +2776,11 @@ Hierarchy:
                         automaticWalkAnimation: true
                         automaticReloadAnimation: true
                         automaticShootAnimation: true
-                        automaticRunFrames: null
-                        automaticIdleFrames: null
-                        automaticReloadFrames: null
-                        automaticShootFrames: null
+                        AutomaticRunFrames: {}
+                        AutomaticIdleFrames: {}
+                        AutomaticReloadFrames: {}
+                        AutomaticShootFrames: {}
+                        sprite: null
                         AnimationComponent: ref!! 1856bc4a-bf53-4b8a-9634-418fc8d51891
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
                         AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
@@ -4065,24 +4061,6 @@ Hierarchy:
                         Children:
                             674fdd1fb2513d41ab88936773660929: ref!! ca93c18b-763e-4388-943b-f057fd5a4470
         -   Entity:
-                Id: 706aae55-2e3f-4ed3-8e5e-a21b83cb86ac
-                Name: SpriteSheet_2
-                Components:
-                    902734e133f385e058b157d4a9dc681a: !TransformComponent
-                        Id: c911bff7-a5d8-4394-9989-ed6e2dc3d53f
-                        Position: {X: 0.23484284, Y: 0.39393514, Z: -3.6720636}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 0.96378297, Y: 0.96378297, Z: 0.96378297}
-                        Children: {}
-                    b85abbb3e8650fe52c4e5e9dd8cb2347: !SpriteComponent
-                        Id: 9ee751ea-ae05-4c57-bd2a-203021c6837d
-                        Enabled: false
-                        SpriteProvider: !SpriteFromSheet
-                            Sheet: 5ac2be1f-7f79-47c4-a875-156219620683:DefaultResources/SpriteSheet_2
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                        Sampler: PointClamp
-                        RenderGroup: Group1
-        -   Entity:
                 Id: 70a87224-67c0-402a-a841-8ede0e599426
                 Name: Wall0x2x5
                 Components:
@@ -4200,10 +4178,8 @@ Hierarchy:
                         Children: {}
                     c5fb935afd3f0046b45d05fdc2409d10: !ModelComponent
                         Id: 3922b117-723e-46bc-a2f8-e80f0d15e8e0
-                        Model: b3ed57b9-1481-4e63-a708-0687a0662919:Models/BoxE
-                        Materials:
-                            479c9a3934b3b593092ec5d67b783725~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
-                            8cb54a9b59a8aff7ce747433ee6c2c39~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
                     b5d8a39cf4f10d4594366a9703e4388b: !RigidbodyComponent
                         Id: 23a86426-f0e7-4874-9274-609d8fb4ec24
                         CanSleep: false
@@ -5113,6 +5089,11 @@ Hierarchy:
                         Id: 5e21fbeb-2870-43b0-af8a-add508396fd3
                         enableFlashLight: true
                         flashLight: ref!! faebfdd0-7bb2-4ebb-b19c-c80be1118a4f
+                    a5ea38bd27cc62c44d3413fb9adfaedd: !SpriteComponent
+                        Id: 20496efa-ca7c-4277-a635-2aa53310ba92
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: dbadba05-bf9a-4c71-99cc-0b4c523470fa:DefaultResources/SpriteSheet
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Entity:
                 Id: 9758b4f8-356a-4443-9a06-4001ccb9e7c4
                 Name: Wall0x2x5
@@ -5404,10 +5385,8 @@ Hierarchy:
                         Children: {}
                     c5fb935afd3f0046b45d05fdc2409d10: !ModelComponent
                         Id: 6cee65bb-fa8b-45de-8ebf-83d9867e29d2
-                        Model: b3ed57b9-1481-4e63-a708-0687a0662919:Models/BoxE
-                        Materials:
-                            057554b18dd5eaeec5321047a4528a76~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
-                            8f3e4cf25c593d66c587d45550aea98a~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
                     b5d8a39cf4f10d4594366a9703e4388b: !RigidbodyComponent
                         Id: fdc5333d-36c5-4982-aa1d-537f8c5ef9e2
                         CanSleep: false
@@ -5798,23 +5777,6 @@ Hierarchy:
                         Children:
                             4eecb3c27affe3478bcc584553d59e41: ref!! 62150304-a0fb-4c3d-818c-49993c8cc1b5
         -   Entity:
-                Id: a9b8bf4f-39f5-4569-88e0-3c68fdbb5be9
-                Name: BulletCount
-                Components:
-                    3874058b00661242806d2e3f4afd55c1: !TransformComponent
-                        Id: 8b057438-6600-4212-806d-2e3f4afd55c1
-                        Position: {X: -0.17101039, Y: 0.537055, Z: -2.3141527}
-                        Rotation: {X: -0.38512552, Y: 1.6653345E-16, Z: -3.366874E-08, W: 0.9228642}
-                        Scale: {X: 0.04, Y: 0.04, Z: 0.04}
-                        Children: {}
-                    a3de2d72fa2fc24d83c344dedd18fc64: !SpriteComponent
-                        Id: 722ddea3-2ffa-4dc2-83c3-44dedd18fc64
-                        SpriteProvider: !SpriteFromSheet
-                            Sheet: 60b32f10-3ad5-42dc-9c12-0026f3462be2:Bullets
-                            CurrentFrame: 9
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                        RenderGroup: Group1
-        -   Entity:
                 Id: aad66409-dd2e-4daf-be54-a7a93743df7e
                 Name: Box3x1x1
                 Components:
@@ -5955,8 +5917,6 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             321d321c570d3e43a2a274d71d7258f5: ref!! 1c321d32-0d57-433e-a2a2-74d71d7258f5
-                            3874058b00661242806d2e3f4afd55c1: ref!! 8b057438-6600-4212-806d-2e3f4afd55c1
-                            ba76ee4f9de9f80c5db924488ec6207a: ref!! c911bff7-a5d8-4394-9989-ed6e2dc3d53f
                             3deeaceca785fb99fa541a4fc233f1de: ref!! 5158b221-f5ab-4b02-bfa1-5f814cd59a2d
                             561dc7a76fe06e2690407548d45fc5c3: ref!! bee5cfed-c6a9-40d6-936f-7223457ab3c1
                     efd695c8917b8a42a02ea11321380575: !ModelComponent
@@ -6007,10 +5967,12 @@ Hierarchy:
                         automaticWalkAnimation: true
                         automaticReloadAnimation: true
                         automaticShootAnimation: true
-                        automaticRunFrames: null
-                        automaticIdleFrames: null
-                        automaticReloadFrames: null
-                        automaticShootFrames: null
+                        AutomaticRunFrames:
+                            652a65568cc8c99ee447766122939b4f: null
+                        AutomaticIdleFrames: {}
+                        AutomaticReloadFrames: {}
+                        AutomaticShootFrames: {}
+                        sprite: ref!! 02ea0b9e-c889-4d4b-847b-7c0b11621380
                         AnimationComponent: ref!! 2de1f9e7-358d-48d3-b360-d0f05ad26c60
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
                         AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
@@ -6022,6 +5984,11 @@ Hierarchy:
                         Page: null
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                    70c03714545b2eff25af5218c89e640a: !SpriteComponent
+                        Id: beb67e8e-0465-4904-a50a-7d1a6f998000
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 5ac2be1f-7f79-47c4-a875-156219620683:DefaultResources/SpriteSheet_2
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Entity:
                 Id: b317a133-8ef0-427f-a966-61f6f75c687c
                 Name: Wall0x2x2Window (2)
@@ -6804,10 +6771,8 @@ Hierarchy:
                         Children: {}
                     a2a7c8831783434a9a49e615d0aa9897: !ModelComponent
                         Id: 80f1418d-f817-4d7b-8c30-9859476f999f
-                        Model: 77915076-61da-454b-80bf-746235e38529:Models/BoxF
-                        Materials:
-                            e42c8c1c0b8dbb93ffae197eac81367f~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
-                            8adde2be57549fe8d88e8bfff2bc9d5c~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
                     81ce6d5479e44d4f9250ca52dc991e16: !RigidbodyComponent
                         Id: 62726783-05b0-46fa-b5c0-9f468d32e913
                         CanSleep: false
@@ -7454,7 +7419,7 @@ Hierarchy:
                 Components:
                     321d321c570d3e43a2a274d71d7258f5: !TransformComponent
                         Id: 6bc66465-ffa3-4964-8771-d87e425126ba
-                        Position: {X: -0.18516514, Y: 0.2284868, Z: -2.9845731}
+                        Position: {X: -0.18516564, Y: 0.2284868, Z: -0.12381482}
                         Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -7511,10 +7476,8 @@ Hierarchy:
                         Children: {}
                     a2a7c8831783434a9a49e615d0aa9897: !ModelComponent
                         Id: bc232068-e6b3-4539-9fb7-a8ce703b3f43
-                        Model: 77915076-61da-454b-80bf-746235e38529:Models/BoxF
-                        Materials:
-                            a5bce3ddc816bca4cfae0a221a213aa5~0: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
-                            1de1094c525dd1f40b97554c9706f678~1: be468672-3308-438e-b0c3-82a739418984:Materials/GridMTStairs
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
                     81ce6d5479e44d4f9250ca52dc991e16: !RigidbodyComponent
                         Id: 6d80131e-3290-447e-b37a-29ff2d9b25e8
                         CanSleep: false

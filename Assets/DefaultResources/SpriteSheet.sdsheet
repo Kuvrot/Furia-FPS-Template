@@ -1,0 +1,36 @@
+!SpriteSheet
+Id: dbadba05-bf9a-4c71-99cc-0b4c523470fa
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Packing: {}
+Sprites:
+    4948bf57a2ff5d2cc1cdcbcd91facbb9:
+        Source: !file ../../Resources/DefaultResources/ar.png
+        Name: ar
+        TextureRegion: {X: 0, Y: 0, Width: 240, Height: 135}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    f12a3ddd17f0698ac3f06a60dccc90dd:
+        Source: !file ../../Resources/DefaultResources/arattack.png
+        Name: arattack
+        TextureRegion: {X: 0, Y: 0, Width: 240, Height: 134}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    594b70e26ed7ed1c2a025b1cb1f9a6c7:
+        Source: !file ../../Resources/DefaultResources/arattack.png
+        Name: arattack
+        TextureRegion: {X: 0, Y: 136, Width: 240, Height: 134}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    2cb062d01866c901a2422e520c57bd6d:
+        Source: !file ../../Resources/DefaultResources/arreload.png
+        Name: arreload
+        TextureRegion: {X: 0, Y: 0, Width: 240, Height: 810}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

@@ -170,22 +170,24 @@ SharedRenderers:
     34ecb9b2633eacfc439ba8744fe05102: !PostProcessingEffects
         Id: 608bf04d-8640-469d-b710-1ecf6a46f794
         Outline:
-            Enabled: false
+            Enabled*: false
             NormalWeight: 2.0
             DepthWeight: 0.2
             NormalNearCutoff: 0.1
         Fog:
-            Enabled: false
-            Density: 0.1
-            Color: {R: 1.0, G: 1.0, B: 1.0}
+            Enabled*: false
+            Density*: 0.1
+            Color*: {R: 0.78125, G: 0.78125, B: 0.78125}
             FogStart: 10.0
             SkipBackground: false
         AmbientOcclusion:
-            Enabled: false
+            Enabled*: false
         LocalReflections:
             Enabled: false
-            ResolvePassResolution: Full
+            ResolvePassResolution*: Half
+            ResolveSamples*: 4
             DepthResolution: Half
+            MaxSteps*: 60
         DepthOfField:
             Enabled: false
             DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}

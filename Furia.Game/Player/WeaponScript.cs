@@ -20,6 +20,8 @@ namespace Furia.Player
 
     public class WeaponScript : SyncScript
     {
+        public int weaponID = 0;
+
         public static readonly EventKey<WeaponFiredResult> WeaponFired = new EventKey<WeaponFiredResult>();
 
         public static readonly EventKey<bool> IsReloading = new EventKey<bool>();
@@ -41,6 +43,8 @@ namespace Furia.Player
         public int remainingBullets = 0;
         public int maxBullets = 30;
         public bool infiniteBullets = false;
+        public float damage = 0;
+        public int inventoryBullets = 100;
 
         private void UpdateBulletsLED()
         {
@@ -63,6 +67,7 @@ namespace Furia.Player
                 }
 
                 remainingBullets = maxBullets;
+                inventoryBullets -= maxBullets;
                 UpdateBulletsLED();
             };
 
@@ -86,8 +91,11 @@ namespace Furia.Player
 
             if ((remainingBullets == 0 && didShoot) || (remainingBullets <= maxBullets && didReload))
             {
-                ReloadWeapon();
-                return;
+                if (inventoryBullets >= maxBullets - remainingBullets)
+                {
+                    ReloadWeapon();
+                    return;
+                }
             }
 
             if (!didShoot)
