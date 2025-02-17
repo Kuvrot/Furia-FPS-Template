@@ -16,7 +16,6 @@ namespace Furia.Stats
         public float MaxShootDistance { get; set; } = 100f;
         public float ShootImpulse { get; set; } = 5f;
         public float Cooldown { get; set; } = 0.3f;
-        private float cooldownRemaining = 0;
         public float ReloadCooldown { get; set; } = 2.0f;
         public SpriteComponent RemainingBullets { get; set; }
         public int remainingBullets = 0;
