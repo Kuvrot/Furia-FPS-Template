@@ -1642,7 +1642,7 @@ Hierarchy:
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
                         RenderGroup: Group1
-                    29bf67bb33a382bf8f8795ff331f5fa8: !Furia.Stats.WeaponStats,Furia.Game
+                    ea5e285b4ea880b5865a2cb75bc55573: !Furia.Stats.WeaponStats,Furia.Game
                         Id: 6dbd04ae-0bcf-4b17-8bd9-5cfc4554f374
                         weaponID: 0
                         remainingBullets: 0
@@ -1651,7 +1651,7 @@ Hierarchy:
                         damage: 50.0
                         MaxShootDistance: 100.0
                         ShootImpulse: 5.0
-                        Cooldown: 0.3
+                        Cooldown: 0.1
                         ReloadCooldown: 2.0
                         RemainingBullets: null
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
@@ -2219,7 +2219,7 @@ Hierarchy:
                         Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    6d272f7d266e6db5e229411fff383654: !Furia.EffectController,Furia.Game
+                    324fa7059b5bf3ca65cab7d80419ec49: !Furia.EffectController,Furia.Game
                         Id: abce43c7-f656-455b-899a-cfd17ce4565d
                         TriggerGroup:
                             Name: Gunfire
@@ -2494,12 +2494,12 @@ Hierarchy:
                         VerticalFieldOfView: 60.0
                         FarClipPlane: 100.0
                         Slot: f1ef5817-0725-4b1a-abc9-845d101ec0e6
-                    24b3a59693872d0694a0450bdb92c054: !Furia.FpsCamera,Furia.Game
+                    c4b08c77e7eb8dd745d0f0a0c1fec4c2: !Furia.FpsCamera,Furia.Game
                         Id: 2200887e-b3b3-43f7-a068-6a19d7ecd8e1
                         RotationSpeed: 0.02355
                         InvertX: false
                         InvertY: false
-                    e1db890dd260e557c115013d78ecec94: !Furia.Player.WeaponScript,Furia.Game
+                    847cc0a91180fbd76466374f33f94dba: !Furia.Player.WeaponScript,Furia.Game
                         Id: cc66f4e3-fab7-4e4a-816d-3113bb7c953a
                         weaponID: 0
                         remainingBullets: 9
@@ -2787,7 +2787,7 @@ Hierarchy:
                     e7f9e12d8d35d348b360d0f05ad26c60: !AnimationComponent
                         Id: 1856bc4a-bf53-4b8a-9634-418fc8d51891
                         Animations: {}
-                    95a016df188f111cf9b67eca80658005: !Furia.Player.AnimationController,Furia.Game
+                    65505a7c38a6148c8a27b64d9aaa43fa: !Furia.Player.AnimationController,Furia.Game
                         Id: afad756b-3426-4f53-944d-88fe250366d7
                         autimaticRunAnimation: true
                         automaticIdleAnimation: true
@@ -2799,7 +2799,9 @@ Hierarchy:
                         AutomaticReloadFrames: {}
                         AutomaticShootFrames: {}
                         sprite: null
-                        AnimationComponent: ref!! 1856bc4a-bf53-4b8a-9634-418fc8d51891
+                        AnimationComponent:
+                            Id: 1856bc4a-bf53-4b8a-9634-418fc8d51891
+                            Animations: {}
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
                         AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
                         AnimationShoot: 5aa23db3-f97f-4126-90a8-891a30c23c06:Animations/MeleeAttack_Armature_Armature_Armature_ArmatureAction
@@ -4980,14 +4982,14 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 4.566728, Y: 4.566728, Z: 4.566728}
                         Children: {}
-                    dbc68ae0f1b081558d041afc8e553ab2: !Furia.Stats.WeaponStats,Furia.Game
+                    7c7d1734ad09bdbd63ab5a0d7795af69: !Furia.Stats.WeaponStats,Furia.Game
                         Id: 7ecdfae8-ec41-48b7-a4f3-e747c92b4d00
-                        weaponID: 0
+                        weaponID: 1
                         remainingBullets: 0
                         maxBullets: 30
-                        infiniteBullets: false
+                        infiniteBullets: true
                         damage: 50.0
-                        MaxShootDistance: 100.0
+                        MaxShootDistance: 2.0
                         ShootImpulse: 5.0
                         Cooldown: 0.3
                         ReloadCooldown: 2.0
@@ -5095,18 +5097,75 @@ Hierarchy:
                                 Radius: 0.4
                                 LocalOffset: {X: 0.0, Y: 0.95, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    10565f1955d8ff15323fc3307bd47d8f: !Furia.Player.PlayerController,Furia.Game
+                    8a3644b9e5d68d5380ca9d83b850a1da: !Furia.Player.PlayerController,Furia.Game
                         Id: a1231a3f-667e-48d8-9193-aa2eca6779e1
-                        Weapons: {}
+                        Weapons:
+                            5c7e4aa17a9722fc1ed230d5d8c245f4: !TransformComponent
+                                Id: 5158b221-f5ab-4b02-bfa1-5f814cd59a2d
+                                Position: {X: -0.43377876, Y: 0.81301105, Z: -3.5496562}
+                                Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                                Children: {}
+                            53c089a17c63ad9f507284c02773a874: !TransformComponent
+                                Id: 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
+                                Position: {X: 0.7153735, Y: 0.0, Z: -3.558087}
+                                Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                Scale: {X: 4.566728, Y: 4.566728, Z: 4.566728}
+                                Children: {}
                         currentWeaponSelected: 0
-                        weaponScript: ref!! cc66f4e3-fab7-4e4a-816d-3113bb7c953a
-                        animationController: ref!! 7d5c3571-a4ab-4bf0-8dc4-bb2c21b9cac6
+                        weaponScript:
+                            Id: cc66f4e3-fab7-4e4a-816d-3113bb7c953a
+                            weaponID: 0
+                            remainingBullets: 9
+                            maxBullets: 30
+                            infiniteBullets: false
+                            damage: 0.0
+                            inventoryBullets: 100
+                            MaxShootDistance: 50.0
+                            ShootImpulse: 12.0
+                            Cooldown: 1.0
+                            ReloadCooldown: 2.0
+                            RemainingBullets: null
+                        animationController:
+                            Id: 7d5c3571-a4ab-4bf0-8dc4-bb2c21b9cac6
+                            autimaticRunAnimation: true
+                            automaticIdleAnimation: true
+                            automaticWalkAnimation: true
+                            automaticReloadAnimation: true
+                            automaticShootAnimation: true
+                            AutomaticRunFrames:
+                                652a65568cc8c99ee447766122939b4f: null
+                            AutomaticIdleFrames: {}
+                            AutomaticReloadFrames: {}
+                            AutomaticShootFrames: {}
+                            sprite:
+                                Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
+                                SpriteProvider: !SpriteFromSheet
+                                    Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
+                                    CurrentFrame: 2
+                                Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                Sampler: PointClamp
+                                RenderGroup: Group1
+                            AnimationComponent:
+                                Id: 2de1f9e7-358d-48d3-b360-d0f05ad26c60
+                                Animations: {}
+                            AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
+                            AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
+                            AnimationShoot: 1f65e631-c4d4-4e29-8bff-0319912d809a:Animations/shoot_BaseAnimation
+                            AnimationReload: 00c926e9-a86f-40a8-b993-4cab12902faa:Animations/Reload_Armature_ArmatureAction.001
+                            TimeFactor: 1.0
                         MaxRunSpeed: 9.0
-                    b0f70abfbb3bef46e49e637e9cf6577d: !Furia.Player.PlayerInput,Furia.Game
+                    257a330d247d9d7e6a69dfe49f71eb0f: !Furia.Player.PlayerInput,Furia.Game
                         Id: c43fea5c-5e1b-401c-8659-11bd77ee624c
                         Priority: -1000
                         DeadZone: 0.25
-                        Camera: ref!! 79c1cebd-d690-4e7f-b9d1-d3a9197c95a2
+                        Camera:
+                            Id: 79c1cebd-d690-4e7f-b9d1-d3a9197c95a2
+                            Name: null
+                            Projection: Perspective
+                            VerticalFieldOfView: 60.0
+                            FarClipPlane: 100.0
+                            Slot: f1ef5817-0725-4b1a-abc9-845d101ec0e6
                         MouseSensitivity: 100.0
                         KeysLeft:
                             79c1d8abdc0cce2b4221ece447bdec9e: Left
@@ -5123,10 +5182,24 @@ Hierarchy:
                         KeysReload:
                             f7748360940667938216bda161f12ed0: E
                             05744cc71fc6762cd1820202d01398ed: R
-                    47bfb80a492da99f3dbe2ddda7af4061: !Furia.Player.WeaponManager,Furia.Game
+                    352da5fb3ffd9aa9ff39e64d2efdcc98: !Furia.Player.WeaponManager,Furia.Game
                         Id: 5e21fbeb-2870-43b0-af8a-add508396fd3
                         enableFlashLight: true
-                        flashLight: ref!! faebfdd0-7bb2-4ebb-b19c-c80be1118a4f
+                        flashLight:
+                            Id: faebfdd0-7bb2-4ebb-b19c-c80be1118a4f
+                            Enabled: false
+                            Type: !LightSpot
+                                Color: !ColorRgbProvider
+                                    Value: {R: 1.0, G: 1.0, B: 1.0}
+                                Range: 15.0
+                                AngleInner: 51.6
+                                AngleOuter: 64.7
+                                UVScale: {X: 1.0, Y: 1.0}
+                                UVOffset: {X: 0.0, Y: 0.0}
+                                Shadow:
+                                    BiasParameters:
+                                        DepthBias: 0.001
+                            Intensity: 2.5
                     a5ea38bd27cc62c44d3413fb9adfaedd: !SpriteComponent
                         Id: 20496efa-ca7c-4277-a635-2aa53310ba92
                         SpriteProvider: !SpriteFromSheet
@@ -5999,7 +6072,7 @@ Hierarchy:
                     e7f9e12d8d35d348b360d0f05ad26c60: !AnimationComponent
                         Id: 2de1f9e7-358d-48d3-b360-d0f05ad26c60
                         Animations: {}
-                    95a016df188f111cf9b67eca80658005: !Furia.Player.AnimationController,Furia.Game
+                    ba53fcb041da00e4715b6ac6e402dd6a: !Furia.Player.AnimationController,Furia.Game
                         Id: 7d5c3571-a4ab-4bf0-8dc4-bb2c21b9cac6
                         autimaticRunAnimation: true
                         automaticIdleAnimation: true
@@ -6011,8 +6084,17 @@ Hierarchy:
                         AutomaticIdleFrames: {}
                         AutomaticReloadFrames: {}
                         AutomaticShootFrames: {}
-                        sprite: ref!! 02ea0b9e-c889-4d4b-847b-7c0b11621380
-                        AnimationComponent: ref!! 2de1f9e7-358d-48d3-b360-d0f05ad26c60
+                        sprite:
+                            Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
+                            SpriteProvider: !SpriteFromSheet
+                                Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
+                                CurrentFrame: 2
+                            Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                            Sampler: PointClamp
+                            RenderGroup: Group1
+                        AnimationComponent:
+                            Id: 2de1f9e7-358d-48d3-b360-d0f05ad26c60
+                            Animations: {}
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
                         AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
                         AnimationShoot: 1f65e631-c4d4-4e29-8bff-0319912d809a:Animations/shoot_BaseAnimation
@@ -7462,7 +7544,7 @@ Hierarchy:
                         Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    6d272f7d266e6db5e229411fff383654: !Furia.EffectController,Furia.Game
+                    5b9dbacc5126049f4601f022b2c8985a: !Furia.EffectController,Furia.Game
                         Id: dbe47557-1c04-4ae2-9ef5-84267c3a1613
                         TriggerGroup:
                             Name: Gunfire
