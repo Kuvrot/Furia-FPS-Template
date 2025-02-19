@@ -98,11 +98,6 @@ namespace Furia.Player
             weaponScript.damage = currentWeaponStats.damage;
 
             //Homologate animations
-            animationController.AnimationIdle = null;
-            animationController.AnimationWalk = null;
-            animationController.AnimationShoot = null;
-            animationController.AnimationReload = null;
-            
             animationController.AnimationIdle = currentWeaponStats.AnimationIdle;
             animationController.AnimationWalk = currentWeaponStats.AnimationWalk;
             animationController.AnimationShoot = currentWeaponStats.AnimationShoot;
