@@ -1,4 +1,4 @@
-﻿// Copyright (c) .NET Foundation and Contributors (https://dotnetfoundation.org/ & https://stride3d.net) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
+// Copyright (c) .NET Foundation and Contributors (https://dotnetfoundation.org/ & https://stride3d.net) and Silicon Studio Corp. (https://www.siliconstudio.co.jp)
 // Distributed under the MIT license. See the LICENSE.md file in the project root for more information.
 using System;
 using Stride.Core;
@@ -29,8 +29,6 @@ namespace Furia.Player
         public int currentWeaponSelected = 0;
         public WeaponScript weaponScript;
         public AnimationController animationController;
-        public WeaponScript weaponScriptAux;
-        public AnimationController animationControllerAux;
         public override void Start()
         {
             base.Start();
@@ -38,8 +36,6 @@ namespace Furia.Player
             // Will search for an CharacterComponent within the same entity as this script
             character = Entity.Get<CharacterComponent>();
             if (character == null) throw new ArgumentException("Please add a CharacterComponent to the entity containing PlayerController!");
-            
-            WeaponChange(1);
         }
         
         /// <summary>
@@ -65,11 +61,11 @@ namespace Furia.Player
 
         private void WeaponInventoryManagement()
         {
-            if (Input.IsKeyPressed(Keys.D1))
+            if (Input.IsKeyPressed(Keys.NumPad1))
             {
                 WeaponChange(0);
             }
-            else if (Input.IsKeyPressed(Keys.D2))
+            else if (Input.IsKeyPressed(Keys.NumPad2))
             {
                 WeaponChange(1);
             }
@@ -82,7 +78,7 @@ namespace Furia.Player
                 weapon.Entity.Get<SpriteComponent>().Enabled = false;
             }
 
-            
+            Weapons[index].Entity.Get<SpriteComponent>().Enabled = true;
 
             WeaponStats currentWeaponStats = Weapons[index].Entity.Get<WeaponStats>();
 
@@ -102,8 +98,6 @@ namespace Furia.Player
             animationController.AnimationWalk = currentWeaponStats.AnimationWalk;
             animationController.AnimationShoot = currentWeaponStats.AnimationShoot;
             animationController.AnimationReload = currentWeaponStats.AnimationReload;
-            
-            Weapons[index].Entity.Get<SpriteComponent>().Enabled = true;
         }
     }
 }

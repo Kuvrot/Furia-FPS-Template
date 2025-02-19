@@ -4985,11 +4985,11 @@ Hierarchy:
                         weaponID: 0
                         remainingBullets: 0
                         maxBullets: 30
-                        infiniteBullets: true
+                        infiniteBullets: false
                         damage: 50.0
-                        MaxShootDistance: 2.0
+                        MaxShootDistance: 100.0
                         ShootImpulse: 5.0
-                        Cooldown: 3.0
+                        Cooldown: 0.3
                         ReloadCooldown: 2.0
                         RemainingBullets: null
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
@@ -5101,8 +5101,6 @@ Hierarchy:
                         currentWeaponSelected: 0
                         weaponScript: ref!! cc66f4e3-fab7-4e4a-816d-3113bb7c953a
                         animationController: ref!! 7d5c3571-a4ab-4bf0-8dc4-bb2c21b9cac6
-                        weaponScriptAux: null
-                        animationControllerAux: null
                         MaxRunSpeed: 9.0
                     b0f70abfbb3bef46e49e637e9cf6577d: !Furia.Player.PlayerInput,Furia.Game
                         Id: c43fea5c-5e1b-401c-8659-11bd77ee624c
