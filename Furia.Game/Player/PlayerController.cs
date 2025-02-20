@@ -25,10 +25,7 @@ namespace Furia.Player
         private readonly EventReceiver<Vector3> moveDirectionEvent = new EventReceiver<Vector3>(PlayerInput.MoveDirectionEventKey);
 
         [Display("WeaponInventory")]
-        public List<EntityComponent> Weapons = [];
-        public int currentWeaponSelected = 0;
-        public WeaponScript weaponScript;
-        public AnimationController animationController;
+        
         public override void Start()
         {
             base.Start();
@@ -44,7 +41,6 @@ namespace Furia.Player
         public override void Update()
         {
             Move();
-            WeaponInventoryManagement();
         }
 
         private void Move()
@@ -57,47 +53,6 @@ namespace Furia.Player
 
             // Broadcast normalized speed
             RunSpeedEventKey.Broadcast(moveDirection.Length());
-        }
-
-        private void WeaponInventoryManagement()
-        {
-            if (Input.IsKeyPressed(Keys.NumPad1))
-            {
-                WeaponChange(0);
-            }
-            else if (Input.IsKeyPressed(Keys.NumPad2))
-            {
-                WeaponChange(1);
-            }
-        }
-
-        private void WeaponChange (int index)
-        {
-            foreach (var weapon in Weapons)
-            {
-                weapon.Entity.Get<SpriteComponent>().Enabled = false;
-            }
-
-            Weapons[index].Entity.Get<SpriteComponent>().Enabled = true;
-
-            WeaponStats currentWeaponStats = Weapons[index].Entity.Get<WeaponStats>();
-
-            //Homologate stats
-            weaponScript.weaponID = currentWeaponStats.weaponID;
-            weaponScript.MaxShootDistance = currentWeaponStats.MaxShootDistance;
-            weaponScript.ShootImpulse = currentWeaponStats.ShootImpulse;
-            weaponScript.Cooldown = currentWeaponStats.Cooldown;
-            weaponScript.ReloadCooldown = currentWeaponStats.ReloadCooldown;
-            weaponScript.remainingBullets = currentWeaponStats.remainingBullets;
-            weaponScript.maxBullets = currentWeaponStats.maxBullets;
-            weaponScript.infiniteBullets = currentWeaponStats.infiniteBullets;
-            weaponScript.damage = currentWeaponStats.damage;
-
-            //Homologate animations
-            animationController.AnimationIdle = currentWeaponStats.AnimationIdle;
-            animationController.AnimationWalk = currentWeaponStats.AnimationWalk;
-            animationController.AnimationShoot = currentWeaponStats.AnimationShoot;
-            animationController.AnimationReload = currentWeaponStats.AnimationReload;
         }
     }
 }

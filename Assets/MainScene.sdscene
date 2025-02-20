@@ -1193,6 +1193,7 @@ Hierarchy:
                         Children:
                             321d321c570d3e43a2a274d71d7258f5: ref!! 6bc66465-ffa3-4964-8771-d87e425126ba
                             3874058b00661242806d2e3f4afd55c1: ref!! 2342f015-607f-4540-95bb-31e44a7c8c05
+                            e5e79fa28710d1a0fbee299139591e64: ref!! 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
                     efd695c8917b8a42a02ea11321380575: !ModelComponent
                         Id: 4d4483f2-1359-44a9-94d6-98c0fa62f0c4
                         Enabled: false
@@ -1645,19 +1646,15 @@ Hierarchy:
                     29bf67bb33a382bf8f8795ff331f5fa8: !Furia.Stats.WeaponStats,Furia.Game
                         Id: 6dbd04ae-0bcf-4b17-8bd9-5cfc4554f374
                         weaponID: 0
-                        remainingBullets: 0
+                        MaxShootDistance: 100.0
+                        ShootImpulse: 5.0
+                        Cooldown: 0.15
+                        ReloadCooldown: 2.0
+                        RemainingBullets: null
+                        remainingBullets: 30
                         maxBullets: 30
                         infiniteBullets: false
                         damage: 50.0
-                        MaxShootDistance: 100.0
-                        ShootImpulse: 5.0
-                        Cooldown: 0.3
-                        ReloadCooldown: 2.0
-                        RemainingBullets: null
-                        AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
-                        AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
-                        AnimationShoot: 1f65e631-c4d4-4e29-8bff-0319912d809a:Animations/shoot_BaseAnimation
-                        AnimationReload: 14db24fc-1f2c-424e-98ea-bea136e6bad4:Animations/Gun_Reload-Derived
         -   Entity:
                 Id: 2e093758-c61d-484d-b4f1-e2cfe8d938a4
                 Name: Wall0x2x5
@@ -2769,7 +2766,7 @@ Hierarchy:
         -   Folder: null
             Entity:
                 Id: 51f5cc03-985b-4127-b390-5fafb5c2e086
-                Name: Melee
+                Name: MeleeWeapons
                 Components:
                     1fe64d64198b4543bfc6b549158775e4: !TransformComponent
                         Id: b87b1df3-79de-40b5-8183-ad310689e9ec
@@ -4982,20 +4979,16 @@ Hierarchy:
                         Children: {}
                     dbc68ae0f1b081558d041afc8e553ab2: !Furia.Stats.WeaponStats,Furia.Game
                         Id: 7ecdfae8-ec41-48b7-a4f3-e747c92b4d00
-                        weaponID: 0
-                        remainingBullets: 0
-                        maxBullets: 30
-                        infiniteBullets: false
-                        damage: 50.0
-                        MaxShootDistance: 100.0
+                        weaponID: 1
+                        MaxShootDistance: 2.0
                         ShootImpulse: 5.0
-                        Cooldown: 0.3
+                        Cooldown: 1.5
                         ReloadCooldown: 2.0
                         RemainingBullets: null
-                        AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
-                        AnimationWalk: 0fa438c8-e536-4a3b-8061-ac1df55d3f09:Animations/Gun_Run
-                        AnimationShoot: 5aa23db3-f97f-4126-90a8-891a30c23c06:Animations/MeleeAttack_Armature_Armature_Armature_ArmatureAction
-                        AnimationReload: 14db24fc-1f2c-424e-98ea-bea136e6bad4:Animations/Gun_Reload-Derived
+                        remainingBullets: 30
+                        maxBullets: 30
+                        infiniteBullets: true
+                        damage: 50.0
                     54b7fb5c205118f6e6a0833693fe2673: !SpriteComponent
                         Id: 21664524-5603-4409-b75c-1aceb3f559d6
                         SpriteProvider: !SpriteFromTexture
@@ -5097,10 +5090,6 @@ Hierarchy:
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     10565f1955d8ff15323fc3307bd47d8f: !Furia.Player.PlayerController,Furia.Game
                         Id: a1231a3f-667e-48d8-9193-aa2eca6779e1
-                        Weapons: {}
-                        currentWeaponSelected: 0
-                        weaponScript: ref!! cc66f4e3-fab7-4e4a-816d-3113bb7c953a
-                        animationController: ref!! 7d5c3571-a4ab-4bf0-8dc4-bb2c21b9cac6
                         MaxRunSpeed: 9.0
                     b0f70abfbb3bef46e49e637e9cf6577d: !Furia.Player.PlayerInput,Furia.Game
                         Id: c43fea5c-5e1b-401c-8659-11bd77ee624c
@@ -5126,7 +5115,12 @@ Hierarchy:
                     47bfb80a492da99f3dbe2ddda7af4061: !Furia.Player.WeaponManager,Furia.Game
                         Id: 5e21fbeb-2870-43b0-af8a-add508396fd3
                         enableFlashLight: true
+                        Weapons:
+                            9b3338ae1e011b0da84ef62733e2795d: ref!! 02ea0b9e-c889-4d4b-847b-7c0b11621380
+                            33f162407a0587037face95801ec47c7: ref!! 21664524-5603-4409-b75c-1aceb3f559d6
                         flashLight: ref!! faebfdd0-7bb2-4ebb-b19c-c80be1118a4f
+                        currentWeaponSelected: 0
+                        weaponScript: ref!! cc66f4e3-fab7-4e4a-816d-3113bb7c953a
                     a5ea38bd27cc62c44d3413fb9adfaedd: !SpriteComponent
                         Id: 20496efa-ca7c-4277-a635-2aa53310ba92
                         SpriteProvider: !SpriteFromSheet
@@ -5957,7 +5951,6 @@ Hierarchy:
                             321d321c570d3e43a2a274d71d7258f5: ref!! 1c321d32-0d57-433e-a2a2-74d71d7258f5
                             3deeaceca785fb99fa541a4fc233f1de: ref!! 5158b221-f5ab-4b02-bfa1-5f814cd59a2d
                             561dc7a76fe06e2690407548d45fc5c3: ref!! bee5cfed-c6a9-40d6-936f-7223457ab3c1
-                            8f9d48979541eb9ab039fb5da2ef3976: ref!! 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
                     efd695c8917b8a42a02ea11321380575: !ModelComponent
                         Id: c895d6ef-7b91-428a-a02e-a11321380575
                         Enabled: false
@@ -5981,7 +5974,7 @@ Hierarchy:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! e1809313-9a0b-4a4b-b650-289c06fbd802
         -   Entity:
                 Id: b1c994b5-3745-4e14-84b3-543f53faa09d
-                Name: Hands
+                Name: DistanceWeapons
                 Components:
                     1fe64d64198b4543bfc6b549158775e4: !TransformComponent
                         Id: 644de61f-8b19-4345-bfc6-b549158775e4

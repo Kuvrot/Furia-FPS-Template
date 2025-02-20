@@ -13,21 +13,15 @@ namespace Furia.Stats
     public class WeaponStats : SyncScript
     {
         public int weaponID = 0;
-        public float MaxShootDistance { get; set; } = 100f;
-        public float ShootImpulse { get; set; } = 5f;
-        public float Cooldown { get; set; } = 0.3f;
-        public float ReloadCooldown { get; set; } = 2.0f;
-        public SpriteComponent RemainingBullets { get; set; }
+        public float MaxShootDistance = 100f;
+        public float ShootImpulse = 5f;
+        public float Cooldown = 0.3f;
+        public float ReloadCooldown = 2.0f;
+        public SpriteComponent RemainingBullets;
         public int remainingBullets = 0;
         public int maxBullets = 30;
         public bool infiniteBullets = false;
         public float damage = 50;
-
-
-        public AnimationClip AnimationIdle { get; set; }
-        public AnimationClip AnimationWalk { get; set; }
-        public AnimationClip AnimationShoot { get; set; }
-        public AnimationClip AnimationReload { get; set; }
 
         public override void Start()
         {
