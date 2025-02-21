@@ -17,7 +17,7 @@ Furia makes developing a retro FPS game easier by providing a stable and flexibl
 - [x] Inventory system
 - [ ] Simple AI system
 - [ ] Damage system
-- [ ] Animate AI sprites
+- [x] Animate AI sprites
 - [ ] AI patroling system
 - [ ] Separate into different kinds of enemies.
 - [ ] Neutral NPCs
