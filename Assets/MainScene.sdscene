@@ -3732,7 +3732,7 @@ Hierarchy:
                         Id: c0939c05-2af7-48a2-9fbe-2b8bba3593f0
                         Position: {X: -16.664177, Y: 0.8861982, Z: 0.6957699}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.7549675, Z: 0.408889}
+                        Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
                         Children:
                             1efcc68f74ecdc145314f92306e40ec7: ref!! 4ee8643b-714b-428c-b0a3-1e29a8db11b3
                     4821840a198b8a60303039b66d559f06: !ModelComponent
@@ -3740,6 +3740,9 @@ Hierarchy:
                         Enabled: false
                         Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
                         Materials: {}
+                    ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
+                        Id: d355976d-c683-4651-a942-54bae01eb33f
+                        target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
         -   Entity:
                 Id: 671b5ed3-76eb-4364-8ca2-198658b71b7c
                 Name: Wall0x2x5
