@@ -40,6 +40,7 @@ Hierarchy:
         - ref!! 25bc5b70-bc98-4f51-b245-56c77af74122
         - ref!! 0ceaf263-3374-437f-9232-ef205569f93d
         - ref!! 796c9d1e-0c4b-4304-a04b-83aceec725b5
+        - ref!! 644eeab8-2696-4cd4-a2dc-82284d9ede70
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -1320,6 +1321,35 @@ Hierarchy:
                 BasePartAsset: 3c52f7bb-30ff-4597-9d1f-eaae6884e1cd:BlocksPrefabs/GridBase10x10
                 BasePartId: b045349c-565e-4488-9130-a795b0e3b229
                 InstanceId: 8bf40e7b-f9a4-4de2-b6e1-53930ab7f97a
+        -   Entity:
+                Id: 26970c6b-71d9-4106-adf2-e99af12e55ff
+                Name: SpriteSheet
+                Components:
+                    cd63069ae84d76618915677691db0294: !TransformComponent
+                        Id: 4ee8643b-714b-428c-b0a3-1e29a8db11b3
+                        Position: {X: 0.0, Y: 0.01011852, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.8274503, Y: 1.8274503, Z: 1.8274503}
+                        Children: {}
+                    1d9f8ea7bc070c56316272276a6001c7: !SpriteComponent
+                        Id: 1be4185a-acd5-4620-8049-de1b4bc024a3
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6a93dc12-904d-47fc-8079-c2ebd480fd99:DefaultResources/Enemies/SpriteSheet
+                            CurrentFrame: 8
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+                    122d9396dee9b26239ed286fbc23b4ed: !Furia.NPC.Animation.Npc2dAnimationController,Furia.Game
+                        Id: 09a73b29-5ffd-41cc-9a9a-a370520f9a9c
+                        animationSpeed: 12
+                        idleStartFrame: 8
+                        idleEndFrame: 8
+                        attackStartFrame: 9
+                        attackEndFrame: 10
+                        walkStartFrame: 4
+                        walkEndFrame: 7
+                        deathStartFrame: 0
+                        deathEndFrame: 3
+                        animationState: 1
         -   Entity:
                 Id: 26d39e57-b138-4e6c-ad0e-b11495655057
                 Name: Wall0x2x5Window
@@ -3694,6 +3724,22 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             cfce75d38d66e24fae426d1f40aa4f8a: ref!! 4114d3a2-80bf-4535-8775-0f56edf13110
+        -   Entity:
+                Id: 644eeab8-2696-4cd4-a2dc-82284d9ede70
+                Name: Enemy
+                Components:
+                    3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
+                        Id: c0939c05-2af7-48a2-9fbe-2b8bba3593f0
+                        Position: {X: -16.664177, Y: 0.8861982, Z: 0.6957699}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.7549675, Z: 0.408889}
+                        Children:
+                            1efcc68f74ecdc145314f92306e40ec7: ref!! 4ee8643b-714b-428c-b0a3-1e29a8db11b3
+                    4821840a198b8a60303039b66d559f06: !ModelComponent
+                        Id: 8e62e439-fb48-41a2-8eb3-53dcf7ce6443
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
         -   Entity:
                 Id: 671b5ed3-76eb-4364-8ca2-198658b71b7c
                 Name: Wall0x2x5

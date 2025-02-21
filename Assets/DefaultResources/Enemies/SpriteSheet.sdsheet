@@ -1,0 +1,85 @@
+!SpriteSheet
+Id: 6a93dc12-904d-47fc-8079-c2ebd480fd99
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Packing: {}
+Sprites:
+    7acef514a36b404920cf303ae77a242f:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBJ0.png
+        Name: ZOMBJ0
+        TextureRegion: {X: 50, Y: 18, Width: 49, Height: 58}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    498a831a4c08a857f83c5e4a6bfc9c98:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBK0.png
+        Name: ZOMBK0
+        TextureRegion: {X: 50, Y: 18, Width: 49, Height: 58}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    21364f8c9999779a36fce9a18c97f52c:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBL0.png
+        Name: ZOMBL0
+        TextureRegion: {X: 50, Y: 18, Width: 49, Height: 58}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    8f2e87ed7b6c76690401e6605fb9e267:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBM0.png
+        Name: ZOMBM0
+        TextureRegion: {X: 50, Y: 18, Width: 49, Height: 58}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    0b778b4986c5561a356f1913d7319755:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBA1.png
+        Name: ZOMBA1
+        TextureRegion: {X: 0, Y: 0, Width: 33, Height: 57}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    73c20e1165b8a5630ce60e3ba9dd6d53:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBB1.png
+        Name: ZOMBB1
+        TextureRegion: {X: 0, Y: 0, Width: 35, Height: 61}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    271ebfd279e7b2aef356743340e4b831:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBC1.png
+        Name: ZOMBC1
+        TextureRegion: {X: 0, Y: 0, Width: 32, Height: 57}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    c7e4245ce1626fa498fb0e1931b22a64:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBD1.png
+        Name: ZOMBD1
+        TextureRegion: {X: 0, Y: 0, Width: 35, Height: 61}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    9686de34da40e22a48dcf454c6622771:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBG1.png
+        Name: ZOMBG1
+        TextureRegion: {X: 0, Y: 0, Width: 25, Height: 57}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    7fa48266ca6b727d1c89aded3a141a2f:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBH1.png
+        Name: ZOMBH1
+        TextureRegion: {X: 0, Y: 0, Width: 49, Height: 58}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    c704951250bcca3d8325cf914cf63af7:
+        Source: !file ../../../Resources/DefaultResources/Enemies/ZOMBE1.png
+        Name: ZOMBE1
+        TextureRegion: {X: 0, Y: 0, Width: 54, Height: 68}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

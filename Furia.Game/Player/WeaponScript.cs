@@ -20,7 +20,7 @@ namespace Furia.Player
 
     public class WeaponScript : SyncScript
     {
-        public int weaponID = 0;
+        public byte weaponID = 0;
 
         public static readonly EventKey<WeaponFiredResult> WeaponFired = new EventKey<WeaponFiredResult>();
 

@@ -12,7 +12,7 @@ namespace Furia.Stats
 {
     public class WeaponStats : SyncScript
     {
-        public int weaponID = 0;
+        public byte weaponID = 0;
         public float MaxShootDistance = 100f;
         public float ShootImpulse = 5f;
         public float Cooldown = 0.3f;

@@ -15,12 +15,12 @@ namespace Furia.Player
         public bool enableFlashLight = true;
         public List<SpriteComponent> Weapons = [];
         public LightComponent flashLight;
-        public int currentWeaponSelected = 0;
+        public byte currentWeaponSelected = 0;
         public WeaponScript weaponScript;
 
         public override void Start()
         {
-            // Initialization of the script.
+            WeaponChange(currentWeaponSelected);
         }
 
         public override void Update()
@@ -47,6 +47,11 @@ namespace Furia.Player
 
         private void WeaponChange(int index)
         {
+            if (Weapons.Count == 0)
+            {
+                return;
+            }
+
             foreach (var weapon in Weapons)
             {
                 weapon.Enabled = false;
