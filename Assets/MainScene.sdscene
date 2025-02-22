@@ -1349,7 +1349,7 @@ Hierarchy:
                         walkEndFrame: 7
                         deathStartFrame: 0
                         deathEndFrame: 3
-                        hitStartFrame: 10
+                        hitStartFrame: 8
                         hitEndFrame: 10
                         animationState: 1
         -   Entity:
@@ -3729,7 +3729,7 @@ Hierarchy:
                 Components:
                     3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
                         Id: c0939c05-2af7-48a2-9fbe-2b8bba3593f0
-                        Position: {X: -16.664177, Y: 0.8861982, Z: 0.6957699}
+                        Position: {X: -16.664177, Y: 0.9554226, Z: 0.7943138}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
                         Children:
@@ -3742,32 +3742,29 @@ Hierarchy:
                     ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
                         Id: d355976d-c683-4651-a942-54bae01eb33f
                         target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
+                        stoppingDistance: 1.5
+                        animationController: null
                     5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
                         Id: 46141b95-9433-4b8e-92a5-04544c39abca
                         npcName: (optional)
                         health: 100.0
                         movementSpeed: 10.0
                         damage: 50.0
-                    59064fad40e0c4aa19e6c4e3b4b1f5bd: !RigidbodyComponent
-                        Id: 4dfecf77-4469-4671-9363-3b400ceb62af
+                    dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
+                        Id: 217f4a5c-93c4-4932-9223-b50b5dae7a3b
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
                         RollingFriction: 0.0
                         CcdMotionThreshold: 0.0
                         CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        IsKinematic: true
-                        Mass: 1.0
-                        LinearDamping: 0.0
-                        AngularDamping: 0.0
-                        OverrideGravity: false
-                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
-                        NodeName: null
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
                         ColliderShapes:
-                            2691bfb21036922bb854dbd184184e6f: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                            d5e0ab8d9594be3406296630e8a16603: !CapsuleColliderShapeDesc
+                                Length: 0.75
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:

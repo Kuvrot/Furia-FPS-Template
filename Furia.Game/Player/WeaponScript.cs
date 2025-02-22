@@ -2,6 +2,7 @@
 // Distributed under the MIT license. See the LICENSE.md file in the project root for more information.
 using System;
 using System.Threading.Tasks;
+using Furia.NPC.Stats;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Engine.Events;
@@ -138,7 +139,7 @@ namespace Furia.Player
             if (!didShoot)
                 return;
 
-            // If the current weapon is melee, don't reduce bullets.
+            // If the current weapon is melee, don't reduce the bullets.
             if (!weaponManager.currentWeaponStats.isMelee)
             {
                 weaponManager.currentWeaponStats.remainingBullets--;
@@ -161,6 +162,7 @@ namespace Furia.Player
                 var rigidBody = result.Collider as RigidbodyComponent;
                 if (rigidBody != null)
                 {
+                    rigidBody.Entity.Get<NpcStats>().GetHit(100);
                     rigidBody.Activate();
                     rigidBody.ApplyImpulse(forward * ShootImpulse);
                     rigidBody.ApplyTorqueImpulse(forward * ShootImpulse + new Vector3(0, 1, 0));

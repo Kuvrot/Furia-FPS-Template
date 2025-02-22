@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
+using Stride.Physics;
+using Furia.NPC.Animation;
 
 namespace Furia.NPC.Controller
 {
@@ -13,16 +15,21 @@ namespace Furia.NPC.Controller
     {
         // Declared public member fields and properties will show in the game studio
         public TransformComponent target;
+        public float stoppingDistance = 3;
+        public Npc2dAnimationController animationController;
+
+        //Enemy properties
+        private bool aggresiveMode = true;
 
         public override void Start()
         {
-            // Initialization of the script.
+            animationController = Entity.GetChild(0).Get<Npc2dAnimationController>();
         }
 
         public override void Update()
         {
-            LookTarget();
-            MoveToTarget(this.target);
+            LookTarget(); 
+            EnemyAiSystem();
         }
 
         public void LookTarget()
@@ -44,7 +51,30 @@ namespace Furia.NPC.Controller
         {
             Vector3 direction = target.Position - Entity.Transform.Position;
             direction.Normalize();
-            Entity.Transform.Position += new Vector3(direction.X , 0f, direction.Z) * 2.5f * (float)this.Game.UpdateTime.Elapsed.TotalSeconds;
+            Entity.Get<CharacterComponent>().SetVelocity(new Vector3(direction.X, 0f, direction.Z) * 2.5f);
+        }
+
+        public void StopMoving()
+        {
+            Entity.Get<CharacterComponent>().SetVelocity(Vector3.Zero);
+        }
+
+        public void EnemyAiSystem ()
+        {
+           if (aggresiveMode)
+           {
+                float distance = Vector3.Distance(Entity.Transform.Position, target.Position);
+                if (distance >= stoppingDistance)
+                {
+                    MoveToTarget(this.target);
+                    animationController.PlayWalkAnimation();
+                }
+                else
+                {
+                    StopMoving();
+                    animationController.PlayAttackAnimation();
+                } 
+           }
         }
     }
 }
