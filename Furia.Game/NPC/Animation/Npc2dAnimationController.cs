@@ -20,6 +20,7 @@ namespace Furia.NPC.Animation
         public byte attackStartFrame = 0 , attackEndFrame = 0;
         public byte walkStartFrame = 0, walkEndFrame = 0;
         public byte deathStartFrame = 0, deathEndFrame = 0;
+        public byte hitStartFrame = 0, hitEndFrame = 0;
 
         private byte currentStartFrame = 0, currentEndFrame = 0;
         private float clock = 0;
@@ -31,7 +32,7 @@ namespace Furia.NPC.Animation
         1 = walk
         2 = attack 
         */
-        public sbyte animationState = 0;
+        public string animationState = "idle";
 
         //Components
         private SpriteComponent spriteComponent;
@@ -48,48 +49,40 @@ namespace Furia.NPC.Animation
 
         public override void Update()
         {
-            try
-            {
-                switch (animationState)
-                {
-                    default: PlayIdleAnimation(); break;
-                    case -1: PlayDeathAnimation(); break;
-                    case 0: PlayIdleAnimation(); break;
-                    case 1: PlayWalkAnimation(); break;
-                    case 2: PlayAttackAnimation(); break;
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.ToString());
-            }
         }
 
-        private void PlayIdleAnimation()
+        public void PlayIdleAnimation()
         {
             currentStartFrame = idleStartFrame;
             currentEndFrame = idleEndFrame;
             PlayFrames();
         }
 
-        private void PlayWalkAnimation()
+        public void PlayWalkAnimation()
         {
             currentStartFrame = walkStartFrame;
             currentEndFrame = walkEndFrame;
             PlayFrames();
         }
 
-        private void PlayAttackAnimation()
+        public void PlayAttackAnimation()
         {
             currentStartFrame = attackStartFrame;
             currentEndFrame = attackEndFrame;
             PlayFrames();
         }
 
-        private void PlayDeathAnimation() 
+        public void PlayDeathAnimation() 
         {
             currentStartFrame = deathStartFrame;
             currentEndFrame = deathEndFrame;
+            PlayFrames();
+        }
+
+        public void PlayHitAnimation()
+        {
+            currentStartFrame = hitStartFrame;
+            currentEndFrame = hitEndFrame;
             PlayFrames();
         }
 
@@ -109,12 +102,12 @@ namespace Furia.NPC.Animation
             } 
         }
 
-        public void SetAnimationState(sbyte state)
+        public void SetAnimationState(string state)
         {
             animationState = state;
         }
 
-        public sbyte GetAnimationState()
+        public string GetAnimationState()
         {
             return animationState;
         }

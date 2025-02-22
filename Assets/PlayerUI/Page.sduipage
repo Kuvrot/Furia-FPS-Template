@@ -18,6 +18,7 @@ Hierarchy:
                 MaximumWidth: 3.4028235E+38
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
+                Name: crossHair
                 Source: !SpriteFromTexture
                     Texture: 1432918f-16f4-44a1-9e42-c675f7e9ea32:Crosshair256
                     Center: {X: 0.0, Y: 0.0}
@@ -32,6 +33,28 @@ Hierarchy:
                 MaximumDepth: 3.4028235E+38
                 Children:
                     d829a6446eb0272dbab2a0963f56f073: !ImageElement ref!! 25c547d0-9eff-4416-8ef5-8dfd4e6a4be0
+                    382f1d1dc12d63be4b5dd17c653aaafc: !TextBlock ref!! c1ca2eac-4b8b-477d-a898-a9507bc23121
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
+        -   UIElement: !TextBlock
+                Id: c1ca2eac-4b8b-477d-a898-a9507bc23121
+                DependencyProperties:
+                    56944c68c318efb76c3f723bfc657b41~Panel.ZIndexPropertyKey: 0
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 238.0
+                Height: 60.0
+                HorizontalAlignment: Right
+                VerticalAlignment: Bottom
+                Margin: {}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: bulletCount
+                Text: 000/000
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 240, G: 240, B: 240, A: 255}
+                OutlineColor: {R: 0, G: 0, B: 0, A: 255}
+                OutlineThickness: 0.0
+                TextAlignment: Center

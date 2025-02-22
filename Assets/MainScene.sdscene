@@ -1349,6 +1349,8 @@ Hierarchy:
                         walkEndFrame: 7
                         deathStartFrame: 0
                         deathEndFrame: 3
+                        hitStartFrame: 0
+                        hitEndFrame: 0
                         animationState: 1
         -   Entity:
                 Id: 26d39e57-b138-4e6c-ad0e-b11495655057
@@ -1678,7 +1680,7 @@ Hierarchy:
                         weaponID: 0
                         MaxShootDistance: 100.0
                         ShootImpulse: 5.0
-                        Cooldown: 0.15
+                        Cooldown: 0.05
                         ReloadCooldown: 2.0
                         RemainingBullets: null
                         remainingBullets: 30
@@ -2242,7 +2244,7 @@ Hierarchy:
                 Components:
                     321d321c570d3e43a2a274d71d7258f5: !TransformComponent
                         Id: 1c321d32-0d57-433e-a2a2-74d71d7258f5
-                        Position: {X: -0.18516514, Y: 0.2284868, Z: -2.9845731}
+                        Position: {X: -0.18516526, Y: 0.2284868, Z: -2.3029099}
                         Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -2538,7 +2540,10 @@ Hierarchy:
                         ShootImpulse: 12.0
                         Cooldown: 1.0
                         ReloadCooldown: 2.0
-                        RemainingBullets: null
+                    53ab0c3dd31e16183a54e8e3d20aab4b: !Furia.Player.UiManager,Furia.Game
+                        Id: a98d0abd-0343-46a7-97e2-4db6d22723c7
+                        crossHair: true
+                        UI: ref!! 6d1dd95f-20af-41a9-bbad-1f48827c5edb
         -   Entity:
                 Id: 4ac16211-9c81-4929-9df1-753678c4eb02
                 Name: Wall0x2x2
@@ -3743,6 +3748,22 @@ Hierarchy:
                     ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
                         Id: d355976d-c683-4651-a942-54bae01eb33f
                         target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
+                    243d4c02317099ea3290546cd4cef332: !StaticColliderComponent
+                        Id: 9c7c4f18-c069-48c9-8892-5cc8be0a8369
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            1d0d6e45b0a88ccad92228d0facf6094: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 671b5ed3-76eb-4364-8ca2-198658b71b7c
                 Name: Wall0x2x5
@@ -4384,6 +4405,7 @@ Hierarchy:
                         Page: 659ee37e-091f-4e31-a2f3-8ccd0f43e181:PlayerUI/Page
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        RenderGroup: Group1
         -   Entity:
                 Id: 79992318-8073-4045-908a-a4342a1f75c0
                 Name: Box3x1x1
@@ -5170,11 +5192,6 @@ Hierarchy:
                         flashLight: ref!! faebfdd0-7bb2-4ebb-b19c-c80be1118a4f
                         currentWeaponSelected: 0
                         weaponScript: ref!! cc66f4e3-fab7-4e4a-816d-3113bb7c953a
-                    a5ea38bd27cc62c44d3413fb9adfaedd: !SpriteComponent
-                        Id: 20496efa-ca7c-4277-a635-2aa53310ba92
-                        SpriteProvider: !SpriteFromSheet
-                            Sheet: dbadba05-bf9a-4c71-99cc-0b4c523470fa:DefaultResources/SpriteSheet
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Entity:
                 Id: 9758b4f8-356a-4443-9a06-4001ccb9e7c4
                 Name: Wall0x2x5
@@ -5663,7 +5680,7 @@ Hierarchy:
                 Components:
                     3874058b00661242806d2e3f4afd55c1: !TransformComponent
                         Id: 2342f015-607f-4540-95bb-31e44a7c8c05
-                        Position: {X: -0.17101039, Y: 0.537055, Z: -2.3141527}
+                        Position: {X: -0.17101048, Y: 0.537055, Z: -1.77086}
                         Rotation: {X: -0.38512552, Y: 1.6653345E-16, Z: -3.366874E-08, W: 0.9228642}
                         Scale: {X: 0.04, Y: 0.04, Z: 0.04}
                         Children: {}
@@ -6065,11 +6082,6 @@ Hierarchy:
                         Page: null
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
-                    70c03714545b2eff25af5218c89e640a: !SpriteComponent
-                        Id: beb67e8e-0465-4904-a50a-7d1a6f998000
-                        SpriteProvider: !SpriteFromSheet
-                            Sheet: 5ac2be1f-7f79-47c4-a875-156219620683:DefaultResources/SpriteSheet_2
-                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
         -   Entity:
                 Id: b317a133-8ef0-427f-a966-61f6f75c687c
                 Name: Wall0x2x2Window (2)

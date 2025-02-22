@@ -39,18 +39,17 @@ namespace Furia.Player
 
         public float ReloadCooldown { get; set; } = 2.0f;
 
-        public SpriteComponent RemainingBullets { get; set; }
         public int remainingBullets = 0;
         public int maxBullets = 30;
         public bool infiniteBullets = false;
         public float damage = 0;
         public int inventoryBullets = 100;
 
-        private void UpdateBulletsLED()
+        private UiManager m_UI;
+
+        public override void Start()
         {
-            var spriteSheet = RemainingBullets?.SpriteProvider as SpriteFromSheet;
-            if (spriteSheet != null)
-                spriteSheet.CurrentFrame = remainingBullets;
+            m_UI = Entity.Get<UiManager>();
         }
 
         private void ReloadWeapon()
@@ -68,7 +67,7 @@ namespace Furia.Player
 
                 remainingBullets = maxBullets;
                 inventoryBullets -= maxBullets;
-                UpdateBulletsLED();
+                m_UI.UpdateBulletCount(remainingBullets , inventoryBullets);
             };
 
             Script.AddTask(reloadTask);
@@ -107,7 +106,7 @@ namespace Furia.Player
                 remainingBullets--;
             }
 
-            UpdateBulletsLED();
+            m_UI.UpdateBulletCount(remainingBullets , inventoryBullets);
 
             cooldownRemaining = Cooldown;
 
