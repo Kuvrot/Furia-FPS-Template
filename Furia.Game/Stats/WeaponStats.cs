@@ -20,6 +20,7 @@ namespace Furia.Stats
         public SpriteComponent RemainingBullets;
         public int remainingBullets = 0;
         public int maxBullets = 30;
+        public int inventoryBullets = 100;
         public bool infiniteBullets = false;
         public float damage = 50;
 
@@ -30,7 +31,6 @@ namespace Furia.Stats
 
         public override void Update()
         {
-            // Do stuff every new frame
         }
     }
 }

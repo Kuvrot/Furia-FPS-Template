@@ -30,26 +30,16 @@ namespace Furia.Player
 
         private readonly EventReceiver<bool> reloadEvent = new EventReceiver<bool>(PlayerInput.ReloadEventKey);
 
-        public float MaxShootDistance { get; set; } = 100f;
-
         public float ShootImpulse { get; set; } = 5f;
-
-        public float Cooldown { get; set; } = 0.3f;
-        private float cooldownRemaining = 0;
-
-        public float ReloadCooldown { get; set; } = 2.0f;
-
-        public int remainingBullets = 0;
-        public int maxBullets = 30;
-        public bool infiniteBullets = false;
-        public float damage = 0;
-        public int inventoryBullets = 100;
+        private float cooldownRemaining = 0f;
 
         private UiManager m_UI;
+        private WeaponManager weaponManager;
 
         public override void Start()
         {
             m_UI = Entity.Get<UiManager>();
+            weaponManager = Entity.GetParent().Get<WeaponManager>();
         }
 
         private void ReloadWeapon()
@@ -58,25 +48,23 @@ namespace Furia.Player
             Func<Task> reloadTask = async () =>
             {
                 // Countdown
-                var secondsCountdown = cooldownRemaining = ReloadCooldown;
+                var secondsCountdown = cooldownRemaining = weaponManager.currentWeaponStats.ReloadCooldown;
                 while (secondsCountdown > 0f)
                 {
                     await Script.NextFrame();
                     secondsCountdown -= (float) Game.UpdateTime.Elapsed.TotalSeconds;
                 }
 
-                if (inventoryBullets >= maxBullets)
+                if (weaponManager.currentWeaponStats.inventoryBullets >= weaponManager.currentWeaponStats.maxBullets)
                 {
-                    remainingBullets = maxBullets;
-                    inventoryBullets -= maxBullets;
+                    weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.maxBullets;
+                    weaponManager.currentWeaponStats.inventoryBullets -= weaponManager.currentWeaponStats.maxBullets;
                 }
                 else
                 {
-                    remainingBullets = inventoryBullets;
-                    inventoryBullets = 0;
+                    weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
+                    weaponManager.currentWeaponStats.inventoryBullets = 0;
                 }
-
-                m_UI.UpdateBulletCount(remainingBullets , inventoryBullets);
             };
 
             Script.AddTask(reloadTask);
@@ -87,6 +75,9 @@ namespace Furia.Player
         /// </summary>
         public override void Update()
         {
+            //Update UI
+            m_UI.UpdateBulletCount(weaponManager.currentWeaponStats.remainingBullets, weaponManager.currentWeaponStats.inventoryBullets);
+
             bool didShoot;
             shootEvent.TryReceive(out didShoot);
 
@@ -97,7 +88,7 @@ namespace Furia.Player
             if (cooldownRemaining > 0)
                 return; // Can't shoot yet
 
-            if ((remainingBullets <= 0 && didShoot) || (remainingBullets <= maxBullets && didReload))
+            if ((weaponManager.currentWeaponStats.remainingBullets <= 0 && didShoot) || (weaponManager.currentWeaponStats.remainingBullets <= weaponManager.currentWeaponStats.maxBullets && didReload))
             {
                 ReloadWeapon();
                 return;
@@ -107,18 +98,16 @@ namespace Furia.Player
                 return;
 
             
-            if (!infiniteBullets)
+            if (!weaponManager.currentWeaponStats.infiniteBullets)
             {
-                remainingBullets--;
+                weaponManager.currentWeaponStats.remainingBullets--;
             }
 
-            m_UI.UpdateBulletCount(remainingBullets , inventoryBullets);
-
-            cooldownRemaining = Cooldown;
+           cooldownRemaining = weaponManager.currentWeaponStats.Cooldown;
 
             var raycastStart = Entity.Transform.WorldMatrix.TranslationVector;
             var forward = Entity.Transform.WorldMatrix.Forward;
-            var raycastEnd = raycastStart + forward * MaxShootDistance;
+            var raycastEnd = raycastStart + forward * weaponManager.currentWeaponStats.MaxShootDistance;
 
             var result = this.GetSimulation().Raycast(raycastStart, raycastEnd);
 

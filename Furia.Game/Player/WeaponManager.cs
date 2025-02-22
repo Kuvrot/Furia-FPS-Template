@@ -7,6 +7,7 @@ using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 using Furia.Stats;
+using static Stride.Graphics.Buffer;
 
 namespace Furia.Player
 {
@@ -17,7 +18,7 @@ namespace Furia.Player
         public LightComponent flashLight;
         public byte currentWeaponSelected = 0;
         public WeaponScript weaponScript;
-
+        public WeaponStats currentWeaponStats;
         public override void Start()
         {
             WeaponChange(currentWeaponSelected);
@@ -27,6 +28,7 @@ namespace Furia.Player
         {
             FlashLightController();
             WeaponInventoryManagement();
+            currentWeaponStats = Weapons[currentWeaponSelected].Entity.Get<WeaponStats>();
         }
 
         private void WeaponInventoryManagement()
@@ -58,19 +60,6 @@ namespace Furia.Player
             }
 
             Weapons[index].Enabled = true;
-
-            WeaponStats currentWeaponStats = Weapons[index].Entity.Get<WeaponStats>();
-
-            //Homologate stats
-            weaponScript.weaponID = currentWeaponStats.weaponID;
-            weaponScript.MaxShootDistance = currentWeaponStats.MaxShootDistance;
-            weaponScript.ShootImpulse = currentWeaponStats.ShootImpulse;
-            weaponScript.Cooldown = currentWeaponStats.Cooldown;
-            weaponScript.ReloadCooldown = currentWeaponStats.ReloadCooldown;
-            weaponScript.remainingBullets = currentWeaponStats.remainingBullets;
-            weaponScript.maxBullets = currentWeaponStats.maxBullets;
-            weaponScript.infiniteBullets = currentWeaponStats.infiniteBullets;
-            weaponScript.damage = currentWeaponStats.damage;
         }
 
         private void FlashLightController ()

@@ -1349,8 +1349,8 @@ Hierarchy:
                         walkEndFrame: 7
                         deathStartFrame: 0
                         deathEndFrame: 3
-                        hitStartFrame: 0
-                        hitEndFrame: 0
+                        hitStartFrame: 10
+                        hitEndFrame: 10
                         animationState: 1
         -   Entity:
                 Id: 26d39e57-b138-4e6c-ad0e-b11495655057
@@ -1671,7 +1671,6 @@ Hierarchy:
                         Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
-                            CurrentFrame: 2
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
                         RenderGroup: Group1
@@ -1685,6 +1684,7 @@ Hierarchy:
                         RemainingBullets: null
                         remainingBullets: 30
                         maxBullets: 30
+                        inventoryBullets: 100
                         infiniteBullets: false
                         damage: 50.0
         -   Entity:
@@ -2531,15 +2531,7 @@ Hierarchy:
                     e1db890dd260e557c115013d78ecec94: !Furia.Player.WeaponScript,Furia.Game
                         Id: cc66f4e3-fab7-4e4a-816d-3113bb7c953a
                         weaponID: 0
-                        remainingBullets: 9
-                        maxBullets: 30
-                        infiniteBullets: false
-                        damage: 0.0
-                        inventoryBullets: 70
-                        MaxShootDistance: 50.0
                         ShootImpulse: 12.0
-                        Cooldown: 1.0
-                        ReloadCooldown: 2.0
                     53ab0c3dd31e16183a54e8e3d20aab4b: !Furia.Player.UiManager,Furia.Game
                         Id: a98d0abd-0343-46a7-97e2-4db6d22723c7
                         crossHair: true
@@ -5058,6 +5050,7 @@ Hierarchy:
                         RemainingBullets: null
                         remainingBullets: 30
                         maxBullets: 30
+                        inventoryBullets: 100
                         infiniteBullets: true
                         damage: 50.0
                     54b7fb5c205118f6e6a0833693fe2673: !SpriteComponent
@@ -5192,6 +5185,7 @@ Hierarchy:
                         flashLight: ref!! faebfdd0-7bb2-4ebb-b19c-c80be1118a4f
                         currentWeaponSelected: 0
                         weaponScript: ref!! cc66f4e3-fab7-4e4a-816d-3113bb7c953a
+                        currentWeaponStats: null
         -   Entity:
                 Id: 9758b4f8-356a-4443-9a06-4001ccb9e7c4
                 Name: Wall0x2x5
