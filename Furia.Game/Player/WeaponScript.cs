@@ -139,7 +139,7 @@ namespace Furia.Player
                 return;
 
             // If the current weapon is melee, don't reduce bullets.
-            if (weaponManager.currentWeaponStats.isMelee)
+            if (!weaponManager.currentWeaponStats.isMelee)
             {
                 weaponManager.currentWeaponStats.remainingBullets--;
             }

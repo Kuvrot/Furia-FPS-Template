@@ -1685,7 +1685,8 @@ Hierarchy:
                         remainingBullets: 30
                         maxBullets: 30
                         inventoryBullets: 100
-                        infiniteBullets: false
+                        infiniteAmmo: false
+                        isMelee: false
                         damage: 50.0
         -   Entity:
                 Id: 2e093758-c61d-484d-b4f1-e2cfe8d938a4
@@ -5052,7 +5053,8 @@ Hierarchy:
                         remainingBullets: 30
                         maxBullets: 30
                         inventoryBullets: 100
-                        infiniteBullets: true
+                        infiniteAmmo: false
+                        isMelee: true
                         damage: 50.0
                     54b7fb5c205118f6e6a0833693fe2673: !SpriteComponent
                         Id: 21664524-5603-4409-b75c-1aceb3f559d6
