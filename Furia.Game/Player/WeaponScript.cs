@@ -89,9 +89,12 @@ namespace Furia.Player
                 return; // Can't shoot yet
 
             if ((weaponManager.currentWeaponStats.remainingBullets <= 0 && didShoot) || (weaponManager.currentWeaponStats.remainingBullets <= weaponManager.currentWeaponStats.maxBullets && didReload))
-            {
-                ReloadWeapon();
-                return;
+            { 
+                if (!weaponManager.currentWeaponStats.infiniteBullets)
+                {
+                    ReloadWeapon();
+                    return;
+                }
             }
 
             if (!didShoot)
