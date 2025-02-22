@@ -20,7 +20,9 @@ namespace Furia.Player
 
     public class WeaponScript : SyncScript
     {
-        public byte weaponID = 0;
+        //Management
+        public bool disableManualReload = false;
+        public bool disableRealisticReload = true; //This means that when you reload before emptying your magazine, all the bullets left in the magazine will be lost.
 
         public static readonly EventKey<WeaponFiredResult> WeaponFired = new EventKey<WeaponFiredResult>();
 
@@ -55,15 +57,33 @@ namespace Furia.Player
                     secondsCountdown -= (float) Game.UpdateTime.Elapsed.TotalSeconds;
                 }
 
-                if (weaponManager.currentWeaponStats.inventoryBullets >= weaponManager.currentWeaponStats.maxBullets)
+                if (!disableRealisticReload)
                 {
-                    weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.maxBullets;
-                    weaponManager.currentWeaponStats.inventoryBullets -= weaponManager.currentWeaponStats.maxBullets;
+                    if (weaponManager.currentWeaponStats.inventoryBullets >= weaponManager.currentWeaponStats.maxBullets)
+                    {
+                        weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.maxBullets;
+                        weaponManager.currentWeaponStats.inventoryBullets -= weaponManager.currentWeaponStats.maxBullets;
+                    }
+                    else
+                    {
+                        weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
+                        weaponManager.currentWeaponStats.inventoryBullets = 0;
+                    }
                 }
                 else
                 {
-                    weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
-                    weaponManager.currentWeaponStats.inventoryBullets = 0;
+                    int difference = weaponManager.currentWeaponStats.maxBullets - weaponManager.currentWeaponStats.remainingBullets;
+                    if (weaponManager.currentWeaponStats.inventoryBullets >= difference)
+                    {
+                        
+                        weaponManager.currentWeaponStats.remainingBullets += difference;
+                        weaponManager.currentWeaponStats.inventoryBullets -= difference;
+                    }
+                    else
+                    {
+                        weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
+                        weaponManager.currentWeaponStats.inventoryBullets = 0;
+                    }
                 }
             };
 
@@ -88,7 +108,7 @@ namespace Furia.Player
             if (cooldownRemaining > 0)
                 return; // Can't shoot yet
 
-            if ((weaponManager.currentWeaponStats.remainingBullets <= 0 && didShoot) || (weaponManager.currentWeaponStats.remainingBullets <= weaponManager.currentWeaponStats.maxBullets && didReload))
+            if ((weaponManager.currentWeaponStats.remainingBullets <= 0 && didShoot) || (weaponManager.currentWeaponStats.remainingBullets <= weaponManager.currentWeaponStats.maxBullets && didReload && !disableManualReload))
             { 
                 if (!weaponManager.currentWeaponStats.infiniteBullets)
                 {

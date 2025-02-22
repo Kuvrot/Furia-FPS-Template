@@ -2530,7 +2530,8 @@ Hierarchy:
                         InvertY: false
                     e1db890dd260e557c115013d78ecec94: !Furia.Player.WeaponScript,Furia.Game
                         Id: cc66f4e3-fab7-4e4a-816d-3113bb7c953a
-                        weaponID: 0
+                        disableManualReload: false
+                        disableRealisticReload: true
                         ShootImpulse: 12.0
                     53ab0c3dd31e16183a54e8e3d20aab4b: !Furia.Player.UiManager,Furia.Game
                         Id: a98d0abd-0343-46a7-97e2-4db6d22723c7
