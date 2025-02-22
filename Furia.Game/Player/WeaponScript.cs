@@ -65,8 +65,17 @@ namespace Furia.Player
                     secondsCountdown -= (float) Game.UpdateTime.Elapsed.TotalSeconds;
                 }
 
-                remainingBullets = maxBullets;
-                inventoryBullets -= maxBullets;
+                if (inventoryBullets >= maxBullets)
+                {
+                    remainingBullets = maxBullets;
+                    inventoryBullets -= maxBullets;
+                }
+                else
+                {
+                    remainingBullets = inventoryBullets;
+                    inventoryBullets = 0;
+                }
+
                 m_UI.UpdateBulletCount(remainingBullets , inventoryBullets);
             };
 
@@ -88,13 +97,10 @@ namespace Furia.Player
             if (cooldownRemaining > 0)
                 return; // Can't shoot yet
 
-            if ((remainingBullets == 0 && didShoot) || (remainingBullets <= maxBullets && didReload))
+            if ((remainingBullets <= 0 && didShoot) || (remainingBullets <= maxBullets && didReload))
             {
-                if (inventoryBullets >= maxBullets - remainingBullets)
-                {
-                    ReloadWeapon();
-                    return;
-                }
+                ReloadWeapon();
+                return;
             }
 
             if (!didShoot)
