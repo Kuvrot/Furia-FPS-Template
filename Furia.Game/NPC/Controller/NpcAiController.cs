@@ -22,6 +22,7 @@ namespace Furia.NPC.Controller
         public override void Update()
         {
             LookTarget();
+            MoveToTarget(this.target);
         }
 
         public void LookTarget()
@@ -37,6 +38,13 @@ namespace Furia.NPC.Controller
             float altitude = (float)Math.Atan2(dist.Y, Math.Sqrt(dist.X * dist.X + dist.Z * dist.Z));
             float azimuth = (float)Math.Atan2(dist.X, dist.Z);
             return new Vector2(altitude, azimuth);
+        }
+
+        public void MoveToTarget(TransformComponent target)
+        {
+            Vector3 direction = target.Position - Entity.Transform.Position;
+            direction.Normalize();
+            Entity.Transform.Position += new Vector3(direction.X , 0f, direction.Z) * 2.5f * (float)this.Game.UpdateTime.Elapsed.TotalSeconds;
         }
     }
 }
