@@ -21,7 +21,8 @@ namespace Furia.Stats
         public int remainingBullets = 0;
         public int maxBullets = 30;
         public int inventoryBullets = 100;
-        public bool infiniteBullets = false;
+        public bool infiniteAmmo = false;
+        public bool isMelee = false;
         public float damage = 50;
 
         public override void Start()

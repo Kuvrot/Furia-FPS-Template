@@ -57,37 +57,54 @@ namespace Furia.Player
                     secondsCountdown -= (float) Game.UpdateTime.Elapsed.TotalSeconds;
                 }
 
-                if (!disableRealisticReload)
+                if (weaponManager.currentWeaponStats.infiniteAmmo)
                 {
-                    if (weaponManager.currentWeaponStats.inventoryBullets >= weaponManager.currentWeaponStats.maxBullets)
-                    {
-                        weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.maxBullets;
-                        weaponManager.currentWeaponStats.inventoryBullets -= weaponManager.currentWeaponStats.maxBullets;
-                    }
-                    else
-                    {
-                        weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
-                        weaponManager.currentWeaponStats.inventoryBullets = 0;
-                    }
+                    weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.maxBullets;
                 }
                 else
                 {
-                    int difference = weaponManager.currentWeaponStats.maxBullets - weaponManager.currentWeaponStats.remainingBullets;
-                    if (weaponManager.currentWeaponStats.inventoryBullets >= difference)
+                    // if the realistic reloading is disabled or not
+                    if (!disableRealisticReload)
                     {
-                        
-                        weaponManager.currentWeaponStats.remainingBullets += difference;
-                        weaponManager.currentWeaponStats.inventoryBullets -= difference;
+                        RealisticReload();
                     }
                     else
                     {
-                        weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
-                        weaponManager.currentWeaponStats.inventoryBullets = 0;
+                        VideoGameReload();
                     }
-                }
+                }                
             };
 
             Script.AddTask(reloadTask);
+        }
+
+        private void RealisticReload()
+        {
+            if (weaponManager.currentWeaponStats.inventoryBullets >= weaponManager.currentWeaponStats.maxBullets)
+            {
+                weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.maxBullets;
+                weaponManager.currentWeaponStats.inventoryBullets -= weaponManager.currentWeaponStats.maxBullets;
+            }
+            else
+            {
+                weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
+                weaponManager.currentWeaponStats.inventoryBullets = 0;
+            }
+        }
+
+        private void VideoGameReload()
+        {
+            int difference = weaponManager.currentWeaponStats.maxBullets - weaponManager.currentWeaponStats.remainingBullets;
+            if (weaponManager.currentWeaponStats.inventoryBullets >= difference)
+            {
+                weaponManager.currentWeaponStats.remainingBullets += difference;
+                weaponManager.currentWeaponStats.inventoryBullets -= difference;
+            }
+            else
+            {
+                weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
+                weaponManager.currentWeaponStats.inventoryBullets = 0;
+            }
         }
 
         /// <summary>
@@ -110,7 +127,8 @@ namespace Furia.Player
 
             if ((weaponManager.currentWeaponStats.remainingBullets <= 0 && didShoot) || (weaponManager.currentWeaponStats.remainingBullets <= weaponManager.currentWeaponStats.maxBullets && didReload && !disableManualReload))
             { 
-                if (!weaponManager.currentWeaponStats.infiniteBullets)
+                //Only reload if the weapon is not melee
+                if (!weaponManager.currentWeaponStats.isMelee)
                 {
                     ReloadWeapon();
                     return;
@@ -120,8 +138,8 @@ namespace Furia.Player
             if (!didShoot)
                 return;
 
-            
-            if (!weaponManager.currentWeaponStats.infiniteBullets)
+            // If the current weapon is melee, don't reduce bullets.
+            if (weaponManager.currentWeaponStats.isMelee)
             {
                 weaponManager.currentWeaponStats.remainingBullets--;
             }
