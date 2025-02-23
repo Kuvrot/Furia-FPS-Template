@@ -9,25 +9,33 @@ using Stride.Engine;
 using Stride.Physics;
 using Furia.NPC.Animation;
 using Furia.NPC.Stats;
+using Furia.Core;
+using Furia.Player;
 
 namespace Furia.NPC.Controller
 {
     public class NpcAiController : SyncScript
     {
         // Declared public member fields and properties will show in the game studio
-        public TransformComponent target;
+        private TransformComponent target;
         public float stoppingDistance = 3;
         
+        //Components
         private NpcStats stats;
         private Npc2dAnimationController animationController;
+        private CharacterComponent characterComponent;
 
         //Enemy properties
         private bool aggresiveMode = true;
+
+        private float clock = 0;
 
         public override void Start()
         {
             animationController = Entity.GetChild(0).Get<Npc2dAnimationController>();
             stats = Entity.Get<NpcStats>();
+            target = GameManager.instance.player;
+            characterComponent = Entity.Get<CharacterComponent>();
         }
 
         public override void Update()
@@ -63,12 +71,12 @@ namespace Furia.NPC.Controller
         {
             Vector3 direction = target.Position - Entity.Transform.Position;
             direction.Normalize();
-            Entity.Get<CharacterComponent>().SetVelocity(new Vector3(direction.X, 0f, direction.Z) * 2.5f);
+            characterComponent.SetVelocity(new Vector3(direction.X, 0f, direction.Z) * 2.5f);
         }
 
         public void StopMoving()
         {
-            Entity.Get<CharacterComponent>().SetVelocity(Vector3.Zero);
+            characterComponent.SetVelocity(Vector3.Zero);
         }
 
         public void KillNpc()
@@ -90,9 +98,27 @@ namespace Furia.NPC.Controller
                 else
                 {
                     StopMoving();
-                    animationController.PlayAttackAnimation();
+                    if (Counter())
+                    {
+                        animationController.PlayAttackAnimation();
+                        GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                    }
                 } 
            }
+        }
+
+
+        private bool Counter()
+        {
+            if (clock >= stats.attackRate)
+            {
+                clock = 0;
+                return true;
+            }
+
+            clock += 1 * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+            return false;
         }
     }
 }

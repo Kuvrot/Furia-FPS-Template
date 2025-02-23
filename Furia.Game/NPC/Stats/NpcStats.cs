@@ -18,7 +18,8 @@ namespace Furia.NPC.Stats
         public float health = 100;
 
         public float movementSpeed = 2.5f;
-        public float damage = 50;
+        public float damage = 10;
+        public float attackRate = 1f; //In seconds
 
         //Components
         private Npc2dAnimationController animationController;
@@ -36,7 +37,6 @@ namespace Furia.NPC.Stats
         public void GetHit (float damageAmount)
         {
             health -= damageAmount;
-            //animationController.PlayHitAnimation();
         }
     }
 }

@@ -35,5 +35,11 @@ namespace Furia.Player
                 BulletCount.Text = currentBullets.ToString() + "/" + inventoryBullets.ToString();
             }
         }
+
+        public void UpdateHealthBar(float health)
+        {
+            Slider healthBar = Page.RootElement.FindName("healthBar") as Slider;
+            healthBar.Value = health;
+        }
     }
 }

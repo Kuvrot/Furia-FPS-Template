@@ -43,6 +43,7 @@ Hierarchy:
         - ref!! 644eeab8-2696-4cd4-a2dc-82284d9ede70
         - ref!! 793393e1-f443-46a4-8a54-d0fd5f1b7c02
         - ref!! 94c38d2f-352b-4953-bc2c-426860500732
+        - ref!! 841d9fd9-a633-4f4d-a313-2495571dc48b
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -2253,7 +2254,7 @@ Hierarchy:
                 Components:
                     321d321c570d3e43a2a274d71d7258f5: !TransformComponent
                         Id: 1c321d32-0d57-433e-a2a2-74d71d7258f5
-                        Position: {X: -0.18516526, Y: 0.2284868, Z: -2.3029099}
+                        Position: {X: -0.18516554, Y: 0.2284868, Z: -0.72298443}
                         Rotation: {X: 0.70710677, Y: 3.8090255E-07, Z: -3.8090255E-07, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -3776,7 +3777,6 @@ Hierarchy:
                         Materials: {}
                     ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
                         Id: d355976d-c683-4651-a942-54bae01eb33f
-                        target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
                         stoppingDistance: 1.5
                     5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
                         Id: 46141b95-9433-4b8e-92a5-04544c39abca
@@ -3784,6 +3784,7 @@ Hierarchy:
                         health: 100.0
                         movementSpeed: 10.0
                         damage: 50.0
+                        attackRate: 1.0
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
                         Id: 217f4a5c-93c4-4932-9223-b50b5dae7a3b
                         CanSleep: false
@@ -4477,7 +4478,6 @@ Hierarchy:
                         Materials: {}
                     ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
                         Id: 5cf230a2-ad0a-4965-a543-78816652876d
-                        target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
                         stoppingDistance: 1.5
                     5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
                         Id: ae72af90-62f7-46a4-a7ed-a042afac0bb2
@@ -4485,6 +4485,7 @@ Hierarchy:
                         health: 100.0
                         movementSpeed: 10.0
                         damage: 50.0
+                        attackRate: 1.0
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
                         Id: 7a8bd3ba-6103-4b69-a0b8-8522dc7f3b90
                         CanSleep: false
@@ -4790,6 +4791,21 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             4eecb3c27affe3478bcc584553d59e41: ref!! 22aa4a21-1691-471b-af60-43340c624e35
+        -   Entity:
+                Id: 841d9fd9-a633-4f4d-a313-2495571dc48b
+                Name: GameManager
+                Components:
+                    5f235171ad6697821498c8a92d0afb66: !TransformComponent
+                        Id: 224fba0b-dd19-4c22-9433-34ab35acb7b2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    32cd4f995f43aed5544c7dc691e6833d: !Furia.Core.GameManager,Furia.Game
+                        Id: 71718b8f-a59d-4e04-8f08-2eb4a4efb4dc
+                        Priority: -1
+                        showEnemyHealthBars: false
+                        player: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
         -   Entity:
                 Id: 84277299-6b9d-4038-99e2-1f903e1a0e53
                 Name: Wall0x2x2
@@ -5126,7 +5142,6 @@ Hierarchy:
                         Materials: {}
                     ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
                         Id: 1405ef64-97b0-4ff6-9b73-1c33484dba4c
-                        target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
                         stoppingDistance: 1.5
                     5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
                         Id: fc027bee-f2cc-433a-9248-6dabe5207bc8
@@ -5134,6 +5149,7 @@ Hierarchy:
                         health: 100.0
                         movementSpeed: 10.0
                         damage: 50.0
+                        attackRate: 1.0
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
                         Id: f16a30d2-b8d5-4e52-b438-b28af7dd73c8
                         CanSleep: false
@@ -5357,6 +5373,9 @@ Hierarchy:
                         currentWeaponSelected: 0
                         weaponScript: ref!! cc66f4e3-fab7-4e4a-816d-3113bb7c953a
                         currentWeaponStats: null
+                    85014678580b0b25ef6da5484e2560f5: !Furia.Player.PlayerStats,Furia.Game
+                        Id: f328aad3-3114-4b57-a285-c9b5751f6bbf
+                        health: 100.0
         -   Entity:
                 Id: 9758b4f8-356a-4443-9a06-4001ccb9e7c4
                 Name: Wall0x2x5

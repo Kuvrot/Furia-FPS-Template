@@ -23,6 +23,31 @@ Hierarchy:
                     Texture: 1432918f-16f4-44a1-9e42-c675f7e9ea32:Crosshair256
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !Slider
+                Id: 88874292-273e-4407-81f4-9a475a243ae7
+                DependencyProperties: {}
+                BackgroundColor: {R: 255, G: 255, B: 255, A: 0}
+                Opacity: 0.5
+                DrawLayerNumber: 5
+                Width: 581.0
+                Height: 32.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Bottom
+                Margin: {Left: 43.0, Bottom: 28.0}
+                MaximumWidth: 3.4028235E+38
+                MaximumHeight: 3.4028235E+38
+                MaximumDepth: 3.4028235E+38
+                Name: healthBar
+                Value: 100.0
+                Maximum: 100.0
+                TrackBackgroundImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 9
+                TrackForegroundImage: !SpriteFromSheet
+                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
+                    CurrentFrame: 12
+                TrackStartingOffsets: {X: 3.0, Y: 3.0}
+                TickOffset: 13.0
         -   UIElement: !Grid
                 Id: a6ffe3bf-ffd4-4b4d-8f7c-c2281eee6340
                 DependencyProperties: {}
@@ -34,6 +59,7 @@ Hierarchy:
                 Children:
                     d829a6446eb0272dbab2a0963f56f073: !ImageElement ref!! 25c547d0-9eff-4416-8ef5-8dfd4e6a4be0
                     382f1d1dc12d63be4b5dd17c653aaafc: !TextBlock ref!! c1ca2eac-4b8b-477d-a898-a9507bc23121
+                    a1bf06fd2a12822fa8bec3cdcca518fd: !Slider ref!! 88874292-273e-4407-81f4-9a475a243ae7
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
