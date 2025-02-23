@@ -27,5 +27,14 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [ ] Ally NPCs
 - [ ] Simple scripting system for triggers
 
+## CREDITS
+Developed by 
+- Jaime Arturo (Kuvrot)
+
+2D art
+- HorrorMovieRei (https://opengameart.org/content/husk-mutant
+- drummyfish (https://opengameart.org/content/anarch-oldschool-fps-resources)
+- GymRat (https://opengameart.org/content/lospec-game-jam-fps-assets)
+
 
  
