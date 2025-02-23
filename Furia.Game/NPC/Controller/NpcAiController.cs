@@ -11,6 +11,7 @@ using Furia.NPC.Animation;
 using Furia.NPC.Stats;
 using Furia.Core;
 using Furia.Player;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Furia.NPC.Controller
 {
@@ -28,7 +29,7 @@ namespace Furia.NPC.Controller
         //Enemy properties
         private bool aggresiveMode = true;
 
-        private float clock = 0;
+        private double clock = 0;
 
         public override void Start()
         {
@@ -36,6 +37,7 @@ namespace Furia.NPC.Controller
             stats = Entity.Get<NpcStats>();
             target = GameManager.instance.player;
             characterComponent = Entity.Get<CharacterComponent>();
+            clock = new Random().NextDouble() * (stats.attackRate - 0.0f) + 0.0f;
         }
 
         public override void Update()
@@ -98,10 +100,10 @@ namespace Furia.NPC.Controller
                 else
                 {
                     StopMoving();
+                    animationController.PlayAttackAnimation();
                     if (Counter())
                     {
-                        animationController.PlayAttackAnimation();
-                        GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                       GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
                     }
                 } 
            }

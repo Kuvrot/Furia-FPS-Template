@@ -15,7 +15,7 @@ namespace Furia.NPC.Animation
 {
     public class Npc2dAnimationController : SyncScript
     {
-        public byte animationSpeed = 12; //Frames per second
+        public byte animationSpeed = 12; // I have no idea how to describe how the speed works, but lesser the value, faster the animation
         public byte idleStartFrame = 0, idleEndFrame = 0;
         public byte attackStartFrame = 0 , attackEndFrame = 0;
         public byte walkStartFrame = 0, walkEndFrame = 0;
