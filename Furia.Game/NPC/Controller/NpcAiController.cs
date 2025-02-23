@@ -8,6 +8,7 @@ using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
 using Furia.NPC.Animation;
+using Furia.NPC.Stats;
 
 namespace Furia.NPC.Controller
 {
@@ -16,7 +17,9 @@ namespace Furia.NPC.Controller
         // Declared public member fields and properties will show in the game studio
         public TransformComponent target;
         public float stoppingDistance = 3;
-        public Npc2dAnimationController animationController;
+        
+        private NpcStats stats;
+        private Npc2dAnimationController animationController;
 
         //Enemy properties
         private bool aggresiveMode = true;
@@ -24,12 +27,21 @@ namespace Furia.NPC.Controller
         public override void Start()
         {
             animationController = Entity.GetChild(0).Get<Npc2dAnimationController>();
+            stats = Entity.Get<NpcStats>();
         }
 
         public override void Update()
         {
-            LookTarget(); 
-            EnemyAiSystem();
+            LookTarget();
+
+            if (stats.health > 0)
+            {
+                EnemyAiSystem();
+            }
+            else
+            {
+                KillNpc();
+            }
         }
 
         public void LookTarget()
@@ -57,6 +69,12 @@ namespace Furia.NPC.Controller
         public void StopMoving()
         {
             Entity.Get<CharacterComponent>().SetVelocity(Vector3.Zero);
+        }
+
+        public void KillNpc()
+        {
+            StopMoving();
+            animationController.PlayDeathAnimation();
         }
 
         public void EnemyAiSystem ()

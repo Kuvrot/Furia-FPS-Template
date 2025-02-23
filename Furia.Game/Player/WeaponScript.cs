@@ -50,6 +50,11 @@ namespace Furia.Player
             IsReloading.Broadcast(true);
             Func<Task> reloadTask = async () =>
             {
+                if (weaponManager.currentWeaponStats.isSpriteSheetAnimation)
+                {
+                    weaponManager.currentWeaponStats.PlayReloadAnimation();
+                }
+
                 // Countdown
                 var secondsCountdown = cooldownRemaining = weaponManager.currentWeaponStats.ReloadCooldown;
                 while (secondsCountdown > 0f)
@@ -145,7 +150,12 @@ namespace Furia.Player
                 weaponManager.currentWeaponStats.remainingBullets--;
             }
 
-           cooldownRemaining = weaponManager.currentWeaponStats.Cooldown;
+            if (weaponManager.currentWeaponStats.isSpriteSheetAnimation)
+            {
+                weaponManager.currentWeaponStats.PlayShootAnimation();
+            }
+
+            cooldownRemaining = weaponManager.currentWeaponStats.Cooldown;
 
             var raycastStart = Entity.Transform.WorldMatrix.TranslationVector;
             var forward = Entity.Transform.WorldMatrix.Forward;
@@ -159,10 +169,15 @@ namespace Furia.Player
             {
                 weaponFired.DidHit = true;
 
+                var _entity = result.Collider as CharacterComponent;
+                if (_entity != null)
+                {
+                    _entity.Entity.Get<NpcStats>().GetHit(25);
+                }
+
                 var rigidBody = result.Collider as RigidbodyComponent;
                 if (rigidBody != null)
                 {
-                    rigidBody.Entity.Get<NpcStats>().GetHit(100);
                     rigidBody.Activate();
                     rigidBody.ApplyImpulse(forward * ShootImpulse);
                     rigidBody.ApplyTorqueImpulse(forward * ShootImpulse + new Vector3(0, 1, 0));

@@ -36,7 +36,7 @@ namespace Furia.NPC.Stats
         public void GetHit (float damageAmount)
         {
             health -= damageAmount;
-            animationController.PlayHitAnimation();
+            //animationController.PlayHitAnimation();
         }
     }
 }

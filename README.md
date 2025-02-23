@@ -9,14 +9,14 @@ Furia makes developing a retro FPS game easier by providing a stable and flexibl
 ## ROAD MAP
 - [x] Simple FPS controller
 - [x] Automatic animations
-- [ ] Sprite animations
+- [x] Sprite animations
 - [x] Flashlight
 - [x] Automatic mode for weapons
 - [x] Melee system (add automatic animations)
 - [ ] Health system
 - [x] Inventory system
 - [x] Simple AI system
-- [ ] Damage system
+- [x] Damage system
 - [x] Animate AI sprites
 - [ ] AI patroling system
 - [ ] Separate into different kinds of enemies.

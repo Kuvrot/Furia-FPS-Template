@@ -15,17 +15,12 @@ namespace Furia.Player
 {
     public class AnimationController : SyncScript, IBlendTreeBuilder
     {
+        //If the boolean is true, it will use the default animations (can be combined with sprite sheet animations)
         public bool autimaticRunAnimation = true;
         public bool automaticIdleAnimation = true;
         public bool automaticWalkAnimation = true;
         public bool automaticReloadAnimation = true;
         public bool automaticShootAnimation = true;
-
-
-        public List<Sprite> AutomaticRunFrames = [];
-        public List<Sprite> AutomaticIdleFrames = [];
-        public List<Sprite> AutomaticReloadFrames = [];
-        public List<Sprite> AutomaticShootFrames = [];
 
         public SpriteComponent sprite;
 

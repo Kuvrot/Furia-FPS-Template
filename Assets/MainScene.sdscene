@@ -41,6 +41,8 @@ Hierarchy:
         - ref!! 0ceaf263-3374-437f-9232-ef205569f93d
         - ref!! 796c9d1e-0c4b-4304-a04b-83aceec725b5
         - ref!! 644eeab8-2696-4cd4-a2dc-82284d9ede70
+        - ref!! 793393e1-f443-46a4-8a54-d0fd5f1b7c02
+        - ref!! 94c38d2f-352b-4953-bc2c-426860500732
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -1350,7 +1352,7 @@ Hierarchy:
                         deathStartFrame: 0
                         deathEndFrame: 3
                         hitStartFrame: 8
-                        hitEndFrame: 10
+                        hitEndFrame: 8
                         animationState: 1
         -   Entity:
                 Id: 26d39e57-b138-4e6c-ad0e-b11495655057
@@ -1670,7 +1672,7 @@ Hierarchy:
                     790f7c7cbc60796c12b6026cfb261e24: !SpriteComponent
                         Id: 02ea0b9e-c889-4d4b-847b-7c0b11621380
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 29f4d96a-ec7a-46b3-9812-df9f47261083:DefaultResources/Weapon
+                            Sheet: dbadba05-bf9a-4c71-99cc-0b4c523470fa:DefaultResources/SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
                         RenderGroup: Group1
@@ -1688,6 +1690,12 @@ Hierarchy:
                         infiniteAmmo: false
                         isMelee: false
                         damage: 50.0
+                        isSpriteSheetAnimation: true
+                        animationSpeed: 5
+                        reloadStartFrame: 3
+                        reloadEndFrame: 8
+                        shootStartFrame: 0
+                        shootEndFrame: 2
         -   Entity:
                 Id: 2e093758-c61d-484d-b4f1-e2cfe8d938a4
                 Name: Wall0x2x5
@@ -2820,10 +2828,6 @@ Hierarchy:
                         automaticWalkAnimation: true
                         automaticReloadAnimation: true
                         automaticShootAnimation: true
-                        AutomaticRunFrames: {}
-                        AutomaticIdleFrames: {}
-                        AutomaticReloadFrames: {}
-                        AutomaticShootFrames: {}
                         sprite: null
                         AnimationComponent: ref!! 1856bc4a-bf53-4b8a-9634-418fc8d51891
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle
@@ -3207,6 +3211,37 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             674fdd1fb2513d41ab88936773660929: ref!! 7187e481-d033-4aef-a8e3-1ab6cb452d07
+        -   Entity:
+                Id: 591030f9-498f-4106-870d-aa72b19581f0
+                Name: SpriteSheet
+                Components:
+                    cd63069ae84d76618915677691db0294: !TransformComponent
+                        Id: 86121d88-19df-4cc9-9312-ca04aba24ae3
+                        Position: {X: 0.0, Y: 0.01011852, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.8274503, Y: 1.8274503, Z: 1.8274503}
+                        Children: {}
+                    1d9f8ea7bc070c56316272276a6001c7: !SpriteComponent
+                        Id: 523c002d-2680-4f50-96c8-c47fcb754d97
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6a93dc12-904d-47fc-8079-c2ebd480fd99:DefaultResources/Enemies/SpriteSheet
+                            CurrentFrame: 8
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+                    122d9396dee9b26239ed286fbc23b4ed: !Furia.NPC.Animation.Npc2dAnimationController,Furia.Game
+                        Id: 56e61012-03c7-4aa9-85e2-19e99d64dac8
+                        animationSpeed: 12
+                        idleStartFrame: 8
+                        idleEndFrame: 8
+                        attackStartFrame: 9
+                        attackEndFrame: 10
+                        walkStartFrame: 4
+                        walkEndFrame: 7
+                        deathStartFrame: 0
+                        deathEndFrame: 3
+                        hitStartFrame: 8
+                        hitEndFrame: 8
+                        animationState: 1
         -   Entity:
                 Id: 59284121-95b3-4622-8ccb-f17bbc945948
                 Name: Wall0x2x5Window (4)
@@ -3743,7 +3778,6 @@ Hierarchy:
                         Id: d355976d-c683-4651-a942-54bae01eb33f
                         target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
                         stoppingDistance: 1.5
-                        animationController: null
                     5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
                         Id: 46141b95-9433-4b8e-92a5-04544c39abca
                         npcName: (optional)
@@ -3883,6 +3917,37 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! 2a12d0bb-25e2-4e59-9389-add33401cbfb
+        -   Entity:
+                Id: 693d3ef5-517c-41be-9cd4-d0b89e9d330d
+                Name: SpriteSheet
+                Components:
+                    cd63069ae84d76618915677691db0294: !TransformComponent
+                        Id: 0f22f80b-09db-42c5-bea0-72765e204e78
+                        Position: {X: 0.0, Y: 0.01011852, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.8274503, Y: 1.8274503, Z: 1.8274503}
+                        Children: {}
+                    1d9f8ea7bc070c56316272276a6001c7: !SpriteComponent
+                        Id: 5320d434-825f-4c50-b318-cdc24cce6173
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6a93dc12-904d-47fc-8079-c2ebd480fd99:DefaultResources/Enemies/SpriteSheet
+                            CurrentFrame: 8
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+                    122d9396dee9b26239ed286fbc23b4ed: !Furia.NPC.Animation.Npc2dAnimationController,Furia.Game
+                        Id: 03ef8596-5e5a-4784-902a-31fba97b6304
+                        animationSpeed: 12
+                        idleStartFrame: 8
+                        idleEndFrame: 8
+                        attackStartFrame: 9
+                        attackEndFrame: 10
+                        walkStartFrame: 4
+                        walkEndFrame: 7
+                        deathStartFrame: 0
+                        deathEndFrame: 3
+                        hitStartFrame: 8
+                        hitEndFrame: 8
+                        animationState: 1
         -   Folder: Ground/Grid
             Entity:
                 Id: 6962a390-00c9-42b7-bd3c-5fab3ab52307
@@ -4393,6 +4458,50 @@ Hierarchy:
                 BasePartAsset: c7dcdd06-d013-4ea1-a09a-eefbefc6e5af:BlocksPrefabs/Wall0x2x2
                 BasePartId: f73cb16c-30b9-4200-b872-56885e7023e2
                 InstanceId: 3bab5154-7538-4875-8129-4bcd72743797
+        -   Folder: null
+            Entity:
+                Id: 793393e1-f443-46a4-8a54-d0fd5f1b7c02
+                Name: Enemy2
+                Components:
+                    3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
+                        Id: 50feebdb-911e-4cee-8e18-d2e9d5da0ba6
+                        Position: {X: -15.759448, Y: 0.9554226, Z: -0.6725477}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
+                        Children:
+                            1efcc68f74ecdc145314f92306e40ec7: ref!! 86121d88-19df-4cc9-9312-ca04aba24ae3
+                    4821840a198b8a60303039b66d559f06: !ModelComponent
+                        Id: fc82463e-bd3e-41ac-a953-53ad368ca7aa
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
+                        Id: 5cf230a2-ad0a-4965-a543-78816652876d
+                        target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
+                        stoppingDistance: 1.5
+                    5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
+                        Id: ae72af90-62f7-46a4-a7ed-a042afac0bb2
+                        npcName: (optional)
+                        health: 100.0
+                        movementSpeed: 10.0
+                        damage: 50.0
+                    dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
+                        Id: 7a8bd3ba-6103-4b69-a0b8-8522dc7f3b90
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            d5e0ab8d9594be3406296630e8a16603: !CapsuleColliderShapeDesc
+                                Length: 0.75
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 796c9d1e-0c4b-4304-a04b-83aceec725b5
                 Name: UI
@@ -4998,6 +5107,50 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             9bd6c2826922c24ba23d41e3a7a958f6: ref!! 3804efde-28bd-4ddd-a6b1-50075664594a
+        -   Folder: null
+            Entity:
+                Id: 94c38d2f-352b-4953-bc2c-426860500732
+                Name: Enemy3
+                Components:
+                    3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
+                        Id: 741b9d78-4557-4fec-ae66-3f611e422b11
+                        Position: {X: -13.771969, Y: 0.9554226, Z: -0.6725477}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
+                        Children:
+                            1efcc68f74ecdc145314f92306e40ec7: ref!! 0f22f80b-09db-42c5-bea0-72765e204e78
+                    4821840a198b8a60303039b66d559f06: !ModelComponent
+                        Id: 54bce01f-fc0d-4a8c-a336-a80c6b81d092
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
+                        Id: 1405ef64-97b0-4ff6-9b73-1c33484dba4c
+                        target: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
+                        stoppingDistance: 1.5
+                    5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
+                        Id: fc027bee-f2cc-433a-9248-6dabe5207bc8
+                        npcName: (optional)
+                        health: 100.0
+                        movementSpeed: 10.0
+                        damage: 50.0
+                    dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
+                        Id: f16a30d2-b8d5-4e52-b438-b28af7dd73c8
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            d5e0ab8d9594be3406296630e8a16603: !CapsuleColliderShapeDesc
+                                Length: 0.75
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 95878084-b49b-4aee-a03b-19d113ca8f61
                 Name: Stairs1x1x1_25
@@ -5065,6 +5218,12 @@ Hierarchy:
                         infiniteAmmo: false
                         isMelee: true
                         damage: 50.0
+                        isSpriteSheetAnimation: false
+                        animationSpeed: 12
+                        reloadStartFrame: 0
+                        reloadEndFrame: 0
+                        shootStartFrame: 0
+                        shootEndFrame: 0
                     54b7fb5c205118f6e6a0833693fe2673: !SpriteComponent
                         Id: 21664524-5603-4409-b75c-1aceb3f559d6
                         SpriteProvider: !SpriteFromTexture
@@ -6069,13 +6228,8 @@ Hierarchy:
                         autimaticRunAnimation: true
                         automaticIdleAnimation: true
                         automaticWalkAnimation: true
-                        automaticReloadAnimation: true
+                        automaticReloadAnimation: false
                         automaticShootAnimation: true
-                        AutomaticRunFrames:
-                            652a65568cc8c99ee447766122939b4f: null
-                        AutomaticIdleFrames: {}
-                        AutomaticReloadFrames: {}
-                        AutomaticShootFrames: {}
                         sprite: ref!! 02ea0b9e-c889-4d4b-847b-7c0b11621380
                         AnimationComponent: ref!! 2de1f9e7-358d-48d3-b360-d0f05ad26c60
                         AnimationIdle: c6c94f5c-df19-49c3-8b18-87556dcb8b8c:Animations/Gun_Idle

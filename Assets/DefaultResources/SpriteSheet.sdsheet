@@ -30,7 +30,42 @@ Sprites:
     2cb062d01866c901a2422e520c57bd6d:
         Source: !file ../../Resources/DefaultResources/arreload.png
         Name: arreload
-        TextureRegion: {X: 0, Y: 0, Width: 240, Height: 810}
+        TextureRegion: {X: 0, Y: 0, Width: 240, Height: 134}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    b54106f621040f931bb24217df88dbbb:
+        Source: !file ../../Resources/DefaultResources/arreload.png
+        Name: arreload
+        TextureRegion: {X: 0, Y: 136, Width: 240, Height: 134}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    2c9f724eb696bfbff5fd1ce47474ed46:
+        Source: !file ../../Resources/DefaultResources/arreload.png
+        Name: arreload
+        TextureRegion: {X: 0, Y: 271, Width: 240, Height: 134}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    0438f672345e9a619dbd0808ec1534c3:
+        Source: !file ../../Resources/DefaultResources/arreload.png
+        Name: arreload
+        TextureRegion: {X: 0, Y: 406, Width: 240, Height: 134}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    4359544864214737ae250b7cd82ea900:
+        Source: !file ../../Resources/DefaultResources/arreload.png
+        Name: arreload
+        TextureRegion: {X: 0, Y: 541, Width: 240, Height: 134}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    fccbf36f42e54816e401db8a84efa2bb:
+        Source: !file ../../Resources/DefaultResources/arreload.png
+        Name: arreload
+        TextureRegion: {X: 0, Y: 676, Width: 240, Height: 134}
         Center: {X: 0.0, Y: 0.0}
         Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
         BorderColor: {R: 0, G: 0, B: 0, A: 0}

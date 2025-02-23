@@ -37,14 +37,12 @@ namespace Furia.NPC.Animation
         //Components
         private SpriteComponent spriteComponent;
         private SpriteFromSheet spriteSheet;
-        private DateTime dateTime;
 
         public override void Start()
         {
             //This is how you are supposed to set sprite frames https://doc.stride3d.net/4.0/en/manual/sprites/use-sprites.html
             spriteComponent = Entity.Get<SpriteComponent>();
             spriteSheet = spriteComponent.SpriteProvider as SpriteFromSheet;
-            dateTime = DateTime.Now;
         }
 
         public override void Update()
@@ -76,7 +74,7 @@ namespace Furia.NPC.Animation
         {
             currentStartFrame = deathStartFrame;
             currentEndFrame = deathEndFrame;
-            PlayFrames();
+            PlayFramesNoLoop();
         }
 
         public void PlayHitAnimation()
@@ -102,14 +100,31 @@ namespace Furia.NPC.Animation
             } 
         }
 
-        public void SetAnimationState(string state)
+        private bool aux = false;
+        private bool animationFinished = false;
+        public void PlayFramesNoLoop()
         {
-            animationState = state;
-        }
+            if (!aux)
+            {
+                spriteSheet.CurrentFrame = deathStartFrame;
+                aux = true;
+            }
 
-        public string GetAnimationState()
-        {
-            return animationState;
+            if (!animationFinished)
+            {
+                if (Counter())
+                {
+                    if (spriteSheet.CurrentFrame < currentEndFrame)
+                    {
+                        spriteSheet.CurrentFrame += 1;
+                    }
+                    else
+                    {
+                        spriteSheet.CurrentFrame = deathEndFrame;
+                        animationFinished = true;
+                    }
+                }
+            }
         }
 
         private bool Counter ()
