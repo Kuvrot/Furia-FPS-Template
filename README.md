@@ -39,5 +39,8 @@ Developed by
 - drummyfish (https://opengameart.org/content/anarch-oldschool-fps-resources)
 - GymRat (https://opengameart.org/content/lospec-game-jam-fps-assets)
 
+Audio
+- Mike Koenig (https://opengameart.org/content/shotgun-shoot-reload)
+
 
  
