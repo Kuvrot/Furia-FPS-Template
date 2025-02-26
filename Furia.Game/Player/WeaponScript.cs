@@ -155,6 +155,8 @@ namespace Furia.Player
                 weaponManager.currentWeaponStats.PlayShootAnimation();
             }
 
+            Entity.Get<AudioManager>().PlayShotSound();
+
             cooldownRemaining = weaponManager.currentWeaponStats.Cooldown;
 
             var raycastStart = Entity.Transform.WorldMatrix.TranslationVector;

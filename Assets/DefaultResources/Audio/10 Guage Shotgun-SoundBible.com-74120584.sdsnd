@@ -1,0 +1,8 @@
+!Sound
+Id: c4139b9f-8f10-41df-aa00-db87b3993ef3
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/DefaultResources/Audio/10 Guage Shotgun-SoundBible.com-74120584.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false
