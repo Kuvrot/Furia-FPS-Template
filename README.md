@@ -28,6 +28,7 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [ ] Neutral NPCs
 - [ ] Ally NPCs
 - [ ] Simple scripting system for triggers
+- [ ] Full compatibility with game pad (it parcially have it)
 
 ## CREDITS
 Developed by 
