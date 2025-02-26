@@ -4,7 +4,8 @@ A Stride template for making retro FPS games.
 Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter to an immersive retro-style FPS, by providing a stable and flexible template built on top of Stride, offering modern tools for classic gameplay.
 
 ![imagen](https://github.com/user-attachments/assets/856fb772-5e07-41df-bc44-07edb0ca130f)
-![imagen](https://github.com/user-attachments/assets/38f175bd-a6c0-4dc4-9b3f-f90122b5752a)
+
+
 ### Melee combat support
 ![imagen](https://github.com/user-attachments/assets/0204ae4b-dda3-4c98-a1d4-2956f9226cbf)
 
@@ -23,6 +24,7 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [ ] Add sounds
 - [ ] AI patroling system
 - [ ] Separate into different kinds of enemies.
+- [ ] Add range enemies
 - [ ] Neutral NPCs
 - [ ] Ally NPCs
 - [ ] Simple scripting system for triggers
@@ -31,7 +33,7 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 Developed by 
 - Jaime Arturo (Kuvrot)
 
-2D art
+2D art default resources
 - HorrorMovieRei (https://opengameart.org/content/husk-mutant
 - drummyfish (https://opengameart.org/content/anarch-oldschool-fps-resources)
 - GymRat (https://opengameart.org/content/lospec-game-jam-fps-assets)
