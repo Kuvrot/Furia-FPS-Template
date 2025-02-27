@@ -26,8 +26,8 @@ Hierarchy:
         -   UIElement: !Slider
                 Id: 88874292-273e-4407-81f4-9a475a243ae7
                 DependencyProperties: {}
-                BackgroundColor: {R: 255, G: 255, B: 255, A: 0}
-                Opacity: 0.5
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Opacity: 0.7
                 DrawLayerNumber: 5
                 Width: 581.0
                 Height: 32.0
@@ -38,14 +38,14 @@ Hierarchy:
                 MaximumHeight: 3.4028235E+38
                 MaximumDepth: 3.4028235E+38
                 Name: healthBar
-                Value: 100.0
+                Value: 1.0
                 Maximum: 100.0
-                TrackBackgroundImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 9
-                TrackForegroundImage: !SpriteFromSheet
-                    Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:StrideUIDesigns
-                    CurrentFrame: 12
+                TrackBackgroundImage: !SpriteFromTexture
+                    Texture: 87540190-ab97-4b4e-b3c2-d57d2fbb1ff3:StrideEnvironmentLightingDFGLUT8
+                    Center: {X: 0.0, Y: 0.0}
+                TrackForegroundImage: !SpriteFromTexture
+                    Texture: a49995f8-2380-4baa-a03e-f8d1da35b79a:StrideEnvironmentLightingDFGLUT16
+                    Center: {X: 0.0, Y: 0.0}
                 TrackStartingOffsets: {X: 3.0, Y: 3.0}
                 TickOffset: 13.0
         -   UIElement: !Grid
