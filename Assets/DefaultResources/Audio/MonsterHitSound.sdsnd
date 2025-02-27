@@ -1,0 +1,8 @@
+!Sound
+Id: cb0c7219-1240-435a-8a39-f3fdc66b2ab5
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/DefaultResources/Audio/hit-2.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

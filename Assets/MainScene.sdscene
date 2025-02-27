@@ -3757,7 +3757,7 @@ Hierarchy:
                         damage: 10.0
                         attackRate: 1.0
                         attackSound: null
-                        hitSound: null
+                        hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
                         Id: 217f4a5c-93c4-4932-9223-b50b5dae7a3b
                         CanSleep: false
@@ -3775,6 +3775,8 @@ Hierarchy:
                                 Length: 0.75
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    22f02fe7cf76212187a00d63264afad9: !Furia.Player.AudioManager,Furia.Game
+                        Id: b8df3884-49b7-432f-820a-0b6178122b21
         -   Entity:
                 Id: 671b5ed3-76eb-4364-8ca2-198658b71b7c
                 Name: Wall0x2x5
@@ -5087,7 +5089,7 @@ Hierarchy:
                         inventoryBullets: 100
                         infiniteAmmo: false
                         isMelee: true
-                        damage: 50.0
+                        damage: 25.0
                         shotSound: d4a34aef-38aa-465b-a7e7-244cf391d0d9:DefaultResources/Audio/SwingSound
                         reloadSound: null
                         isSpriteSheetAnimation: false
@@ -5232,6 +5234,9 @@ Hierarchy:
                     85014678580b0b25ef6da5484e2560f5: !Furia.Player.PlayerStats,Furia.Game
                         Id: f328aad3-3114-4b57-a285-c9b5751f6bbf
                         health: 100.0
+                        hitSound: 3076297a-33d3-4980-8360-3f68521231f3:DefaultResources/Audio/PlayerHitSound
+                    9224d4d3999588de828f5773b5e0576d: !Furia.Player.AudioManager,Furia.Game
+                        Id: ddddc987-f1be-43e9-ae76-a30cfb08412f
         -   Entity:
                 Id: 9758b4f8-356a-4443-9a06-4001ccb9e7c4
                 Name: Wall0x2x5

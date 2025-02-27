@@ -1,0 +1,8 @@
+!Sound
+Id: 3076297a-33d3-4980-8360-3f68521231f3
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/DefaultResources/Audio/hit1.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

@@ -10,6 +10,7 @@ using Silk.NET.Core;
 using Furia.NPC.Controller;
 using Furia.NPC.Animation;
 using Stride.Audio;
+using Furia.Player;
 
 namespace Furia.NPC.Stats
 {
@@ -28,10 +29,12 @@ namespace Furia.NPC.Stats
 
         //Components
         private Npc2dAnimationController animationController;
+        private AudioManager audioManager;
 
         public override void Start()
         {
             animationController = Entity.GetChild(0).Get<Npc2dAnimationController>();
+            audioManager = Entity.Get<AudioManager>();
         }
 
         public override void Update()
@@ -42,6 +45,7 @@ namespace Furia.NPC.Stats
         public void GetHit (float damageAmount)
         {
             health -= damageAmount;
+            audioManager?.PlaySound(hitSound);
         }
     }
 }

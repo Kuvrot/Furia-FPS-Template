@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
+using Stride.Audio;
 
 namespace Furia.Player
 {
@@ -13,12 +14,16 @@ namespace Furia.Player
     {
         public float health = 100;
 
+        public Sound hitSound;
+
         //Components
-        UiManager uiManager;
+        private UiManager uiManager;
+        private AudioManager audioManager;
 
         public override void Start()
         {
             uiManager = Entity.GetChild(0).Get<UiManager>();
+            audioManager = Entity.Get<AudioManager>();
         }
 
         public override void Update()
@@ -29,6 +34,7 @@ namespace Furia.Player
         public void GetHit(float damageAmount)
         {
             health -= damageAmount;
+            audioManager?.PlaySound(hitSound);
             uiManager.UpdateHitScreen();
         }
     }

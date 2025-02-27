@@ -22,10 +22,9 @@ namespace Furia.Player
             // Do stuff every new frame
         }
 
-        public void PlaySound(Sound sound)
+        public void PlaySound (Sound sound)
         {
-            if (sound != null)
-            {
+            if (sound != null) {
                 SoundInstance soundInstance = sound.CreateInstance();
                 soundInstance.Play();
             }
