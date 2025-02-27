@@ -8,6 +8,8 @@ using Stride.Input;
 using Stride.Engine;
 using Stride.UI.Controls;
 using BulletSharp;
+using Stride.Physics;
+using Stride.UI.Panels;
 
 namespace Furia.Player
 {
@@ -18,6 +20,10 @@ namespace Furia.Player
         public UIComponent UI;
         private UIPage Page;
 
+        private bool getHit = false;
+        private float counter = 0;
+        private readonly float damageTime = 0.3f;
+
         public override void Start()
         {
             Page = UI.Page;
@@ -25,7 +31,19 @@ namespace Furia.Player
 
         public override void Update()
         {
-            // Do stuff every new frame
+            if (getHit)
+            {
+                counter += 1 * (float)Game.UpdateTime.Elapsed.TotalSeconds;
+
+                if (counter >= damageTime)
+                {
+                    counter = 0;
+                    Canvas hitCanvas = Page.RootElement.FindName("hitScreen") as Canvas;
+                    hitCanvas.Opacity = 0;
+                    getHit = false;
+                }
+
+            }
         }
 
         public void UpdateBulletCount(int currentBullets , int inventoryBullets)
@@ -40,6 +58,13 @@ namespace Furia.Player
         {
             Slider healthBar = Page.RootElement.FindName("healthBar") as Slider;
             healthBar.Value = health;
+        }
+
+        public void UpdateHitScreen ()
+        {
+            Canvas hitCanvas = Page.RootElement.FindName("hitScreen") as Canvas;
+            hitCanvas.Opacity = 0.57f;
+            getHit = true;
         }
     }
 }

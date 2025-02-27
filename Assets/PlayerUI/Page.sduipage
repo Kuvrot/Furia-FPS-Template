@@ -23,6 +23,14 @@ Hierarchy:
                     Texture: 1432918f-16f4-44a1-9e42-c675f7e9ea32:Crosshair256
                     Center: {X: 0.0, Y: 0.0}
                 Color: {R: 255, G: 255, B: 255, A: 255}
+        -   UIElement: !Canvas
+                Id: 49696185-16aa-42d2-bef8-65b22d74ba7d
+                DependencyProperties: {}
+                BackgroundColor: {R: 255, G: 0, B: 0, A: 0}
+                Opacity: 0.0
+                Margin: {}
+                Name: hitScreen
+                Children: {}
         -   UIElement: !Slider
                 Id: 88874292-273e-4407-81f4-9a475a243ae7
                 DependencyProperties: {}
@@ -60,6 +68,7 @@ Hierarchy:
                     d829a6446eb0272dbab2a0963f56f073: !ImageElement ref!! 25c547d0-9eff-4416-8ef5-8dfd4e6a4be0
                     382f1d1dc12d63be4b5dd17c653aaafc: !TextBlock ref!! c1ca2eac-4b8b-477d-a898-a9507bc23121
                     a1bf06fd2a12822fa8bec3cdcca518fd: !Slider ref!! 88874292-273e-4407-81f4-9a475a243ae7
+                    6aba8cf53b2b51e9aa75539981767687: !Canvas ref!! 49696185-16aa-42d2-bef8-65b22d74ba7d
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}

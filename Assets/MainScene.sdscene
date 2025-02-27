@@ -3756,6 +3756,8 @@ Hierarchy:
                         movementSpeed: 10.0
                         damage: 10.0
                         attackRate: 1.0
+                        attackSound: null
+                        hitSound: null
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
                         Id: 217f4a5c-93c4-4932-9223-b50b5dae7a3b
                         CanSleep: false

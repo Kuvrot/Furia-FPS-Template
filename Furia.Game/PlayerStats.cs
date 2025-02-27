@@ -29,6 +29,7 @@ namespace Furia.Player
         public void GetHit(float damageAmount)
         {
             health -= damageAmount;
+            uiManager.UpdateHitScreen();
         }
     }
 }
