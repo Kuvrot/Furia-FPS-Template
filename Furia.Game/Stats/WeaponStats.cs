@@ -11,6 +11,7 @@ using Stride.Core;
 using Stride.Graphics;
 using Stride.Games;
 using Stride.Rendering.Sprites;
+using Stride.Audio;
 
 namespace Furia.Stats
 {
@@ -30,10 +31,15 @@ namespace Furia.Stats
         public bool isMelee = false;
         public float damage = 50;
 
+        // Sound
+        // If any or them are null, then the sound will not be reproduced.
+        public Sound shotSound;
+        public Sound reloadSound;
+
         //WeaponAnimations (optional)
         [Display("Spritesheet Animations (optional)")]
         public bool isSpriteSheetAnimation = true; // Controls if the weapon will use sprite animations
-        public byte animationSpeed = 12; //Frames per second
+        public byte animationSpeed = 12; //Idk how this is working, but lesser is faster
         public byte reloadStartFrame = 0, reloadEndFrame = 0;
         public byte shootStartFrame = 0, shootEndFrame = 0;
 

@@ -38,11 +38,13 @@ namespace Furia.Player
 
         private UiManager m_UI;
         private WeaponManager weaponManager;
+        private AudioManager audioManager;
 
         public override void Start()
         {
             m_UI = Entity.Get<UiManager>();
             weaponManager = Entity.GetParent().Get<WeaponManager>();
+            audioManager = Entity.Get<AudioManager>();
         }
 
         private void ReloadWeapon()
@@ -54,6 +56,9 @@ namespace Furia.Player
                 {
                     weaponManager.currentWeaponStats.PlayReloadAnimation();
                 }
+
+                // Play reload sound
+                audioManager.PlaySound(weaponManager.currentWeaponStats.reloadSound);
 
                 // Countdown
                 var secondsCountdown = cooldownRemaining = weaponManager.currentWeaponStats.ReloadCooldown;
@@ -155,7 +160,7 @@ namespace Furia.Player
                 weaponManager.currentWeaponStats.PlayShootAnimation();
             }
 
-            Entity.Get<AudioManager>().PlayShotSound();
+            audioManager.PlaySound(weaponManager.currentWeaponStats.shotSound);
 
             cooldownRemaining = weaponManager.currentWeaponStats.Cooldown;
 

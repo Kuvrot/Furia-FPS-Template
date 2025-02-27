@@ -1689,6 +1689,8 @@ Hierarchy:
                         infiniteAmmo: false
                         isMelee: false
                         damage: 50.0
+                        shotSound: c4139b9f-8f10-41df-aa00-db87b3993ef3:DefaultResources/Audio/ShotSound
+                        reloadSound: 212af359-6a06-4f87-80b2-bebc0b050d23:DefaultResources/Audio/ReloadSound
                         isSpriteSheetAnimation: true
                         animationSpeed: 5
                         reloadStartFrame: 3
@@ -2547,7 +2549,6 @@ Hierarchy:
                         UI: ref!! 6d1dd95f-20af-41a9-bbad-1f48827c5edb
                     0a0314bccb01ff203b937a722ca3561c: !Furia.Player.AudioManager,Furia.Game
                         Id: 7e468f51-8e67-43aa-8ba0-763f7e0b04f5
-                        shotSound: c4139b9f-8f10-41df-aa00-db87b3993ef3:DefaultResources/Audio/10 Guage Shotgun-SoundBible.com-74120584
         -   Entity:
                 Id: 4ac16211-9c81-4929-9df1-753678c4eb02
                 Name: Wall0x2x2
@@ -5085,6 +5086,8 @@ Hierarchy:
                         infiniteAmmo: false
                         isMelee: true
                         damage: 50.0
+                        shotSound: d4a34aef-38aa-465b-a7e7-244cf391d0d9:DefaultResources/Audio/SwingSound
+                        reloadSound: null
                         isSpriteSheetAnimation: false
                         animationSpeed: 12
                         reloadStartFrame: 0

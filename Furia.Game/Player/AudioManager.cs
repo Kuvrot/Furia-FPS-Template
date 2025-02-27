@@ -12,9 +12,6 @@ namespace Furia.Player
 {
     public class AudioManager : SyncScript
     {
-        public Sound shotSound;
-        private SoundInstance _shotSound;
-
         public override void Start()
         {
             
@@ -25,10 +22,13 @@ namespace Furia.Player
             // Do stuff every new frame
         }
 
-        public void PlayShotSound ()
+        public void PlaySound(Sound sound)
         {
-            _shotSound = shotSound.CreateInstance();
-            _shotSound.Play ();
+            if (sound != null)
+            {
+                SoundInstance soundInstance = sound.CreateInstance();
+                soundInstance.Play();
+            }
         }
     }
 }

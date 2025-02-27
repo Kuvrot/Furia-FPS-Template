@@ -1,0 +1,8 @@
+!Sound
+Id: 212af359-6a06-4f87-80b2-bebc0b050d23
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/DefaultResources/Audio/Chambering A Round-SoundBible.com-854171848.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

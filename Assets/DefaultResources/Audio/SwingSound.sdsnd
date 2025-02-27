@@ -1,0 +1,8 @@
+!Sound
+Id: d4a34aef-38aa-465b-a7e7-244cf391d0d9
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/DefaultResources/Audio/melee sound.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false
