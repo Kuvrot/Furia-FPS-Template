@@ -37,6 +37,7 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 Opacity: 0.7
                 DrawLayerNumber: 5
+                CanBeHitByUser: false
                 Width: 581.0
                 Height: 32.0
                 HorizontalAlignment: Left
