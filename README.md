@@ -21,7 +21,7 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [x] Simple AI system
 - [x] Damage system
 - [x] Animate AI sprites
-- [ ] Add sounds (In progress)
+- [x] Add sounds
 - [ ] AI patroling system
 - [ ] Separate into different kinds of enemies.
 - [ ] Add range enemies (In progress)
@@ -41,6 +41,9 @@ Developed by
 
 Audio
 - Mike Koenig (https://opengameart.org/content/shotgun-shoot-reload)
+- remaxim (https://opengameart.org/content/3-melee-sounds)
+- Ogrebane (https://opengameart.org/content/guttural-vocals)
+- TinyWorlds (https://opengameart.org/content/5-hit-sounds-dying)
 
 
  
