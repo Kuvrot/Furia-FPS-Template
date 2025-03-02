@@ -22,6 +22,8 @@ namespace Furia.NPC.Stats
         public float movementSpeed = 2.5f;
         public float damage = 10;
         public float attackRate = 1f; //In seconds
+        public float stoppingDistance = 3; //Attack range
+        public float detectRange = 10;
 
         //Audio
         public Sound attackSound;

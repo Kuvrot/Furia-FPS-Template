@@ -3736,7 +3736,7 @@ Hierarchy:
                 Components:
                     3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
                         Id: c0939c05-2af7-48a2-9fbe-2b8bba3593f0
-                        Position: {X: -16.664177, Y: 0.9554226, Z: 0.7943138}
+                        Position: {X: -16.664177, Y: 0.9554226, Z: -15.797443}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
                         Children:
@@ -3748,7 +3748,6 @@ Hierarchy:
                         Materials: {}
                     ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
                         Id: d355976d-c683-4651-a942-54bae01eb33f
-                        stoppingDistance: 1.5
                     5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
                         Id: 46141b95-9433-4b8e-92a5-04544c39abca
                         npcName: (optional)
@@ -3756,6 +3755,8 @@ Hierarchy:
                         movementSpeed: 10.0
                         damage: 10.0
                         attackRate: 1.0
+                        stoppingDistance: 3.0
+                        detectRange: 10.0
                         attackSound: null
                         hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent

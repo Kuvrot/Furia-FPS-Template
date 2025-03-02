@@ -19,7 +19,6 @@ namespace Furia.NPC.Controller
     {
         // Declared public member fields and properties will show in the game studio
         private TransformComponent target;
-        public float stoppingDistance = 3;
         
         //Components
         private NpcStats stats;
@@ -27,9 +26,10 @@ namespace Furia.NPC.Controller
         private CharacterComponent characterComponent;
 
         //Enemy properties
-        private bool aggresiveMode = true;
+        private bool aggresiveMode = false;
 
         private double clock = 0;
+        private float distance = 0;
 
         public override void Start()
         {
@@ -89,10 +89,9 @@ namespace Furia.NPC.Controller
 
         public void EnemyAiSystem ()
         {
-           if (aggresiveMode)
-           {
-                float distance = Vector3.Distance(Entity.Transform.Position, target.Position);
-                if (distance >= stoppingDistance)
+            if (aggresiveMode)
+            {
+                if (GetDistance() >= stats.stoppingDistance)
                 {
                     MoveToTarget(this.target);
                     animationController.PlayWalkAnimation();
@@ -103,12 +102,33 @@ namespace Furia.NPC.Controller
                     animationController.PlayAttackAnimation();
                     if (Counter())
                     {
-                       GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                        GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
                     }
-                } 
-           }
+                }
+            }
+            else
+            {
+                aggresiveMode = DetectTarget();
+            }
         }
 
+        private bool DetectTarget()
+        {
+            if (target != null)
+            {
+                if (GetDistance() <= stats.detectRange)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private float GetDistance()
+        {
+            return distance = Vector3.Distance(Entity.Transform.Position, target.Position);
+        }
 
         private bool Counter()
         {
