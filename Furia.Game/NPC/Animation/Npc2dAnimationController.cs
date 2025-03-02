@@ -32,7 +32,6 @@ namespace Furia.NPC.Animation
         1 = walk
         2 = attack 
         */
-        public string animationState = "idle";
 
         //Components
         private SpriteComponent spriteComponent;
@@ -97,7 +96,7 @@ namespace Furia.NPC.Animation
                 {
                     spriteSheet.CurrentFrame = currentStartFrame;
                 }
-            } 
+            }
         }
 
         private bool aux = false;

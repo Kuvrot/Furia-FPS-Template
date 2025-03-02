@@ -24,6 +24,7 @@ namespace Furia.NPC.Controller
         private NpcStats stats;
         private Npc2dAnimationController animationController;
         private CharacterComponent characterComponent;
+        private AudioManager audioManager;
 
         //Enemy properties
         private bool aggresiveMode = false;
@@ -38,6 +39,7 @@ namespace Furia.NPC.Controller
             target = GameManager.instance.player;
             characterComponent = Entity.Get<CharacterComponent>();
             clock = new Random().NextDouble() * (stats.attackRate - 0.0f) + 0.0f;
+            audioManager = Entity.Get<AudioManager>();
         }
 
         public override void Update()
@@ -100,9 +102,22 @@ namespace Furia.NPC.Controller
                 {
                     StopMoving();
                     animationController.PlayAttackAnimation();
+                    
                     if (Counter())
                     {
-                        GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                        audioManager?.PlaySound(stats.attackSound);
+
+                        if (!stats.isRangeNPC)
+                        {
+                            GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                        }
+                        else
+                        {
+                            if (new Random().Next() * (100 - 0) + 0 <= 25) // If it is a range npc, then his shots will have a 25% chance of impact
+                            {
+                                GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                            }
+                        }
                     }
                 }
             }

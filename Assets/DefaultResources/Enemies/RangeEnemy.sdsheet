@@ -1,0 +1,99 @@
+!SpriteSheet
+Id: 6f6576ff-5af6-4919-b1d7-a7a26db11e9f
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Packing: {}
+Sprites:
+    4e45289c922a60c6d83f6756f43efea3:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 45, Y: 32, Width: 54, Height: 84}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    847d10118e5de089b896b536a69c443d:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 45, Y: 150, Width: 54, Height: 82}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    1b7023ce0dd0ee6712123de14b4c673e:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 51, Y: 268, Width: 51, Height: 83}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    65b8d6c9592dac615c64e65e8017057f:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 47, Y: 386, Width: 60, Height: 81}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    47708686e935b2f5d2a7ccdb4a34e349:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 53, Y: 506, Width: 53, Height: 83}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    b1f3c1e827faa5b58557b015be070cc2:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 56, Y: 623, Width: 56, Height: 81}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    9acc753ff0a12f9021d5527557eb2d23:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 54, Y: 730, Width: 57, Height: 82}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    3debae81a3ea2ad18bdb55225c651a10:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 59, Y: 1303, Width: 63, Height: 82}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    7915ea08f6218ffd910694b17fdfdd52:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 159, Y: 1302, Width: 66, Height: 82}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    4f6e37e6939f11e2d9101ac1d9fe5508:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 252, Y: 1302, Width: 93, Height: 82}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    ff8bf3667f9631ac9b80d5f7fb4c5e53:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 365, Y: 1302, Width: 93, Height: 82}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    6e71e9fe5930792a10df06256360cdf7:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 486, Y: 1294, Width: 89, Height: 82}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    99efaec7a979a38faebe53f18901c12b:
+        Source: !file ../../../Resources/DefaultResources/Enemies/outleader_paletted.png
+        Name: outleader_paletted
+        TextureRegion: {X: 601, Y: 1293, Width: 88, Height: 82}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

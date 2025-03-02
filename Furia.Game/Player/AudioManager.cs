@@ -29,5 +29,15 @@ namespace Furia.Player
                 soundInstance.Play();
             }
         }
+
+        public async void PlaySoundOnce(Sound sound)
+        {
+            if (sound != null)
+            {
+                SoundInstance soundInstance = sound.CreateInstance();
+                await soundInstance.ReadyToPlay();
+                soundInstance.Play();
+            }
+        }
     }
 }

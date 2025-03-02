@@ -11,6 +11,7 @@ using Furia.NPC.Controller;
 using Furia.NPC.Animation;
 using Stride.Audio;
 using Furia.Player;
+using Stride.Core;
 
 namespace Furia.NPC.Stats
 {
@@ -22,8 +23,11 @@ namespace Furia.NPC.Stats
         public float movementSpeed = 2.5f;
         public float damage = 10;
         public float attackRate = 1f; //In seconds
+        [Display("Attack range")]
         public float stoppingDistance = 3; //Attack range
         public float detectRange = 10;
+
+        public bool isRangeNPC = false; // Is a range unit/attacks from distance
 
         //Audio
         public Sound attackSound;

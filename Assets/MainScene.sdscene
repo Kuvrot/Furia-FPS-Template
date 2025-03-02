@@ -41,6 +41,7 @@ Hierarchy:
         - ref!! 0ceaf263-3374-437f-9232-ef205569f93d
         - ref!! 796c9d1e-0c4b-4304-a04b-83aceec725b5
         - ref!! 644eeab8-2696-4cd4-a2dc-82284d9ede70
+        - ref!! eaa76ae2-7133-4ebf-aa23-b024309c2574
         - ref!! 841d9fd9-a633-4f4d-a313-2495571dc48b
     Parts:
         -   Entity:
@@ -1352,7 +1353,6 @@ Hierarchy:
                         deathEndFrame: 3
                         hitStartFrame: 8
                         hitEndFrame: 8
-                        animationState: 1
         -   Entity:
                 Id: 26d39e57-b138-4e6c-ad0e-b11495655057
                 Name: Wall0x2x5Window
@@ -3757,6 +3757,7 @@ Hierarchy:
                         attackRate: 1.0
                         stoppingDistance: 3.0
                         detectRange: 10.0
+                        isRangeNPC: false
                         attackSound: null
                         hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
@@ -6980,6 +6981,35 @@ Hierarchy:
                 BasePartId: 33a6f301-d9b7-4a2a-b0c9-7771e250fd3e
                 InstanceId: a9e94bed-71f3-4096-bf10-86adbad3e163
         -   Entity:
+                Id: e26d77a7-f606-4233-9870-efdddbc593fc
+                Name: SpriteSheet
+                Components:
+                    cd63069ae84d76618915677691db0294: !TransformComponent
+                        Id: a804b94a-6ddf-445a-8b7d-e89c39802204
+                        Position: {X: 0.0, Y: 0.01011852, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.3527911, Y: 1.3527911, Z: 1.3527911}
+                        Children: {}
+                    1d9f8ea7bc070c56316272276a6001c7: !SpriteComponent
+                        Id: 8273cbcb-fd94-44c1-bd0b-44fba923290a
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6f6576ff-5af6-4919-b1d7-a7a26db11e9f:DefaultResources/Enemies/RangeEnemy
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+                    122d9396dee9b26239ed286fbc23b4ed: !Furia.NPC.Animation.Npc2dAnimationController,Furia.Game
+                        Id: 325494d4-125d-440b-b6da-5d27fe246970
+                        animationSpeed: 12
+                        idleStartFrame: 0
+                        idleEndFrame: 0
+                        attackStartFrame: 4
+                        attackEndFrame: 6
+                        walkStartFrame: 0
+                        walkEndFrame: 3
+                        deathStartFrame: 7
+                        deathEndFrame: 12
+                        hitStartFrame: 7
+                        hitEndFrame: 7
+        -   Entity:
                 Id: e341f3ef-7354-4445-94bb-d026399645e1
                 Name: Wall0x2x5 (6)
                 Components:
@@ -7293,6 +7323,56 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             db07bec9b88cb84e9f8d6d3511eb10f2: ref!! 4b18ea55-54c9-40eb-aaed-726ed2f9feea
+        -   Folder: null
+            Entity:
+                Id: eaa76ae2-7133-4ebf-aa23-b024309c2574
+                Name: RangeEnemy
+                Components:
+                    3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
+                        Id: 3040658d-a2cd-4bc3-ba85-bd052bca2669
+                        Position: {X: -11.932127, Y: 0.9554226, Z: -15.797443}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
+                        Children:
+                            1efcc68f74ecdc145314f92306e40ec7: ref!! a804b94a-6ddf-445a-8b7d-e89c39802204
+                    4821840a198b8a60303039b66d559f06: !ModelComponent
+                        Id: 7efd1794-6c80-489d-9e00-3a85e8f56758
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
+                        Id: db9efb60-6285-4397-b10e-e92c2c5ce0a3
+                    5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
+                        Id: 03793cdc-d86f-4832-874e-75bb8ae81c2c
+                        npcName: (optional)
+                        health: 100.0
+                        movementSpeed: 10.0
+                        damage: 10.0
+                        attackRate: 1.0
+                        stoppingDistance: 3.0
+                        detectRange: 10.0
+                        isRangeNPC: true
+                        attackSound: c4139b9f-8f10-41df-aa00-db87b3993ef3:DefaultResources/Audio/ShotSound
+                        hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
+                    dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
+                        Id: 17a92f42-3d35-40e8-b8c9-e178ad4a19ca
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            d5e0ab8d9594be3406296630e8a16603: !CapsuleColliderShapeDesc
+                                Length: 0.75
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    22f02fe7cf76212187a00d63264afad9: !Furia.Player.AudioManager,Furia.Game
+                        Id: 23187ba7-4a3b-4f62-bbca-88c9631756d7
         -   Entity:
                 Id: eb8cdfe5-7a8a-4ccf-9e1b-bfb5555518e0
                 Name: Stairs1x1x2
