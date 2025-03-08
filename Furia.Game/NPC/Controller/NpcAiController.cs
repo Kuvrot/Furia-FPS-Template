@@ -87,6 +87,7 @@ namespace Furia.NPC.Controller
         {
             StopMoving();
             animationController.PlayDeathAnimation();
+            characterComponent.Enabled = false;
         }
 
         public void EnemyAiSystem ()
