@@ -137,7 +137,6 @@ namespace Furia.NPC.Controller
                     return true;
                 }
             }
-
             return false;
         }
 
