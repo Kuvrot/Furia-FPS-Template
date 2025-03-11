@@ -118,11 +118,9 @@ namespace Furia.Player
             }
         }
 
-        /// <summary>
-        /// Called on every frame update
-        /// </summary>
-        public override void Update()
+        private void WeaponSystem()
         {
+
             //Update UI
             m_UI.UpdateBulletCount(weaponManager.currentWeaponStats.remainingBullets, weaponManager.currentWeaponStats.inventoryBullets);
 
@@ -137,7 +135,7 @@ namespace Furia.Player
                 return; // Can't shoot yet
 
             if ((weaponManager.currentWeaponStats.remainingBullets <= 0 && didShoot) || (weaponManager.currentWeaponStats.remainingBullets <= weaponManager.currentWeaponStats.maxBullets && didReload && !disableManualReload))
-            { 
+            {
                 //Only reload if the weapon is not melee
                 if (!weaponManager.currentWeaponStats.isMelee)
                 {
@@ -170,7 +168,7 @@ namespace Furia.Player
 
             var result = this.GetSimulation().Raycast(raycastStart, raycastEnd);
 
-            var weaponFired = new WeaponFiredResult {HitResult = result, DidFire = true, DidHit = false };
+            var weaponFired = new WeaponFiredResult { HitResult = result, DidFire = true, DidHit = false };
 
             if (result.Succeeded && result.Collider != null)
             {
@@ -192,7 +190,18 @@ namespace Furia.Player
             }
 
             // Broadcast the fire event
-            WeaponFired.Broadcast( weaponFired );
+            WeaponFired.Broadcast(weaponFired);
+        }
+
+        /// <summary>
+        /// Called on every frame update
+        /// </summary>
+        public override void Update()
+        {
+            if (weaponManager.currentWeaponStats != null)
+            {
+                WeaponSystem();
+            }
         }
     }
 }
