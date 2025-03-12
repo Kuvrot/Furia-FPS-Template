@@ -23,6 +23,8 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [x] Animate AI sprites
 - [x] Add sounds
 - [x] Add range enemies
+- [ ] Enemies that shoot slow projectiles (magic, arrows, etc)
+- [ ] Enemies drop loot
 - [ ] AI patroling system
 - [ ] Separate into different kinds of enemies.
 - [ ] Neutral NPCs
