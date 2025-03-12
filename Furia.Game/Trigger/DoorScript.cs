@@ -10,47 +10,69 @@ using Microsoft.VisualBasic;
 using Stride.Physics;
 using Furia.Player;
 using System.Diagnostics;
+using Stride.Audio;
 
 namespace Furia.Trigger
 {
     public class DoorScript : SyncScript
     {
+        public int idDoor = 0;
         public float openAngle = 90;
-        public bool isOpen = false;
+        public bool isOpen = false, isLocked = false;
         public TransformComponent door;
+        public Sound openDoorSound , closeDoorSound, lockedDoorSound;
 
         public StaticColliderComponent doorCollider;
-        private static StaticColliderComponent collider;
-        private float currentAngle = 0;
+        private StaticColliderComponent collider;
+        private AudioManager audioManager;
 
         public override void Start()
         {
             collider = Entity.Get<StaticColliderComponent>();
+            audioManager = Entity.Get<AudioManager>();
         }
 
         public override void Update() 
         {
             foreach (var collision in collider.Collisions)
             {
-                if (collision.ColliderA.Entity.Name == "Player")
+                if (collision.ColliderA.Entity.Get<PlayerController>() != null)
                 {
-                    if (Input.IsKeyPressed(Keys.E) && !isOpen)
+                    DebugText.Print("Press E to open", new Int2(500, 300));
+
+                    if (Input.IsKeyPressed(Keys.E))
                     {
-                        DebugText.Print("Open", new Int2(500, 300));
-                        Quaternion result = door.Entity.Transform.Rotation + Quaternion.RotationYawPitchRoll(openAngle, 0, 0);
-                        door.Entity.Transform.Rotation = result;
-                        doorCollider.Enabled = false;
-                        isOpen = true;
-                    }
-                    else if (Input.IsKeyPressed(Keys.E) && isOpen)
-                    {
-                        DebugText.Print("Closed", new Int2(500, 300));
-                        Quaternion result = door.Entity.Transform.Rotation - Quaternion.RotationYawPitchRoll(openAngle, 0, 0);
-                        door.Entity.Transform.Rotation = result;
-                        doorCollider.Enabled = true;
-                        isOpen = false;
+                        DoorInteraction();
                     }
                 }
+            }
+        }
+
+        private void DoorInteraction()
+        {
+            if (isLocked)
+            {
+                audioManager.PlaySound(lockedDoorSound);
+                return;
+            }
+                
+            if (!isOpen)
+            {
+                DebugText.Print("Open", new Int2(500, 300));
+                Quaternion result = door.Entity.Transform.Rotation + Quaternion.RotationYawPitchRoll(openAngle, 0, 0);
+                door.Entity.Transform.Rotation = result;
+                doorCollider.Enabled = false;
+                audioManager.PlaySound(openDoorSound);
+                isOpen = true;
+            }
+            else
+            {
+                DebugText.Print("Closed", new Int2(500, 300));
+                Quaternion result = door.Entity.Transform.Rotation - Quaternion.RotationYawPitchRoll(openAngle, 0, 0);
+                door.Entity.Transform.Rotation = result;
+                doorCollider.Enabled = true;
+                audioManager.PlaySound(closeDoorSound);
+                isOpen = false;
             }
         }
     }

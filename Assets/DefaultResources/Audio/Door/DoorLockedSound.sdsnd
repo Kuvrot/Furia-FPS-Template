@@ -1,0 +1,9 @@
+!Sound
+Id: ae99a05a-61b1-4541-a0ba-c0fd3d7107f0
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../Resources/DefaultResources/Audio/Door/door-06.flac
+SampleRate: 96000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

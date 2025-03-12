@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Stride.Core.Mathematics;
+﻿using System.Collections.Generic;
 using Stride.Input;
 using Stride.Engine;
 using Furia.Stats;
-using static Stride.Graphics.Buffer;
 
 namespace Furia.Player
 {

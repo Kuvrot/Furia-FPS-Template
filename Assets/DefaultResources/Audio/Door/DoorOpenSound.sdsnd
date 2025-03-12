@@ -1,0 +1,9 @@
+!Sound
+Id: d35205ec-c290-425e-9128-79da90580aec
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../Resources/DefaultResources/Audio/Door/door-02.flac
+SampleRate: 96000
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false
