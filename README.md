@@ -30,7 +30,7 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [ ] Full compatibility with game pad (it parcially have it)
 
 #### Triggers
-- [ ] Doors (Locked/unlocked)
+- [x] Doors (Locked/unlocked)
 - [ ] Dialogues
 - [ ] Keys for unlocking doors
 - [ ] Grabbing items (health, ammo, power ups, etc.)
