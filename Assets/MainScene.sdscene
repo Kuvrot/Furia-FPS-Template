@@ -2860,8 +2860,8 @@ Hierarchy:
                 Components:
                     51472fcc44e5774ec9e7eb3e28722faa: !TransformComponent
                         Id: 112e691d-b766-459d-b294-3bac3c348312
-                        Position: {X: 8.847038, Y: 1.3803978, Z: -2.8982482}
-                        Rotation: {X: 0.0, Y: 0.7078642, Z: 0.0, W: 0.70634854}
+                        Position: {X: 3.8425505, Y: 1.3803978, Z: -2.0301828}
+                        Rotation: {X: 0.0, Y: 0.014927551, Z: 0.0, W: 0.9998886}
                         Scale: {X: 0.26239678, Y: 1.5, Z: 1.0}
                         Children:
                             3cf60faccc0f99c1fbb313ac79425d25: ref!! d233d773-8b3d-4b21-aa11-b05a0a45f757

@@ -28,12 +28,14 @@ namespace Furia.Trigger
 
         public override void Start()
         {
-            collider = Entity.Get<StaticColliderComponent>();
             audioManager = Entity.Get<AudioManager>();
         }
 
         public override void Update() 
         {
+
+            collider ??= Entity.Get<StaticColliderComponent>();
+
             foreach (var collision in collider.Collisions)
             {
                 if (collision.ColliderA.Entity.Get<PlayerController>() != null)
