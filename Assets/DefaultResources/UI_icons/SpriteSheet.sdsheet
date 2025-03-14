@@ -1,0 +1,36 @@
+!SpriteSheet
+Id: c80bd455-56d1-4c31-a928-df85a0009980
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: Sprite2D
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+Packing: {}
+Sprites:
+    816df3187d4e4c3f625f7a62feedd419:
+        Source: !file ../../../Resources/DefaultResources/UI_icons/MeteorRepository1Icons_fixed_0.png
+        Name: Health
+        TextureRegion: {X: 78, Y: 181, Width: 12, Height: 10}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    76272f30e2d39a440748b64b371cfd01:
+        Source: !file ../../../Resources/DefaultResources/UI_icons/MeteorRepository1Icons_fixed_0.png
+        Name: Ammo
+        TextureRegion: {X: 52, Y: 194, Width: 12, Height: 10}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    7d57396cdaab6c16300a4724dfe40bbe:
+        Source: !file ../../../Resources/DefaultResources/UI_icons/MeteorRepository1Icons_fixed_0.png
+        Name: Weapon
+        TextureRegion: {X: 136, Y: 57, Width: 15, Height: 16}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}
+    dbca8f344afbd426857c6a9c612d3a53:
+        Source: !file ../../../Resources/DefaultResources/UI_icons/MeteorRepository1Icons_fixed_0.png
+        Name: Knife
+        TextureRegion: {X: 85, Y: 74, Width: 15, Height: 16}
+        Center: {X: 0.0, Y: 0.0}
+        Borders: {X: 0.0, Y: 0.0, Z: 0.0, W: 0.0}
+        BorderColor: {R: 0, G: 0, B: 0, A: 0}

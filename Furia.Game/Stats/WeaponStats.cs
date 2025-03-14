@@ -24,9 +24,9 @@ namespace Furia.Stats
         public float Cooldown = 0.3f;
         public float ReloadCooldown = 2.0f;
         public SpriteComponent RemainingBullets;
-        public int remainingBullets = 0;
+        public int remainingAmmo = 0;
         public int maxBullets = 30;
-        public int inventoryBullets = 100;
+        public int inventoryAmmo = 100;
         public bool infiniteAmmo = false;
         public bool isMelee = false;
         public float damage = 50;

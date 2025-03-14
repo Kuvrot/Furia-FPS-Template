@@ -7,8 +7,6 @@ using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Engine.Events;
 using Stride.Physics;
-using Stride.Rendering.Sprites;
-using Vortice.Vulkan;
 
 namespace Furia.Player
 {
@@ -70,7 +68,7 @@ namespace Furia.Player
 
                 if (weaponManager.currentWeaponStats.infiniteAmmo)
                 {
-                    weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.maxBullets;
+                    weaponManager.currentWeaponStats.remainingAmmo = weaponManager.currentWeaponStats.maxBullets;
                 }
                 else
                 {
@@ -91,30 +89,30 @@ namespace Furia.Player
 
         private void RealisticReload()
         {
-            if (weaponManager.currentWeaponStats.inventoryBullets >= weaponManager.currentWeaponStats.maxBullets)
+            if (weaponManager.currentWeaponStats.inventoryAmmo >= weaponManager.currentWeaponStats.maxBullets)
             {
-                weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.maxBullets;
-                weaponManager.currentWeaponStats.inventoryBullets -= weaponManager.currentWeaponStats.maxBullets;
+                weaponManager.currentWeaponStats.remainingAmmo = weaponManager.currentWeaponStats.maxBullets;
+                weaponManager.currentWeaponStats.inventoryAmmo -= weaponManager.currentWeaponStats.maxBullets;
             }
             else
             {
-                weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
-                weaponManager.currentWeaponStats.inventoryBullets = 0;
+                weaponManager.currentWeaponStats.remainingAmmo = weaponManager.currentWeaponStats.inventoryAmmo;
+                weaponManager.currentWeaponStats.inventoryAmmo = 0;
             }
         }
 
         private void VideoGameReload()
         {
-            int difference = weaponManager.currentWeaponStats.maxBullets - weaponManager.currentWeaponStats.remainingBullets;
-            if (weaponManager.currentWeaponStats.inventoryBullets >= difference)
+            int difference = weaponManager.currentWeaponStats.maxBullets - weaponManager.currentWeaponStats.remainingAmmo;
+            if (weaponManager.currentWeaponStats.inventoryAmmo >= difference)
             {
-                weaponManager.currentWeaponStats.remainingBullets += difference;
-                weaponManager.currentWeaponStats.inventoryBullets -= difference;
+                weaponManager.currentWeaponStats.remainingAmmo += difference;
+                weaponManager.currentWeaponStats.inventoryAmmo -= difference;
             }
             else
             {
-                weaponManager.currentWeaponStats.remainingBullets = weaponManager.currentWeaponStats.inventoryBullets;
-                weaponManager.currentWeaponStats.inventoryBullets = 0;
+                weaponManager.currentWeaponStats.remainingAmmo = weaponManager.currentWeaponStats.inventoryAmmo;
+                weaponManager.currentWeaponStats.inventoryAmmo = 0;
             }
         }
 
@@ -122,7 +120,7 @@ namespace Furia.Player
         {
 
             //Update UI
-            m_UI.UpdateBulletCount(weaponManager.currentWeaponStats.remainingBullets, weaponManager.currentWeaponStats.inventoryBullets);
+            m_UI.UpdateBulletCount(weaponManager.currentWeaponStats.remainingAmmo, weaponManager.currentWeaponStats.inventoryAmmo);
 
             bool didShoot;
             shootEvent.TryReceive(out didShoot);
@@ -134,7 +132,7 @@ namespace Furia.Player
             if (cooldownRemaining > 0)
                 return; // Can't shoot yet
 
-            if ((weaponManager.currentWeaponStats.remainingBullets <= 0 && didShoot) || (weaponManager.currentWeaponStats.remainingBullets <= weaponManager.currentWeaponStats.maxBullets && didReload && !disableManualReload))
+            if ((weaponManager.currentWeaponStats.remainingAmmo <= 0 && didShoot) || (weaponManager.currentWeaponStats.remainingAmmo <= weaponManager.currentWeaponStats.maxBullets && didReload && !disableManualReload))
             {
                 //Only reload if the weapon is not melee
                 if (!weaponManager.currentWeaponStats.isMelee)
@@ -150,7 +148,7 @@ namespace Furia.Player
             // If the current weapon is melee, don't reduce the bullets.
             if (!weaponManager.currentWeaponStats.isMelee)
             {
-                weaponManager.currentWeaponStats.remainingBullets--;
+                weaponManager.currentWeaponStats.remainingAmmo--;
             }
 
             if (weaponManager.currentWeaponStats.isSpriteSheetAnimation)

@@ -1710,9 +1710,9 @@ Hierarchy:
                         Cooldown: 0.05
                         ReloadCooldown: 2.0
                         RemainingBullets: null
-                        remainingBullets: 30
+                        remainingAmmo: 0
                         maxBullets: 30
-                        inventoryBullets: 100
+                        inventoryAmmo: 100
                         infiniteAmmo: false
                         isMelee: false
                         damage: 50.0
@@ -3814,10 +3814,10 @@ Hierarchy:
                         Id: 46141b95-9433-4b8e-92a5-04544c39abca
                         npcName: (optional)
                         health: 100.0
-                        movementSpeed: 10.0
+                        movementSpeed: 100.0
                         damage: 10.0
                         attackRate: 1.0
-                        stoppingDistance: 3.0
+                        stoppingDistance: 1.5
                         detectRange: 10.0
                         isRangeNPC: false
                         attackSound: null
@@ -5113,9 +5113,9 @@ Hierarchy:
                         Cooldown: 1.5
                         ReloadCooldown: 2.0
                         RemainingBullets: null
-                        remainingBullets: 30
+                        remainingAmmo: 0
                         maxBullets: 30
-                        inventoryBullets: 100
+                        inventoryAmmo: 100
                         infiniteAmmo: false
                         isMelee: true
                         damage: 25.0
@@ -7416,10 +7416,10 @@ Hierarchy:
                         Id: 03793cdc-d86f-4832-874e-75bb8ae81c2c
                         npcName: (optional)
                         health: 100.0
-                        movementSpeed: 10.0
-                        damage: 10.0
+                        movementSpeed: 100.0
+                        damage: 20.0
                         attackRate: 1.0
-                        stoppingDistance: 3.0
+                        stoppingDistance: 5.0
                         detectRange: 10.0
                         isRangeNPC: true
                         attackSound: c4139b9f-8f10-41df-aa00-db87b3993ef3:DefaultResources/Audio/ShotSound

@@ -33,7 +33,6 @@ namespace Furia.Trigger
 
         public override void Update() 
         {
-
             collider ??= Entity.Get<StaticColliderComponent>();
 
             foreach (var collision in collider.Collisions)

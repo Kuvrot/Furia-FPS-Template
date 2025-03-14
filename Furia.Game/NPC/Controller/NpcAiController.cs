@@ -75,7 +75,7 @@ namespace Furia.NPC.Controller
         {
             Vector3 direction = target.Position - Entity.Transform.Position;
             direction.Normalize();
-            characterComponent.SetVelocity(new Vector3(direction.X, 0f, direction.Z) * 2.5f);
+            characterComponent.SetVelocity(new Vector3(direction.X, 0f, direction.Z) * stats.movementSpeed * (float)Game.UpdateTime.Elapsed.TotalSeconds);
         }
 
         public void StopMoving()
