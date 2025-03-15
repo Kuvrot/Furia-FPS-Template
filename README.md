@@ -3,8 +3,7 @@ A Stride template for making retro FPS games.
 
 Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter to an immersive retro-style FPS, by providing a stable and flexible template built on top of Stride, offering modern tools for classic gameplay.
 
-![imagen](https://github.com/user-attachments/assets/856fb772-5e07-41df-bc44-07edb0ca130f)
-
+![imagen](https://github.com/user-attachments/assets/caffbd3c-afe4-4805-96ea-4db691f37a4f)
 
 ### Melee combat support
 ![imagen](https://github.com/user-attachments/assets/0204ae4b-dda3-4c98-a1d4-2956f9226cbf)
