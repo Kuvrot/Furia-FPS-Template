@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Stride.Core.Mathematics;
-using Stride.Input;
-using Stride.Engine;
-using Stride.Animations;
+﻿using Stride.Engine;
 using Stride.Core;
-using Stride.Graphics;
-using Stride.Games;
 using Stride.Rendering.Sprites;
 using Stride.Audio;
 

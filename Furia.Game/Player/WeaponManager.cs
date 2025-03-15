@@ -2,13 +2,14 @@
 using Stride.Input;
 using Stride.Engine;
 using Furia.Stats;
+using static Stride.Graphics.GeometricPrimitives.GeometricPrimitive;
 
 namespace Furia.Player
 {
     public class WeaponManager : SyncScript
     {
         public bool enableFlashLight = true;
-        public List<SpriteComponent> Weapons = [];
+        public List<EntityComponent> Weapons = [];
         public LightComponent flashLight;
         public byte currentWeaponSelected = 0;
         public WeaponScript weaponScript;
@@ -22,7 +23,6 @@ namespace Furia.Player
         {
             FlashLightController();
             WeaponInventoryManagement();
-            currentWeaponStats = Weapons[currentWeaponSelected].Entity.Get<WeaponStats>();
         }
 
         private void WeaponInventoryManagement()
@@ -41,7 +41,7 @@ namespace Furia.Player
             }
         }
 
-        private void WeaponChange(int index)
+        public void WeaponChange(int index)
         {
             if (Weapons.Count == 0)
             {
@@ -50,10 +50,28 @@ namespace Furia.Player
 
             foreach (var weapon in Weapons)
             {
-                weapon.Enabled = false;
+               if (weapon.Entity.Get<ModelComponent>() != null)
+                {
+                    weapon.Entity.Get<ModelComponent>().Enabled = false;
+                }
+
+                if (weapon.Entity.Get<SpriteComponent>() != null)
+                {
+                    weapon.Entity.Get<SpriteComponent>().Enabled = false;
+                }
             }
 
-            Weapons[index].Enabled = true;
+            if (Weapons[index].Entity.Get<ModelComponent>() != null)
+            {
+                Weapons[index].Entity.Get<ModelComponent>().Enabled = true;
+            }
+
+            if (Weapons[index].Entity.Get<SpriteComponent>() != null)
+            {
+                Weapons[index].Entity.Get<SpriteComponent>().Enabled = true;
+            }
+
+            currentWeaponStats = Weapons[currentWeaponSelected].Entity.Get<WeaponStats>();
         }
 
         private void FlashLightController ()
