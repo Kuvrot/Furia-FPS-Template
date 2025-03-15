@@ -3,8 +3,7 @@ A Stride template for making retro FPS games.
 
 Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter to an immersive retro-style FPS, by providing a stable and flexible template built on top of Stride, offering modern tools for classic gameplay.
 
-![imagen](https://github.com/user-attachments/assets/856fb772-5e07-41df-bc44-07edb0ca130f)
-
+![imagen](https://github.com/user-attachments/assets/caffbd3c-afe4-4805-96ea-4db691f37a4f)
 
 ### Melee combat support
 ![imagen](https://github.com/user-attachments/assets/0204ae4b-dda3-4c98-a1d4-2956f9226cbf)
@@ -24,9 +23,9 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [x] Add sounds
 - [x] Add range enemies
 - [ ] Enemies that shoot slow projectiles (magic, arrows, etc)
+- [ ] Simple footsteps system
 - [ ] Enemies drop loot
 - [ ] AI patroling system
-- [ ] Separate into different kinds of enemies.
 - [ ] Neutral NPCs
 - [ ] Ally NPCs
 - [ ] Full compatibility with game pad (it parcially have it)
@@ -34,7 +33,7 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 #### Triggers
 - [x] Doors (Locked/unlocked)
 - [ ] Dialogues
-- [ ] Keys for unlocking doors
+- [x] Keys for unlocking doors
 - [x] Grabbing items (health, ammo, power ups, etc.)
 
 ## CREDITS
@@ -54,6 +53,7 @@ Audio
 - remaxim (https://opengameart.org/content/3-melee-sounds)
 - Ogrebane (https://opengameart.org/content/guttural-vocals)
 - TinyWorlds (https://opengameart.org/content/5-hit-sounds-dying)
+- Fupi (https://opengameart.org/content/8bit-menu-highlight)
 
 
  
