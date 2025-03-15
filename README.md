@@ -23,9 +23,9 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [x] Add sounds
 - [x] Add range enemies
 - [ ] Enemies that shoot slow projectiles (magic, arrows, etc)
+- [ ] Simple footsteps system
 - [ ] Enemies drop loot
 - [ ] AI patroling system
-- [ ] Separate into different kinds of enemies.
 - [ ] Neutral NPCs
 - [ ] Ally NPCs
 - [ ] Full compatibility with game pad (it parcially have it)
@@ -33,7 +33,7 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 #### Triggers
 - [x] Doors (Locked/unlocked)
 - [ ] Dialogues
-- [ ] Keys for unlocking doors
+- [x] Keys for unlocking doors
 - [x] Grabbing items (health, ammo, power ups, etc.)
 
 ## CREDITS
