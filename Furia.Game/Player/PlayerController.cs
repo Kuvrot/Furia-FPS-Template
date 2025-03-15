@@ -21,6 +21,7 @@ namespace Furia.Player
 
         // This component is the physics representation of a controllable character
         private CharacterComponent character;
+        private FootstepsSystem footstepsSystem;
 
         private readonly EventReceiver<Vector3> moveDirectionEvent = new EventReceiver<Vector3>(PlayerInput.MoveDirectionEventKey);
 
@@ -33,6 +34,8 @@ namespace Furia.Player
             // Will search for an CharacterComponent within the same entity as this script
             character = Entity.Get<CharacterComponent>();
             if (character == null) throw new ArgumentException("Please add a CharacterComponent to the entity containing PlayerController!");
+
+            footstepsSystem = Entity.Get<FootstepsSystem>();
         }
         
         /// <summary>
@@ -50,6 +53,8 @@ namespace Furia.Player
             moveDirectionEvent.TryReceive(out moveDirection);
 
             character.SetVelocity(moveDirection * MaxRunSpeed);
+
+            footstepsSystem?.setWalking(moveDirection != Vector3.Zero);
 
             // Broadcast normalized speed
             RunSpeedEventKey.Broadcast(moveDirection.Length());

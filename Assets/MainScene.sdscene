@@ -5615,6 +5615,13 @@ Hierarchy:
                     ba6311e99be734064a130e02cd95fdc4: !Furia.Player.InventoryManager,Furia.Game
                         Id: db2f0a22-2946-445f-bfea-d0351172696c
                         keys: {}
+                    06361a02763361e2e706903bb1b9f846: !Furia.Player.FootstepsSystem,Furia.Game
+                        Id: 075f8846-03e4-4c0b-9112-b84b9f547ce3
+                        soundSpeed: 0.25
+                        sounds:
+                            af62e9babd933cbb290594440aef42ef: e8bfc9ec-7ea7-41f4-ab4f-3b11255a1735:DefaultResources/Audio/Footsteps/0
+                            24eb5f5405b0a1598c736cba8b68c809: 5e7217b5-a4f6-490c-a44b-0c7617b31a73:DefaultResources/Audio/Footsteps/1
+                            b16a55a301d702ef427a977fbbb3c263: e5c55713-0f6c-4a7a-8765-6f6e447659f8:DefaultResources/Audio/Footsteps/2
         -   Entity:
                 Id: 9758b4f8-356a-4443-9a06-4001ccb9e7c4
                 Name: Wall0x2x5
