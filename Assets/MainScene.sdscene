@@ -159,7 +159,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 8d7da98a-fc12-4c21-9096-b4cff2e27bea
-                        Position: {X: 10.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 10.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -946,7 +946,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: e1bf7919-96fa-4f86-922f-bdb4c2074916
-                        Position: {X: -9.536743E-07, Y: 0.0, Z: -20.0}
+                        Position: {X: -9.536743E-07, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -958,7 +958,7 @@ Hierarchy:
                 Components:
                     ae9d48810854f64c90736b8aa80ccd32: !TransformComponent
                         Id: 81489dae-5408-4cf6-9073-6b8aa80ccd32
-                        Position: {X: -16.0, Y: 1.0, Z: -12.0}
+                        Position: {X: -16.0, Y: 1.0, Z: -34.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
@@ -1348,7 +1348,7 @@ Hierarchy:
                 Components:
                     ae9d48810854f64c90736b8aa80ccd32: !TransformComponent
                         Id: 3a28baae-6e75-4d51-9d8f-d457e16e6d9b
-                        Position: {X: 9.0, Y: 1.0, Z: -12.0}
+                        Position: {X: 9.0, Y: 1.0, Z: -34.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.5, Y: 1.5, Z: 1.5}
                         Children: {}
@@ -1715,7 +1715,7 @@ Hierarchy:
                 Components:
                     53601749b70e4446921511393e38a000: !TransformComponent
                         Id: 49176053-0eb7-4644-9215-11393e38a000
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1742,7 +1742,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 14888c7c-f5ed-4c16-833e-996fc9936f75
-                        Position: {X: -20.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -20.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1834,7 +1834,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: a51fc306-bfcc-4060-9ce7-f547584af6a0
-                        Position: {X: -10.0, Y: 0.0, Z: -20.0}
+                        Position: {X: -10.0, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1846,7 +1846,7 @@ Hierarchy:
                 Components:
                     51472fcc44e5774ec9e7eb3e28722faa: !TransformComponent
                         Id: b1f99ee2-f7d1-48bb-bdf0-16e32523b8ac
-                        Position: {X: 9.002409, Y: 1.3803978, Z: -0.81794417}
+                        Position: {X: 9.002409, Y: 1.3803978, Z: -23.24065}
                         Rotation: {X: 0.0, Y: 0.014927551, Z: 0.0, W: 0.9998886}
                         Scale: {X: 0.26239678, Y: 1.5, Z: 1.0}
                         Children:
@@ -1870,7 +1870,7 @@ Hierarchy:
                 Components:
                     a2d6ca1adcf6ec41a4c7d29eb46ea480: !TransformComponent
                         Id: b204a513-1531-43ed-8a03-dd82c62e9d84
-                        Position*: {X: 13.467997, Y: 1.4809911, Z: 1.8673875}
+                        Position*: {X: 13.467997, Y: 1.4809911, Z: -20.555319}
                         Rotation*: {X: 0.0, Y: 0.0, Z: 0.71197456, W: 0.7022053}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1879,7 +1879,6 @@ Hierarchy:
                         Model: 3f9d7055-5b0f-40d6-b18e-6919d6336b8d:Models/Box3x1x1
                         Materials:
                             b268898b2f56a525462d5651c67e5380~0: cc2fe6c9-1543-4a66-a383-c0d2f3f57bbc:Materials/Emissive
-                            1f66d7610cd6dc4c9b32d800d312e162~: ~(Deleted)
                     d85b2b6e072fba4f9eac30a89cde96ea: !StaticColliderComponent
                         Id: d1d77eb5-e52e-496b-8bde-9f1139e80bc4
                         CanSleep: true
@@ -1917,7 +1916,7 @@ Hierarchy:
                 Components:
                     2a6bed74cfb66c8ec52c5f8e7672afc7: !TransformComponent
                         Id: fce31df8-52fe-4cc0-819e-06d207b3bd38
-                        Position: {X: 6.443969, Y: 0.6280223, Z: -16.626537}
+                        Position: {X: 6.443969, Y: 0.6280223, Z: -39.049244}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3005,7 +3004,7 @@ Hierarchy:
                 Components:
                     51472fcc44e5774ec9e7eb3e28722faa: !TransformComponent
                         Id: 112e691d-b766-459d-b294-3bac3c348312
-                        Position: {X: 3.305975, Y: 1.3803978, Z: -2.014158}
+                        Position: {X: 3.305975, Y: 1.3803978, Z: -24.436865}
                         Rotation: {X: 0.0, Y: 0.014927551, Z: 0.0, W: 0.9998886}
                         Scale: {X: 0.26239678, Y: 1.5, Z: 1.0}
                         Children:
@@ -3302,7 +3301,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 4882fa74-43f2-4b1a-a69c-d4feef04a72b
-                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -32.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3392,7 +3391,7 @@ Hierarchy:
                 Components:
                     6cd8639c35566d49a4fdec0a9e37c355: !TransformComponent
                         Id: 9c63d86c-5635-496d-a4fd-ec0a9e37c355
-                        Position: {X: -3.0, Y: 0.0, Z: -3.0}
+                        Position: {X: -3.0, Y: 0.0, Z: -25.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3612,7 +3611,7 @@ Hierarchy:
                 Components:
                     6995cff9e3635543a32f91a31f6b6b7a: !TransformComponent
                         Id: f9cf9569-63e3-4355-a32f-91a31f6b6b7a
-                        Position: {X: -4.7683716E-07, Y: 0.0, Z: 20.0}
+                        Position: {X: -4.7683716E-07, Y: 0.0, Z: -2.4227066}
                         Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4078,7 +4077,7 @@ Hierarchy:
                 Components:
                     3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
                         Id: c0939c05-2af7-48a2-9fbe-2b8bba3593f0
-                        Position: {X: -16.664177, Y: 0.9554226, Z: -15.797443}
+                        Position: {X: -16.664177, Y: 0.9554226, Z: -38.22015}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
                         Children:
@@ -4100,7 +4099,7 @@ Hierarchy:
                         stoppingDistance: 1.5
                         detectRange: 10.0
                         isRangeNPC: false
-                        probabilityOfLoot: 100
+                        probabilityOfLoot: 25
                         accuracy: 25
                         attackSound: null
                         hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
@@ -4246,7 +4245,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: a532d45c-be3d-484f-892e-fb6697fd3462
-                        Position: {X: -10.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -10.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4438,7 +4437,7 @@ Hierarchy:
                 Components:
                     9b2b6ce83ee08c4db6f4b48e349de97f: !TransformComponent
                         Id: e86c2b9b-e03e-4d8c-b6f4-b48e349de97f
-                        Position: {X: 0.0, Y: 32.539055, Z: -9.101348E-07}
+                        Position: {X: 0.0, Y: 32.539055, Z: -22.422707}
                         Rotation: {X: -0.5540323, Y: 0.21201216, Z: 0.1484525, W: 0.7912401}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4581,7 +4580,7 @@ Hierarchy:
                 Components:
                     70e9bb04d768b54998613e8ceefea848: !TransformComponent
                         Id: 059153a5-5641-47a1-8ccf-969a7a8f2a65
-                        Position: {X: 3.000001, Y: 4.0, Z: -3.0}
+                        Position: {X: 3.000001, Y: 4.0, Z: -25.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.5, Y: 1.5, Z: 1.5}
                         Children: {}
@@ -4652,7 +4651,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 6c1ad7bd-7f85-45b3-9ff5-e355691911d3
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4720,7 +4719,7 @@ Hierarchy:
                 Components:
                     04bebcb2336e473b97e3c948fcaa9740: !TransformComponent
                         Id: c3f4044e-48b5-465a-8e4e-5aee5e230dfa
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4997,7 +4996,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 0400eb1a-0a00-4d1a-810e-ab4c25eb0087
-                        Position: {X: -10.0, Y: 0.0, Z: -10.0}
+                        Position: {X: -10.0, Y: 0.0, Z: -32.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5009,7 +5008,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 77b63cef-a992-497c-8d4d-d25708d129e6
-                        Position: {X: 9.999999, Y: 0.0, Z: -20.0}
+                        Position: {X: 9.999999, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5020,7 +5019,7 @@ Hierarchy:
                 Components:
                     5f235171ad6697821498c8a92d0afb66: !TransformComponent
                         Id: 224fba0b-dd19-4c22-9433-34ab35acb7b2
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -5097,7 +5096,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 36a8dd56-3bf2-4f66-a4a1-bb4c1a85893f
-                        Position: {X: -20.0, Y: 0.0, Z: -20.0}
+                        Position: {X: -20.0, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5244,7 +5243,7 @@ Hierarchy:
                 Components:
                     6995cff9e3635543a32f91a31f6b6b7a: !TransformComponent
                         Id: 7c45fcb6-b766-4e5f-9274-c5a56061718e
-                        Position: {X: 20.000002, Y: 0.0, Z: 0.0}
+                        Position: {X: 20.000002, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5550,7 +5549,7 @@ Hierarchy:
                 Components:
                     458ac2590f953f4fb47242e21b3e420f: !TransformComponent
                         Id: 59c28a45-950f-4f3f-b472-42e21b3e420f
-                        Position: {X: -14.999999, Y: 0.0, Z: 14.999999}
+                        Position: {X: -14.999999, Y: 0.0, Z: -7.4227076}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5679,7 +5678,7 @@ Hierarchy:
                 Components:
                     6995cff9e3635543a32f91a31f6b6b7a: !TransformComponent
                         Id: 946bcb69-b407-48fa-99e8-7956b6e86f3c
-                        Position: {X: -19.999998, Y: 0.0, Z: 0.0}
+                        Position: {X: -19.999998, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5922,7 +5921,7 @@ Hierarchy:
                 Components:
                     70e9bb04d768b54998613e8ceefea848: !TransformComponent
                         Id: dc733dd2-ae4a-4ed2-82b4-56e350a4f68a
-                        Position: {X: -8.999999, Y: 2.0, Z: -3.0}
+                        Position: {X: -8.999999, Y: 2.0, Z: -25.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
@@ -5991,7 +5990,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 3782e053-0038-4a77-9996-8ceb701aada0
-                        Position: {X: 10.0, Y: 0.0, Z: 10.000001}
+                        Position: {X: 10.0, Y: 0.0, Z: -12.422706}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6350,7 +6349,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 5108692c-8fbe-47d9-93a3-4168f0872f91
-                        Position: {X: -10.0, Y: 0.0, Z: 10.000001}
+                        Position: {X: -10.0, Y: 0.0, Z: -12.422706}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6673,7 +6672,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 1e505aec-dff5-4cfb-8974-29f5ce40939b
-                        Position: {X: -20.0, Y: 0.0, Z: 10.000001}
+                        Position: {X: -20.0, Y: 0.0, Z: -12.422706}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6865,7 +6864,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: be8e5a46-b04e-4443-bc14-4efa1ff0211f
-                        Position: {X: -20.0, Y: 0.0, Z: -10.0}
+                        Position: {X: -20.0, Y: 0.0, Z: -32.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6910,7 +6909,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: a3fdf4d2-eded-4ea7-ab38-7ec7084d2562
-                        Position: {X: 0.0, Y: 0.0, Z: 10.000001}
+                        Position: {X: 0.0, Y: 0.0, Z: -12.422706}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -7264,7 +7263,7 @@ Hierarchy:
                 Components:
                     6995cff9e3635543a32f91a31f6b6b7a: !TransformComponent
                         Id: e19f94d2-4270-4bf5-8d93-3c76da08c700
-                        Position: {X: 2.1457672E-06, Y: 0.0, Z: -20.0}
+                        Position: {X: 2.1457672E-06, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -7529,7 +7528,7 @@ Hierarchy:
                 Components:
                     b0d1edd9a8132645a0d25f44658b463a: !TransformComponent
                         Id: 8c9ceaed-e718-435d-9d5d-d8f28a47e407
-                        Position: {X: 9.536743E-07, Y: 1.0, Z: -12.999999}
+                        Position: {X: 9.536743E-07, Y: 1.0, Z: -35.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.5, Y: 1.5, Z: 1.5}
                         Children: {}
@@ -7959,7 +7958,7 @@ Hierarchy:
                 Components:
                     3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
                         Id: 3040658d-a2cd-4bc3-ba85-bd052bca2669
-                        Position: {X: -11.932127, Y: 0.9554226, Z: -15.797443}
+                        Position: {X: -11.932127, Y: 0.9554226, Z: -38.22015}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
                         Children:
@@ -7981,7 +7980,7 @@ Hierarchy:
                         stoppingDistance: 5.0
                         detectRange: 10.0
                         isRangeNPC: true
-                        probabilityOfLoot: 100
+                        probabilityOfLoot: 25
                         accuracy: 25
                         attackSound: c4139b9f-8f10-41df-aa00-db87b3993ef3:DefaultResources/Audio/ShotSound
                         hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
@@ -8062,7 +8061,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 9f1161bf-f206-49f2-8b3d-e6c197d45918
-                        Position: {X: 10.0, Y: 0.0, Z: -10.0}
+                        Position: {X: 10.0, Y: 0.0, Z: -32.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -8170,7 +8169,7 @@ Hierarchy:
                 Components:
                     6cd8639c35566d49a4fdec0a9e37c355: !TransformComponent
                         Id: 8264c9c8-6766-440a-9f73-d73f1015a3bc
-                        Position: {X: 4.0, Y: 0.0, Z: 3.0}
+                        Position: {X: 4.0, Y: 0.0, Z: -19.422707}
                         Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -8379,7 +8378,7 @@ Hierarchy:
                 Components:
                     b0d1edd9a8132645a0d25f44658b463a: !TransformComponent
                         Id: 8a1dc202-0da7-4c04-bb25-becfb89ee759
-                        Position: {X: 15.0, Y: 1.0, Z: 3.0}
+                        Position: {X: 15.0, Y: 1.0, Z: -19.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
@@ -8604,7 +8603,7 @@ Hierarchy:
                 Components:
                     8d16c996d7c9c54eb5a2d12ea4ba3d7c: !TransformComponent
                         Id: 96c9168d-c9d7-4ec5-b5a2-d12ea4ba3d7c
-                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Position: {X: 0.0, Y: 2.0, Z: -24.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}

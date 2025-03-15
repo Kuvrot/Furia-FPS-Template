@@ -32,7 +32,6 @@ namespace Furia.Interaction
 
         public Sound pickUpSound;
 
-        private StaticColliderComponent collider;
         private AudioManager audioManager;
 
         public override void Start()
