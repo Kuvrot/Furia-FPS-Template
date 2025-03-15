@@ -52,7 +52,7 @@ namespace Furia.Interaction
                 RotateCharacter();
             }
 
-            if (GetPlayerDistance() < 2f)
+            if (GetPlayerDistance() < 3f && !isDialogueStarted)
             {
                 if (isManualInteraction)
                 {
