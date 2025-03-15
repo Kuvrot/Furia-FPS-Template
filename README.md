@@ -46,6 +46,8 @@ Developed by
 - drummyfish (https://opengameart.org/content/anarch-oldschool-fps-resources)
 - GymRat (https://opengameart.org/content/lospec-game-jam-fps-assets)
 - Nmn (https://opengameart.org/content/monster-mutant-leader-for-fps-game)
+- Kelvin Shadewing (https://opengameart.org/content/locks-and-keys)
+- Angrymeteor (https://opengameart.org/content/2d-static-spritesicons)
 
 Audio
 - Mike Koenig (https://opengameart.org/content/shotgun-shoot-reload)
