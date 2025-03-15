@@ -138,5 +138,13 @@ namespace Furia.NPC.Animation
 
             return false;
         }
+
+        private void CheckComponents()
+        {
+            if (spriteComponent == null || spriteSheet == null)
+            {
+                DebugText.Print(Entity.Name + " has null components!!", new Int2(500, 300));
+            }
+        }
     }
 }

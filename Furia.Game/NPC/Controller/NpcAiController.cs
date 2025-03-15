@@ -40,6 +40,31 @@ namespace Furia.NPC.Controller
             characterComponent = Entity.Get<CharacterComponent>();
             clock = new Random().NextDouble() * (stats.attackRate - 0.0f) + 0.0f;
             audioManager = Entity.Get<AudioManager>();
+
+            if (animationController == null)
+            {
+                throw new ArgumentException("No animation controller was founded at " + Entity.Name);
+            }
+
+            if (stats == null)
+            {
+                throw new ArgumentException("No stats component was founded at " + Entity.Name);
+            }
+
+            if (target == null)
+            {
+                throw new ArgumentException("There is no target assingned to " + Entity.Name);
+            }
+
+            if (characterComponent == null)
+            {
+                throw new ArgumentException("No character controller was founded at " + Entity.Name);
+            }
+
+            if (audioManager == null)
+            {
+                throw new ArgumentException("No audio manager was founded at " + Entity.Name);
+            }
         }
 
         public override void Update()
