@@ -29,6 +29,11 @@ namespace Furia.NPC.Stats
 
         public bool isRangeNPC = false; // Is a range unit/attacks from distance
 
+        public int probabilityOfLoot = 100;
+
+        [Display("accuaracy (% of hitting the player)")] //only works for range enemies
+        public byte accuracy = 25;
+
         //Audio
         public Sound attackSound;
         public Sound hitSound;

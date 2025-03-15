@@ -24,6 +24,9 @@ namespace Furia.Core
         public TransformComponent player;
         public UIComponent ui;
 
+        public List<Prefab> dropableLoot = [];
+
+
         public override void Update()
         {
             // Do stuff every new frame

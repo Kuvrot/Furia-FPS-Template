@@ -12,6 +12,8 @@ using Furia.NPC.Stats;
 using Furia.Core;
 using Furia.Player;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static Stride.Graphics.Buffer;
+using System.Windows.Forms;
 
 namespace Furia.NPC.Controller
 {
@@ -30,7 +32,6 @@ namespace Furia.NPC.Controller
         private bool aggresiveMode = false;
 
         private double clock = 0;
-        private float distance = 0;
 
         public override void Start()
         {
@@ -112,7 +113,22 @@ namespace Furia.NPC.Controller
         {
             StopMoving();
             animationController.PlayDeathAnimation();
+
+            if (characterComponent.Enabled)
+            {
+                if (new Random().Next(0, 100) <= stats.probabilityOfLoot) // If it is a range npc, then his shots will have a 25% chance of impact
+                {
+                    int index = GameManager.instance.dropableLoot.Count;
+                    int random = new Random().Next(0, index);
+                    var loot = GameManager.instance.dropableLoot[random].Instantiate();
+                    loot[0].Transform.Position = Entity.Transform.Position;
+                    Entity.Scene.Entities.AddRange(loot);
+                }
+            }
+
             characterComponent.Enabled = false;
+            
+            
         }
 
         public void EnemyAiSystem ()
@@ -139,7 +155,7 @@ namespace Furia.NPC.Controller
                         }
                         else
                         {
-                            if (new Random().Next() * (100 - 0) + 0 <= 25) // If it is a range npc, then his shots will have a 25% chance of impact
+                            if (new Random().Next(0, 100) <= stats.accuracy) // If it is a range npc, then his shots will have a 25% chance of impact
                             {
                                 GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
                             }
@@ -167,7 +183,7 @@ namespace Furia.NPC.Controller
 
         private float GetDistance()
         {
-            return distance = Vector3.Distance(Entity.Transform.Position, target.Position);
+            return Vector3.Distance(Entity.Transform.Position, target.Position);
         }
 
         private bool Counter()
