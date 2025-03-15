@@ -53,6 +53,7 @@ Audio
 - remaxim (https://opengameart.org/content/3-melee-sounds)
 - Ogrebane (https://opengameart.org/content/guttural-vocals)
 - TinyWorlds (https://opengameart.org/content/5-hit-sounds-dying)
+- Fupi (https://opengameart.org/content/8bit-menu-highlight)
 
 
  
