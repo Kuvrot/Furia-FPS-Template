@@ -40,7 +40,6 @@ Hierarchy:
         - ref!! df496061-c636-4bf6-a081-fd238c2f74b8
         - ref!! 1c16ce32-59b1-4691-9465-974111982f67
         - ref!! 25bc5b70-bc98-4f51-b245-56c77af74122
-        - ref!! 0ceaf263-3374-437f-9232-ef205569f93d
         - ref!! 796c9d1e-0c4b-4304-a04b-83aceec725b5
         - ref!! 644eeab8-2696-4cd4-a2dc-82284d9ede70
         - ref!! eaa76ae2-7133-4ebf-aa23-b024309c2574
@@ -49,6 +48,7 @@ Hierarchy:
         - ref!! d8130b4e-4328-4af8-8076-9eebac45e0db
         - ref!! 14119122-4788-46b1-9892-a2f311d5a304
         - ref!! 9160044e-6388-4fe2-9ba0-f99c8445cf0f
+        - ref!! 31eb3a5b-a120-4fee-a3c3-ed97e3c0efbc
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -424,18 +424,6 @@ Hierarchy:
                 BasePartAsset: 6b352249-d0e8-4437-8067-1beada5d4363:BlocksPrefabs/Box3x1x1
                 BasePartId: b86036f4-0ce3-4794-9947-a61378390d41
                 InstanceId: 7bd63b9e-8c21-4801-be4c-f3781acdece2
-        -   Folder: Ground
-            Entity:
-                Id: 0ceaf263-3374-437f-9232-ef205569f93d
-                Name: Box3x1x1
-                Components:
-                    753d04c0c481d746a75318006d55fa86: !TransformComponent
-                        Id: c0043d75-81c4-46d7-a753-18006d55fa86
-                        Position: {X: 4.0, Y: 0.0, Z: -4.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.70710677, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            a2d6ca1adcf6ec41a4c7d29eb46ea480: ref!! a173542c-0be2-447f-bbc7-6efd22736851
         -   Entity:
                 Id: 0d0b5c5c-d062-473a-b342-44c8166ffdc6
                 Name: Box1x1x1
@@ -756,7 +744,7 @@ Hierarchy:
                         giveAmount: 25
                         weapon: null
                         amountType: Ammo
-                        pickUpSound: null
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
         -   Entity:
                 Id: 141dcea6-59de-4225-b512-5603b3eff1d9
                 Name: Wall0x2x5
@@ -1025,41 +1013,6 @@ Hierarchy:
                 BasePartAsset: 3c52f7bb-30ff-4597-9d1f-eaae6884e1cd:BlocksPrefabs/GridBase10x10
                 BasePartId: b045349c-565e-4488-9130-a795b0e3b229
                 InstanceId: 366c2f47-8675-4d4b-84e8-1c388511e7ec
-        -   Entity:
-                Id: 1d5a1255-530d-4b03-8df4-66e2d5a46bdd
-                Name: Box3x1x1
-                Components:
-                    a2d6ca1adcf6ec41a4c7d29eb46ea480: !TransformComponent
-                        Id: a173542c-0be2-447f-bbc7-6efd22736851
-                        Position: {X: 1.5000001, Y: 0.5, Z: 0.5}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    8fff9564224e164bbfeeb200886985b1: !ModelComponent
-                        Id: d84b6648-2bc1-4a42-aca2-bb9413eeb41c
-                        Model: 3f9d7055-5b0f-40d6-b18e-6919d6336b8d:Models/Box3x1x1
-                        Materials:
-                            1f66d7610cd6dc4c9b32d800d312e162~0: db8e115d-73b8-4f74-b910-ef5f9a8ff222:Materials/GridMTPlatform
-                    d85b2b6e072fba4f9eac30a89cde96ea: !StaticColliderComponent
-                        Id: c057d522-dcc3-4060-ad24-739b0f8656e8
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            e444ebaf79902340b6f52785555515ef: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 3.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: 6b352249-d0e8-4437-8067-1beada5d4363:BlocksPrefabs/Box3x1x1
-                BasePartId: b86036f4-0ce3-4794-9947-a61378390d41
-                InstanceId: 7b6deb75-e403-4410-8209-ec2f96941880
         -   Entity:
                 Id: 1daf6845-db12-416a-b91a-2337c46a87d2
                 Name: Wall0x2x2
@@ -1902,6 +1855,57 @@ Hierarchy:
                         doorCollider: ref!! e986ea55-493c-4678-8afd-b5d027d7e9f7
                     03a04fe90ef4dc3c6351b2885f2f7124: !Furia.Player.AudioManager,Furia.Game
                         Id: dee84722-64a6-477e-bb8e-8eb06c52429b
+        -   Entity:
+                Id: 31eb3a5b-a120-4fee-a3c3-ed97e3c0efbc
+                Name*: DialogueSystem
+                Components:
+                    a2d6ca1adcf6ec41a4c7d29eb46ea480: !TransformComponent
+                        Id: b204a513-1531-43ed-8a03-dd82c62e9d84
+                        Position*: {X: 13.467997, Y: 1.4809911, Z: 1.8673875}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.71197456, W: 0.7022053}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8fff9564224e164bbfeeb200886985b1: !ModelComponent
+                        Id: 1dcebfe8-80d3-4fa1-b0bf-090900939379
+                        Model: 3f9d7055-5b0f-40d6-b18e-6919d6336b8d:Models/Box3x1x1
+                        Materials:
+                            b268898b2f56a525462d5651c67e5380*~0: cc2fe6c9-1543-4a66-a383-c0d2f3f57bbc:Materials/Emissive
+                            1f66d7610cd6dc4c9b32d800d312e162~: ~(Deleted)
+                    d85b2b6e072fba4f9eac30a89cde96ea: !StaticColliderComponent
+                        Id: d1d77eb5-e52e-496b-8bde-9f1139e80bc4
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            e444ebaf79902340b6f52785555515ef: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    512ec6cc8c744c4603466961e0d8fdaa*: !Furia.Interaction.DialogueSystem,Furia.Game
+                        Id: 06333d68-215b-4a78-8d8f-31d53b6bafa7
+                        rotate: false
+                        isManualInteraction: true
+                        dialogueInterval: 1.0
+                        dialogues:
+                            2f0bddc46f1851fd2cc36714e5af286a: Hello
+                            b925407b82b3cb3ed139bd096e87fea6: I am an object
+                            450f79837130fdb77b1d6a0b19fec396: And this is a test
+                            83b366f7dfe09226ccf3bcc8393992ae: Goodbye
+                        dialogueSound: {}
+                    00a3d6564aa7742f6c13cecec2a14f7c*: !Furia.Player.AudioManager,Furia.Game
+                        Id: 618f08ec-087f-461c-9939-27210a953011
+                    d194bad2cd7bb2fb9fd2d376d7a4bf38*: !Furia.Player.AudioManager,Furia.Game
+                        Id: ed2ae6de-f5c8-45ea-8c27-ad134f776e9d
+            Base:
+                BasePartAsset: 6b352249-d0e8-4437-8067-1beada5d4363:BlocksPrefabs/Box3x1x1
+                BasePartId: b86036f4-0ce3-4794-9947-a61378390d41
+                InstanceId: c991b722-4f84-447b-a9a1-caf0496e684f
         -   Entity:
                 Id: 32c287d0-7fa8-4510-9b40-a773eca87ee4
                 Name: Box3x1x1 (5)
@@ -4974,6 +4978,7 @@ Hierarchy:
                         Priority: -1
                         showEnemyHealthBars: false
                         player: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
+                        ui: ref!! 6d1dd95f-20af-41a9-bbad-1f48827c5edb
         -   Entity:
                 Id: 84277299-6b9d-4038-99e2-1f903e1a0e53
                 Name: Wall0x2x2
@@ -5270,7 +5275,7 @@ Hierarchy:
                         Id: 74152c12-1df5-4d43-800c-72d2ff4fae6e
                         idKey: 1
                         itemRotation: true
-                        pickUpSound: null
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
         -   Entity:
                 Id: 92d564ea-a959-40ba-a909-13b58357ea97
                 Name: Stairs1x1x1_50
@@ -7368,7 +7373,7 @@ Hierarchy:
                         giveAmount: 25
                         weapon: null
                         amountType: Health
-                        pickUpSound: null
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
         -   Entity:
                 Id: dac72e5a-ffc1-4d2f-bb9c-9ea3c8816458
                 Name: Trigger
@@ -7945,7 +7950,7 @@ Hierarchy:
                         giveAmount: 25
                         weapon: !TransformComponent ref!! 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
                         amountType: Health
-                        pickUpSound: null
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
         -   Folder: Ground/Grid
             Entity:
                 Id: ec88afd3-134a-4f30-a4f3-e9099b3bda3d

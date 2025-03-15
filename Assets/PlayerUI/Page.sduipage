@@ -31,6 +31,34 @@ Hierarchy:
                 Margin: {}
                 Name: hitScreen
                 Children: {}
+        -   UIElement: !Canvas
+                Id: 750019c4-7c68-4739-84bb-50c76cb56f90
+                DependencyProperties: {}
+                BackgroundColor: {R: 255, G: 255, B: 255, A: 0}
+                Width: 1280.0
+                Height: 137.0
+                VerticalAlignment: Bottom
+                Margin: {}
+                Name: dialoguePanel
+                Children:
+                    47d19c747419446f6e34e6fbf840de9c: !TextBlock ref!! 7f489ce7-c759-47dd-a2e3-59705c28ca7f
+        -   UIElement: !TextBlock
+                Id: 7f489ce7-c759-47dd-a2e3-59705c28ca7f
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 1184.0
+                Height: 78.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {Left: 48.0, Top: 23.0}
+                Name: dialogueText
+                Text: 
+                Font: c90f3988-0544-4cbe-993f-13af7d9c23c6:StrideDefaultFont
+                TextSize: 20.0
+                TextColor: {R: 0, G: 0, B: 0, A: 255}
+                OutlineColor: {R: 0, G: 0, B: 0, A: 255}
+                OutlineThickness: 0.0
+                TextAlignment: Center
         -   UIElement: !Slider
                 Id: 88874292-273e-4407-81f4-9a475a243ae7
                 DependencyProperties: {}
@@ -70,6 +98,7 @@ Hierarchy:
                     382f1d1dc12d63be4b5dd17c653aaafc: !TextBlock ref!! c1ca2eac-4b8b-477d-a898-a9507bc23121
                     a1bf06fd2a12822fa8bec3cdcca518fd: !Slider ref!! 88874292-273e-4407-81f4-9a475a243ae7
                     6aba8cf53b2b51e9aa75539981767687: !Canvas ref!! 49696185-16aa-42d2-bef8-65b22d74ba7d
+                    63af91100207337ee6de3dfad9fad469: !Canvas ref!! 750019c4-7c68-4739-84bb-50c76cb56f90
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}

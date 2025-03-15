@@ -22,6 +22,7 @@ namespace Furia.Core
 
         public bool showEnemyHealthBars = false;
         public TransformComponent player;
+        public UIComponent ui;
 
         public override void Update()
         {

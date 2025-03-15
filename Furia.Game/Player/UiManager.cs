@@ -27,6 +27,9 @@ namespace Furia.Player
         public override void Start()
         {
             Page = UI.Page;
+
+            Canvas dialogueCanvas  = Page.RootElement.FindName("dialoguePanel") as Canvas;
+            dialogueCanvas.Opacity = 0;
         }
 
         public override void Update()
@@ -42,7 +45,6 @@ namespace Furia.Player
                     hitCanvas.Opacity = 0;
                     getHit = false;
                 }
-
             }
         }
 
