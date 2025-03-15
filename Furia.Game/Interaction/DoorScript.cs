@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Stride.Core.Mathematics;
+﻿using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
-using Microsoft.VisualBasic;
 using Stride.Physics;
 using Furia.Player;
-using System.Diagnostics;
 using Stride.Audio;
+using Furia.Core;
 
-namespace Furia.Trigger
+namespace Furia.Interaction
 {
     public class DoorScript : SyncScript
     {
@@ -20,10 +14,9 @@ namespace Furia.Trigger
         public float openAngle = 90;
         public bool isOpen = false, isLocked = false;
         public TransformComponent door;
-        public Sound openDoorSound , closeDoorSound, lockedDoorSound;
+        public Sound openDoorSound, closeDoorSound, lockedDoorSound;
 
         public StaticColliderComponent doorCollider;
-        private StaticColliderComponent collider;
         private AudioManager audioManager;
 
         public override void Start()
@@ -31,20 +24,15 @@ namespace Furia.Trigger
             audioManager = Entity.Get<AudioManager>();
         }
 
-        public override void Update() 
+        public override void Update()
         {
-            collider ??= Entity.Get<StaticColliderComponent>();
-
-            foreach (var collision in collider.Collisions)
+            if (GetPlayerDistance() < 2.5f)
             {
-                if (collision.ColliderA.Entity.Get<PlayerController>() != null)
-                {
-                    DebugText.Print("Press E to open", new Int2(500, 300));
+                DebugText.Print(GetPlayerDistance().ToString(), new Int2(500, 300));
 
-                    if (Input.IsKeyPressed(Keys.E))
-                    {
-                        DoorInteraction();
-                    }
+                if (Input.IsKeyPressed(Keys.E))
+                {
+                    DoorInteraction();
                 }
             }
         }
@@ -56,7 +44,7 @@ namespace Furia.Trigger
                 audioManager.PlaySound(lockedDoorSound);
                 return;
             }
-                
+
             if (!isOpen)
             {
                 DebugText.Print("Open", new Int2(500, 300));
@@ -75,6 +63,10 @@ namespace Furia.Trigger
                 audioManager.PlaySound(closeDoorSound);
                 isOpen = false;
             }
+        }
+        private float GetPlayerDistance()
+        {
+            return Vector3.Distance(GameManager.instance.player.Position, Entity.Transform.Position);
         }
     }
 }
