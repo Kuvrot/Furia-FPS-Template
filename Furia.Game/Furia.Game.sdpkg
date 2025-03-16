@@ -23,6 +23,7 @@ AssetFolders:
     -   Path: !dir ../Assets
     -   Path: !dir ../Assets
     -   Path: !dir ../Assets
+    -   Path: !dir ../Assets
     -   Path: !dir D:/GameEngines/StrideProjects/Furia/Assets
 ResourceFolders:
     - !dir ../Resources
