@@ -22,17 +22,15 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 - [x] Animate AI sprites
 - [x] Add sounds
 - [x] Add range enemies
+- [x] Simple footsteps system
+- [x] Enemies drop loot
 - [ ] Enemies that shoot slow projectiles (magic, arrows, etc)
-- [ ] Simple footsteps system
-- [ ] Enemies drop loot
 - [ ] AI patroling system
-- [ ] Neutral NPCs
-- [ ] Ally NPCs
 - [ ] Full compatibility with game pad (it parcially have it)
 
 #### Triggers
 - [x] Doors (Locked/unlocked)
-- [ ] Dialogues
+- [x] Dialogues
 - [x] Keys for unlocking doors
 - [x] Grabbing items (health, ammo, power ups, etc.)
 
@@ -54,6 +52,6 @@ Audio
 - Ogrebane (https://opengameart.org/content/guttural-vocals)
 - TinyWorlds (https://opengameart.org/content/5-hit-sounds-dying)
 - Fupi (https://opengameart.org/content/8bit-menu-highlight)
-
+- congusbongus (https://opengameart.org/content/footsteps-on-different-surfaces)
 
  
