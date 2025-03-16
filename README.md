@@ -30,7 +30,7 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 
 #### Triggers
 - [x] Doors (Locked/unlocked)
-- [ ] Dialogues
+- [x] Dialogues
 - [x] Keys for unlocking doors
 - [x] Grabbing items (health, ammo, power ups, etc.)
 
