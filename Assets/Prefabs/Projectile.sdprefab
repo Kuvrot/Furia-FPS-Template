@@ -1,0 +1,49 @@
+!PrefabAsset
+Id: 2591db0c-45f4-45fd-a6e3-4634b99047bb
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 30d930e6-3ba6-4307-a28e-e24b338f7465
+    Parts:
+        -   Entity:
+                Id: 30d930e6-3ba6-4307-a28e-e24b338f7465
+                Name: Projectile
+                Components:
+                    6ff30cfa102524865246fbc7e25dbac1: !TransformComponent
+                        Id: 153875e6-9e4a-44b3-9382-a3c029196c96
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 0.25}
+                        Children: {}
+                    40158c637cc7092ce6d2cd75d96b284a: !ModelComponent
+                        Id: af15bbdd-8090-4bca-8ca1-1eb4900f4468
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    c36b25979179d04c5d389f8c141181b2: !RigidbodyComponent
+                        Id: 14428edc-abe7-4635-a099-6e503fc20bde
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2bcb5c29b17dd603aaa3946218af9de8: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d5888a0062917b7a04b8dbaf57c6ff81: !Furia.Interaction.ProjectileScript,Furia.Game
+                        Id: 06f8850f-494d-4119-b7b4-f03318b06fff
+                        speed: 200.0
+                        lifeTime: 7.0
+                        damage: 10.0

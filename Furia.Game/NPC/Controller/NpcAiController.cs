@@ -155,9 +155,18 @@ namespace Furia.NPC.Controller
                         }
                         else
                         {
-                            if (new Random().Next(0, 100) <= stats.accuracy) // If it is a range npc, then his shots will have a 25% chance of impact
+                            if (stats.Projectiles.Count > 0)
                             {
-                                GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                                var projectile = stats.Projectiles[0].Instantiate();
+                                projectile[0].Transform.Position = Entity.Transform.Position;
+                                Entity.Scene.Entities.AddRange(projectile);
+                            }
+                            else
+                            {
+                                if (new Random().Next(0, 100) <= stats.accuracy) // If it is a range npc, then his shots will have a 25% chance of impact
+                                {
+                                    GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                                }
                             }
                         }
                     }

@@ -42,6 +42,7 @@ Hierarchy:
         - ref!! 25bc5b70-bc98-4f51-b245-56c77af74122
         - ref!! 796c9d1e-0c4b-4304-a04b-83aceec725b5
         - ref!! 644eeab8-2696-4cd4-a2dc-82284d9ede70
+        - ref!! 8e625263-abd9-4181-ab69-d8df3f10cdf6
         - ref!! eaa76ae2-7133-4ebf-aa23-b024309c2574
         - ref!! 841d9fd9-a633-4f4d-a313-2495571dc48b
         - ref!! ec1e1acc-9364-48f4-87eb-57f8678fee97
@@ -50,6 +51,7 @@ Hierarchy:
         - ref!! 9160044e-6388-4fe2-9ba0-f99c8445cf0f
         - ref!! 31eb3a5b-a120-4fee-a3c3-ed97e3c0efbc
         - ref!! 3237036a-191b-4e53-af04-c54d9ef8780e
+        - ref!! 8cdcf255-0634-4190-91ab-fd393e333feb
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -4073,11 +4075,11 @@ Hierarchy:
                             cfce75d38d66e24fae426d1f40aa4f8a: ref!! 4114d3a2-80bf-4535-8775-0f56edf13110
         -   Entity:
                 Id: 644eeab8-2696-4cd4-a2dc-82284d9ede70
-                Name: Enemy
+                Name: Wizard
                 Components:
                     3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
                         Id: c0939c05-2af7-48a2-9fbe-2b8bba3593f0
-                        Position: {X: -16.664177, Y: 0.9554226, Z: -38.22015}
+                        Position: {X: -5.8109465, Y: 0.9554226, Z: -38.22015}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
                         Children:
@@ -4096,9 +4098,11 @@ Hierarchy:
                         movementSpeed: 100.0
                         damage: 10.0
                         attackRate: 1.0
-                        stoppingDistance: 1.5
+                        stoppingDistance: 15.0
                         detectRange: 10.0
-                        isRangeNPC: false
+                        isRangeNPC: true
+                        Projectiles:
+                            cae0550ff40e5f32aa7264e24535c981: 2591db0c-45f4-45fd-a6e3-4634b99047bb:Prefabs/Projectile
                         probabilityOfLoot: 25
                         accuracy: 25
                         attackSound: null
@@ -4192,6 +4196,36 @@ Hierarchy:
                 BasePartAsset: c7dcdd06-d013-4ea1-a09a-eefbefc6e5af:BlocksPrefabs/Wall0x2x2
                 BasePartId: f73cb16c-30b9-4200-b872-56885e7023e2
                 InstanceId: 9df314c7-9437-47b7-83ec-b80a28027635
+        -   Entity:
+                Id: 680206fe-d06a-40e5-b9a9-5613db94e683
+                Name: SpriteSheet
+                Components:
+                    cd63069ae84d76618915677691db0294: !TransformComponent
+                        Id: 7a1ca908-2793-4093-a8f6-222a1ea26473
+                        Position: {X: 0.0, Y: 0.01011852, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.8274503, Y: 1.8274503, Z: 1.8274503}
+                        Children: {}
+                    1d9f8ea7bc070c56316272276a6001c7: !SpriteComponent
+                        Id: bbef7143-d4d4-44b1-9fc6-054a1df27c73
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6a93dc12-904d-47fc-8079-c2ebd480fd99:DefaultResources/Enemies/SpriteSheet
+                            CurrentFrame: 8
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+                    122d9396dee9b26239ed286fbc23b4ed: !Furia.NPC.Animation.Npc2dAnimationController,Furia.Game
+                        Id: 3beae8be-8312-4d37-bf88-05c6f3ca6578
+                        animationSpeed: 12
+                        idleStartFrame: 8
+                        idleEndFrame: 8
+                        attackStartFrame: 9
+                        attackEndFrame: 10
+                        walkStartFrame: 4
+                        walkEndFrame: 7
+                        deathStartFrame: 0
+                        deathEndFrame: 3
+                        hitStartFrame: 8
+                        hitEndFrame: 8
         -   Entity:
                 Id: 68693810-ca82-4463-8a17-601f3facc486
                 Name: Box3x1x1
@@ -5089,6 +5123,51 @@ Hierarchy:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: b4ea938b-25e4-4f13-811e-9781e348c1ff
+        -   Entity:
+                Id: 8cdcf255-0634-4190-91ab-fd393e333feb
+                Name: Projectile
+                Components:
+                    6ff30cfa102524865246fbc7e25dbac1: !TransformComponent
+                        Id: 4360f36c-9996-4a1c-9c15-8128f5bfa524
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 0.25}
+                        Children: {}
+                    40158c637cc7092ce6d2cd75d96b284a: !ModelComponent
+                        Id: a02c30ee-3c06-4fa5-a6d8-f802e1ada681
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    c36b25979179d04c5d389f8c141181b2: !RigidbodyComponent
+                        Id: 2d4668d2-f964-40be-8da2-4f1c0c0655f0
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2bcb5c29b17dd603aaa3946218af9de8: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d5888a0062917b7a04b8dbaf57c6ff81: !Furia.Interaction.ProjectileScript,Furia.Game
+                        Id: ab411385-555f-4611-be7a-ca1f4fc7b105
+                        speed: 200.0
+                        lifeTime: 7.0
+                        damage: 10.0
+            Base:
+                BasePartAsset: 2591db0c-45f4-45fd-a6e3-4634b99047bb:Prefabs/Projectile
+                BasePartId: 30d930e6-3ba6-4307-a28e-e24b338f7465
+                InstanceId: f18e9ab4-552f-446b-97a3-4acd073a94c7
         -   Folder: Ground/Grid
             Entity:
                 Id: 8d668a37-caf7-4bb4-9392-8609535e9f87
@@ -5136,6 +5215,59 @@ Hierarchy:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: dadb4dc0-efe1-4c2d-8426-43929f60f768
+        -   Folder: null
+            Entity:
+                Id: 8e625263-abd9-4181-ab69-d8df3f10cdf6
+                Name: Enemy
+                Components:
+                    3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
+                        Id: 3c97e148-4157-405b-bcbf-ba8f9ffec07f
+                        Position: {X: -16.664177, Y: 0.9554226, Z: -38.22015}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
+                        Children:
+                            1efcc68f74ecdc145314f92306e40ec7: ref!! 7a1ca908-2793-4093-a8f6-222a1ea26473
+                    4821840a198b8a60303039b66d559f06: !ModelComponent
+                        Id: ce61d449-a178-44c0-a6e9-7df1bd6c595d
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
+                        Id: 619aaefa-6688-4c66-bdbd-ac3d8234ee1b
+                    5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
+                        Id: 11d8f929-8d20-4055-b106-b91278a03eac
+                        npcName: (optional)
+                        health: 100.0
+                        movementSpeed: 100.0
+                        damage: 10.0
+                        attackRate: 1.0
+                        stoppingDistance: 1.5
+                        detectRange: 10.0
+                        isRangeNPC: false
+                        Projectiles: {}
+                        probabilityOfLoot: 25
+                        accuracy: 25
+                        attackSound: null
+                        hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
+                    dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
+                        Id: b56803d2-49a8-44c1-aeae-8ee4d1aea4d5
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            d5e0ab8d9594be3406296630e8a16603: !CapsuleColliderShapeDesc
+                                Length: 0.75
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    22f02fe7cf76212187a00d63264afad9: !Furia.Player.AudioManager,Furia.Game
+                        Id: 4f211601-d501-4c9e-bd51-7f9fcc3825a0
         -   Entity:
                 Id: 8e712f42-8af0-4b6b-8f06-95ee1d21ab77
                 Name: Wall0x2x5
@@ -7980,6 +8112,7 @@ Hierarchy:
                         stoppingDistance: 5.0
                         detectRange: 10.0
                         isRangeNPC: true
+                        Projectiles: {}
                         probabilityOfLoot: 25
                         accuracy: 25
                         attackSound: c4139b9f-8f10-41df-aa00-db87b3993ef3:DefaultResources/Audio/ShotSound

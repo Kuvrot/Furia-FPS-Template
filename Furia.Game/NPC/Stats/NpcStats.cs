@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Stride.Core.Mathematics;
-using Stride.Input;
+﻿using System.Collections.Generic;
 using Stride.Engine;
-using Silk.NET.Core;
-using Furia.NPC.Controller;
 using Furia.NPC.Animation;
 using Stride.Audio;
 using Furia.Player;
@@ -28,6 +20,9 @@ namespace Furia.NPC.Stats
         public float detectRange = 10;
 
         public bool isRangeNPC = false; // Is a range unit/attacks from distance
+
+        [Display("Projectiles (if the projectile is visible and avoidable)")]
+        public List<Prefab> Projectiles = [];
 
         public int probabilityOfLoot = 100;
 
