@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Stride.Core.Mathematics;
-using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
 using Furia.NPC.Animation;
 using Furia.NPC.Stats;
 using Furia.Core;
 using Furia.Player;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using static Stride.Graphics.Buffer;
-using System.Windows.Forms;
 
 namespace Furia.NPC.Controller
 {
@@ -116,7 +108,7 @@ namespace Furia.NPC.Controller
 
             if (characterComponent.Enabled)
             {
-                if (new Random().Next(0, 100) <= stats.probabilityOfLoot) // If it is a range npc, then his shots will have a 25% chance of impact
+                if (new Random().Next(0, 100) <= stats.probabilityOfLoot)
                 {
                     int index = GameManager.instance.dropableLoot.Count;
                     int random = new Random().Next(0, index);
@@ -137,12 +129,30 @@ namespace Furia.NPC.Controller
             {
                 if (GetDistance() >= stats.stoppingDistance)
                 {
-                    MoveToTarget(this.target);
+                    //This allows setting the NPC velocity from the WeaponScript class for one frame so that the enemy can be pushed back after gertting hit.
+                    if (!GetHit())
+                    {
+                        MoveToTarget(this.target);
+                    }
+                    else
+                    {
+                        SetHit(false);
+                    }
+
                     animationController.PlayWalkAnimation();
                 }
                 else
                 {
-                    StopMoving();
+                    //This allows setting the NPC velocity from the WeaponScript class for one frame so that the enemy can be pushed back after gertting hit.
+                    if (!GetHit())
+                    {
+                        StopMoving();
+                    }
+                    else
+                    {
+                        SetHit(false);
+                    }
+
                     animationController.PlayAttackAnimation();
                     
                     if (Counter())
@@ -206,6 +216,17 @@ namespace Furia.NPC.Controller
             clock += 1 * (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
             return false;
+        }
+
+        private bool hit = false;
+
+        public void SetHit(bool hit)
+        {
+            this.hit = hit;
+        }
+        public bool GetHit ()
+        {
+            return this.hit;
         }
     }
 }

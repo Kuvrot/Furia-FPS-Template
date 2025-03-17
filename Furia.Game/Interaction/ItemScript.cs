@@ -1,9 +1,7 @@
 ﻿using Stride.Core.Mathematics;
-using Stride.Input;
 using Stride.Engine;
 using Stride.Core;
 using Stride.Audio;
-using Stride.Physics;
 using Furia.Player;
 using Furia.Core;
 using System;

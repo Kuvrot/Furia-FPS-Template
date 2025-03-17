@@ -4,6 +4,7 @@ using Furia.NPC.Animation;
 using Stride.Audio;
 using Furia.Player;
 using Stride.Core;
+using Furia.NPC.Controller;
 
 namespace Furia.NPC.Stats
 {
@@ -52,6 +53,7 @@ namespace Furia.NPC.Stats
         {
             health -= damageAmount;
             audioManager?.PlaySound(hitSound);
+            Entity.Get<NpcAiController>().SetHit(true);
         }
     }
 }

@@ -52,6 +52,7 @@ Hierarchy:
         - ref!! 31eb3a5b-a120-4fee-a3c3-ed97e3c0efbc
         - ref!! 3237036a-191b-4e53-af04-c54d9ef8780e
         - ref!! 8cdcf255-0634-4190-91ab-fd393e333feb
+        - ref!! 91d1f8a0-a22b-45aa-801d-771af6cd6433
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -5466,6 +5467,35 @@ Hierarchy:
                 BasePartId: 6e50d0bb-0b47-4eb4-af78-68a50394bb99
                 InstanceId: 2ea30afb-8bed-4326-bb7a-79edfc596805
         -   Entity:
+                Id: 91d1f8a0-a22b-45aa-801d-771af6cd6433
+                Name: PickWeapon
+                Components:
+                    fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
+                        Id: a208f70f-d024-471d-a18f-ebee72b8dd25
+                        Position*: {X: 0.0, Y: 0.48574063, Z: -8.4622965}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            378b85391965da67643d7c8bba1dbbd4: ref!! 772bf26e-c27c-484f-b773-92a4d26e0b53
+                    6389326936f4bd5123d3239c90a0a28e: !ModelComponent
+                        Id: fb13236e-ec11-4e4a-bc63-fc69bfa9fe47
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
+                        Id: 9ba41aeb-e943-462d-a0ce-82844f7c3c3a
+                    2b649958b1e2337b7132df9ad34092a8: !Furia.Interaction.ItemScript,Furia.Game
+                        Id: db9d5b6c-2980-4e42-8690-4d10ede0ba0e
+                        itemRotation: true
+                        giveAmount: 25
+                        weapon*: !TransformComponent ref!! 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
+                        amountType: Health
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
+            Base:
+                BasePartAsset: 720bbef9-99a6-4c1e-8e33-a817dcf4e35d:Prefabs/PickWeapon
+                BasePartId: 0bb08cde-99ac-4e74-8cae-535734255d7f
+                InstanceId: 4d98d6e1-de1f-4d95-873f-b5fa1758a99d
+        -   Entity:
                 Id: 92d564ea-a959-40ba-a909-13b58357ea97
                 Name: Stairs1x1x1_50
                 Components:
@@ -8419,6 +8449,27 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c444819e77a60441a6144bd7bd8a4a23: ref!! ca056b63-d161-4eda-a025-6afc04c23b37
+        -   Entity:
+                Id: f01aaaf5-b413-41f9-b41f-e66b45e29ca1
+                Name: SpriteSheet
+                Components:
+                    a29c27277e79294b3fc0a0100bba0380: !TransformComponent
+                        Id: 772bf26e-c27c-484f-b773-92a4d26e0b53
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 5.0669866, Y: 5.0669866, Z: 5.0669866}
+                        Children: {}
+                    086cead27902791df374cd430d9a3c03: !SpriteComponent
+                        Id: 5ea3d372-5004-4c15-b36c-371c159689c4
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: c80bd455-56d1-4c31-a928-df85a0009980:DefaultResources/UI_icons/SpriteSheet
+                            CurrentFrame: 3
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+            Base:
+                BasePartAsset: 720bbef9-99a6-4c1e-8e33-a817dcf4e35d:Prefabs/PickWeapon
+                BasePartId: f2d6b127-addc-4fb6-bef4-f857af1f4653
+                InstanceId: 4d98d6e1-de1f-4d95-873f-b5fa1758a99d
         -   Entity:
                 Id: f1bf040d-7b6b-4f88-86a7-df4c15ee7713
                 Name: Wall0x2x5
