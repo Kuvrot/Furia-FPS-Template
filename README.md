@@ -6,7 +6,8 @@ Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter
 ![imagen](https://github.com/user-attachments/assets/caffbd3c-afe4-4805-96ea-4db691f37a4f)
 
 ### Melee combat support
-![imagen](https://github.com/user-attachments/assets/0204ae4b-dda3-4c98-a1d4-2956f9226cbf)
+![imagen](https://github.com/user-attachments/assets/a29e634d-7bc9-4bd0-a255-f7358c9bd50c)
+
 
 ## ROAD MAP
 - [x] Simple FPS controller
