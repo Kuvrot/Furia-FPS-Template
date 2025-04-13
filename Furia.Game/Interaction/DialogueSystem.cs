@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using Stride.Core.Mathematics;
 using Stride.Engine;
 using Stride.Audio;
@@ -56,7 +56,6 @@ namespace Furia.Interaction
             {
                 if (isManualInteraction)
                 {
-                    DebugText.Print("Press E to interact", new Int2(500, 300));
                     if (Input.IsKeyPressed(Keys.E))
                     {
                         dialogueCanvas.Opacity = 1;
@@ -65,9 +64,11 @@ namespace Furia.Interaction
                 }
                 else
                 {
-                    dialogueCanvas.Opacity = 2;
+                    dialogueCanvas.Opacity = 1;
                     isDialogueStarted = true;
                 }
+
+                clock = dialogueInterval;
             }
 
             if (isDialogueStarted)
@@ -88,8 +89,17 @@ namespace Furia.Interaction
                 else
                 {
                     dialogueCanvas.Opacity = 0;
-                    isDialogueStarted = false;
+                    
                     isDialogueEnded = true;
+
+                    if (isDialogueStarted)
+                    {
+                        if (GetPlayerDistance() > 3f)
+                        {
+                            isDialogueStarted = false;
+                        }
+                    }
+
                 }
             }
         }
