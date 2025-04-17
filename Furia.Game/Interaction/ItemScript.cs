@@ -1,9 +1,7 @@
 ﻿using Stride.Core.Mathematics;
-using Stride.Input;
 using Stride.Engine;
 using Stride.Core;
 using Stride.Audio;
-using Stride.Physics;
 using Furia.Player;
 using Furia.Core;
 using System;
@@ -17,8 +15,6 @@ namespace Furia.Interaction
 
         [Display("How much amount of this will be given to the player")]
         public int giveAmount = 25;
-
-        private bool isPickedUp = false;
 
         // Leave this null if the item adds health or ammo
         [Display("Pickup weapon (only if the item is a gun)")]
@@ -34,7 +30,6 @@ namespace Furia.Interaction
 
         public Sound pickUpSound;
 
-        private StaticColliderComponent collider;
         private AudioManager audioManager;
 
         public override void Start()
@@ -49,7 +44,7 @@ namespace Furia.Interaction
                 RotateItem();
             }
 
-            if (GetPlayerDistance() < 1.5f && !isPickedUp)
+            if (GetPlayerDistance() < 1.5f)
             {
                
                 if (weapon == null)
@@ -76,7 +71,6 @@ namespace Furia.Interaction
                 }
 
                 audioManager.PlaySoundOnce(pickUpSound);
-                isPickedUp = true;
                 Entity.Scene.Entities.Remove(Entity);
             }
         }

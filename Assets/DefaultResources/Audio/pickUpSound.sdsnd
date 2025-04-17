@@ -1,0 +1,8 @@
+!Sound
+Id: 63bb48e4-3f96-4508-a699-c24271882328
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../Resources/DefaultResources/Audio/pickUpSound.ogg
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

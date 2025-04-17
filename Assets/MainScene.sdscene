@@ -7,6 +7,7 @@ Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootParts:
         - ref!! 51efcbd6-cb52-489f-af51-479f5b84d392
+        - ref!! 31828965-20a7-41af-bcf8-aeebf6f43d75
         - ref!! 96a9e8b6-3a2d-4d58-83b0-86ce04c80379
         - ref!! 2b5698d3-f8fd-41ca-822c-29fc288e6e7d
         - ref!! 6d2f4791-6113-4783-bbfa-0c268be80a53
@@ -39,14 +40,19 @@ Hierarchy:
         - ref!! df496061-c636-4bf6-a081-fd238c2f74b8
         - ref!! 1c16ce32-59b1-4691-9465-974111982f67
         - ref!! 25bc5b70-bc98-4f51-b245-56c77af74122
-        - ref!! 0ceaf263-3374-437f-9232-ef205569f93d
         - ref!! 796c9d1e-0c4b-4304-a04b-83aceec725b5
         - ref!! 644eeab8-2696-4cd4-a2dc-82284d9ede70
+        - ref!! 8e625263-abd9-4181-ab69-d8df3f10cdf6
         - ref!! eaa76ae2-7133-4ebf-aa23-b024309c2574
         - ref!! 841d9fd9-a633-4f4d-a313-2495571dc48b
         - ref!! ec1e1acc-9364-48f4-87eb-57f8678fee97
         - ref!! d8130b4e-4328-4af8-8076-9eebac45e0db
         - ref!! 14119122-4788-46b1-9892-a2f311d5a304
+        - ref!! 9160044e-6388-4fe2-9ba0-f99c8445cf0f
+        - ref!! 31eb3a5b-a120-4fee-a3c3-ed97e3c0efbc
+        - ref!! 3237036a-191b-4e53-af04-c54d9ef8780e
+        - ref!! 8cdcf255-0634-4190-91ab-fd393e333feb
+        - ref!! 91d1f8a0-a22b-45aa-801d-771af6cd6433
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -156,7 +162,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 8d7da98a-fc12-4c21-9096-b4cff2e27bea
-                        Position: {X: 10.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 10.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -286,16 +292,20 @@ Hierarchy:
                 Components:
                     a29c27277e79294b3fc0a0100bba0380: !TransformComponent
                         Id: e9f7d84c-dee1-43c5-89b2-ec173d6c4f38
-                        Position: {X: -0.023116007, Y: 0.025984854, Z: 0.02935753}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 6.896519, Y: 6.896519, Z: 6.896519}
                         Children: {}
                     086cead27902791df374cd430d9a3c03: !SpriteComponent
-                        Id: 4877fcc7-bd33-4050-abf2-b2842cd35089
+                        Id: 3f2a212d-470d-413c-aaf3-1189e4751f6c
                         SpriteProvider: !SpriteFromSheet
                             Sheet: c80bd455-56d1-4c31-a928-df85a0009980:DefaultResources/UI_icons/SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
+            Base:
+                BasePartAsset: 2259ee07-df97-44ea-b32f-3d5a30e1290d:Prefabs/PickHealth
+                BasePartId: dcb63f31-5ee4-4fa5-8f91-66f60f317034
+                InstanceId: d753fdd9-9f35-47e2-8196-5d2612b8b091
         -   Entity:
                 Id: 08373dfc-44ac-4e99-84b7-39b8b12d5ba5
                 Name: Wall0x2x5
@@ -422,18 +432,6 @@ Hierarchy:
                 BasePartAsset: 6b352249-d0e8-4437-8067-1beada5d4363:BlocksPrefabs/Box3x1x1
                 BasePartId: b86036f4-0ce3-4794-9947-a61378390d41
                 InstanceId: 7bd63b9e-8c21-4801-be4c-f3781acdece2
-        -   Folder: Ground
-            Entity:
-                Id: 0ceaf263-3374-437f-9232-ef205569f93d
-                Name: Box3x1x1
-                Components:
-                    753d04c0c481d746a75318006d55fa86: !TransformComponent
-                        Id: c0043d75-81c4-46d7-a753-18006d55fa86
-                        Position: {X: 4.0, Y: 0.0, Z: -4.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.70710677, W: 0.70710677}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            a2d6ca1adcf6ec41a4c7d29eb46ea480: ref!! a173542c-0be2-447f-bbc7-6efd22736851
         -   Entity:
                 Id: 0d0b5c5c-d062-473a-b342-44c8166ffdc6
                 Name: Box1x1x1
@@ -536,6 +534,42 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             cafed28ac2678c4e84c546d7570eabd3: ref!! f4759756-c4da-4e67-a919-d3b7dcdfbe37
+        -   Folder: null
+            Entity:
+                Id: 10da54d8-e120-4be8-b2ce-5c207b23b159
+                Name: Box1x1x1
+                Components:
+                    cafed28ac2678c4e84c546d7570eabd3: !TransformComponent
+                        Id: 27f05154-15e6-4667-913e-87ea19d0a4dd
+                        Position*: {X: -0.20743248, Y: 1.5186244, Z: 5.945355}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7807e4f88759f5408bc713431dfc8978: !ModelComponent
+                        Id: 45f0eee4-fab7-4a00-980c-bf6ee93ca006
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials:
+                            1f66d7610cd6dc4c9b32d800d312e162~0: db8e115d-73b8-4f74-b910-ef5f9a8ff222:Materials/GridMTPlatform
+                    793d2ad2924e3a48a2a869b11f5df718: !StaticColliderComponent
+                        Id: 5266b33c-8fd3-4f40-a45a-92032d1f8694
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            16348c7905caf14d82d3668b90f0c07b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 95906119-5e14-487c-bfec-43071c696c61:BlocksPrefabs/Box1x1x1
+                BasePartId: 496dab69-b03b-4272-a196-8e81329ce249
+                InstanceId: c32e07d7-81ef-43fc-88fa-5edcb20dd508
         -   Entity:
                 Id: 10de3ea5-d9fa-45f2-a8a4-e5df1965cc49
                 Name: Box1x1x1
@@ -608,6 +642,12 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             cafed28ac2678c4e84c546d7570eabd3: ref!! c815712b-5ce7-4c23-8070-e8814ecbab3d
+                            7685798828760123df9ffd26c79667cd: ref!! 48a23cc7-ddbf-455c-875f-cc14498023f7
+                            2d7e6826bef9f053f0534264c1e91deb: ref!! ce678564-33f4-41fa-a0f8-b88ddeaf9cd9
+                            671f3fef651403af1c09df240a4ebafe: ref!! 27f05154-15e6-4667-913e-87ea19d0a4dd
+                            6e111dca7acbf153cff01ba6757eae37: ref!! 1bb431b4-2968-428c-8b9a-1c79fdf2252c
+                            c13e53611e45d44184bb09de11a5ae75: ref!! aabe09d1-9c6c-4386-b13b-722eeeed4d5b
+                            93953397c95882a26ffe57790c6fc7f9: ref!! ca1642cd-3c64-46ce-86c7-e9a0f3180fb8
                             91216d850bf54c6081216c029ac7be9c: ref!! efecae1f-306f-40fa-926e-9cd6030b607b
         -   Entity:
                 Id: 119ac3dc-35fc-47af-912d-0f881a8bf737
@@ -694,25 +734,29 @@ Hierarchy:
                 Components:
                     fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
                         Id: 4aba0bc6-91c0-455a-867d-2577c9ca30a1
-                        Position: {X: -3.5542688, Y: 0.5908705, Z: 13.160736}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             378b85391965da67643d7c8bba1dbbd4: ref!! 2696eef2-941f-4b9f-82c7-c6d4017cb7fb
                     6389326936f4bd5123d3239c90a0a28e: !ModelComponent
-                        Id: 06626221-1927-4ecc-a53e-3f04024d0451
+                        Id: 53d479c3-4b5e-4c60-8f37-bb86c04ae93a
                         Enabled: false
                         Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
                         Materials: {}
                     eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
-                        Id: b539d69a-12a5-4e05-b273-40acafd1c159
+                        Id: 557cbdc1-9310-4adb-a834-9a2ae952725e
                     2b649958b1e2337b7132df9ad34092a8: !Furia.Interaction.ItemScript,Furia.Game
-                        Id: ca4f6495-0994-4c21-a086-b006399b482f
+                        Id: 63adb7e3-2722-4ebe-b7b2-e05baaa39416
                         itemRotation: true
                         giveAmount: 25
                         weapon: null
                         amountType: Ammo
-                        pickUpSound: null
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
+            Base:
+                BasePartAsset: cb0e21ba-2707-4829-bb38-e9b11d39d45d:Prefabs/PickAmmo
+                BasePartId: 56bea2de-15c3-4e47-b021-cd09caf0fcec
+                InstanceId: 2e0e5d50-33c1-49b1-9c2b-68642e35458c
         -   Entity:
                 Id: 141dcea6-59de-4225-b512-5603b3eff1d9
                 Name: Wall0x2x5
@@ -905,7 +949,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: e1bf7919-96fa-4f86-922f-bdb4c2074916
-                        Position: {X: -9.536743E-07, Y: 0.0, Z: -20.0}
+                        Position: {X: -9.536743E-07, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -917,7 +961,7 @@ Hierarchy:
                 Components:
                     ae9d48810854f64c90736b8aa80ccd32: !TransformComponent
                         Id: 81489dae-5408-4cf6-9073-6b8aa80ccd32
-                        Position: {X: -16.0, Y: 1.0, Z: -12.0}
+                        Position: {X: -16.0, Y: 1.0, Z: -34.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
@@ -981,41 +1025,6 @@ Hierarchy:
                 BasePartAsset: 3c52f7bb-30ff-4597-9d1f-eaae6884e1cd:BlocksPrefabs/GridBase10x10
                 BasePartId: b045349c-565e-4488-9130-a795b0e3b229
                 InstanceId: 366c2f47-8675-4d4b-84e8-1c388511e7ec
-        -   Entity:
-                Id: 1d5a1255-530d-4b03-8df4-66e2d5a46bdd
-                Name: Box3x1x1
-                Components:
-                    a2d6ca1adcf6ec41a4c7d29eb46ea480: !TransformComponent
-                        Id: a173542c-0be2-447f-bbc7-6efd22736851
-                        Position: {X: 1.5000001, Y: 0.5, Z: 0.5}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    8fff9564224e164bbfeeb200886985b1: !ModelComponent
-                        Id: d84b6648-2bc1-4a42-aca2-bb9413eeb41c
-                        Model: 3f9d7055-5b0f-40d6-b18e-6919d6336b8d:Models/Box3x1x1
-                        Materials:
-                            1f66d7610cd6dc4c9b32d800d312e162~0: db8e115d-73b8-4f74-b910-ef5f9a8ff222:Materials/GridMTPlatform
-                    d85b2b6e072fba4f9eac30a89cde96ea: !StaticColliderComponent
-                        Id: c057d522-dcc3-4060-ad24-739b0f8656e8
-                        CanSleep: true
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        AlwaysUpdateNaviMeshCache: false
-                        ColliderShapes:
-                            e444ebaf79902340b6f52785555515ef: !BoxColliderShapeDesc
-                                Is2D: false
-                                Size: {X: 3.0, Y: 1.0, Z: 1.0}
-                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-            Base:
-                BasePartAsset: 6b352249-d0e8-4437-8067-1beada5d4363:BlocksPrefabs/Box3x1x1
-                BasePartId: b86036f4-0ce3-4794-9947-a61378390d41
-                InstanceId: 7b6deb75-e403-4410-8209-ec2f96941880
         -   Entity:
                 Id: 1daf6845-db12-416a-b91a-2337c46a87d2
                 Name: Wall0x2x2
@@ -1132,6 +1141,17 @@ Hierarchy:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: d0f4ea4e-8ed8-4683-aedb-853cde00c646
+        -   Entity:
+                Id: 21fb31e6-be80-405e-8128-52241d4abecb
+                Name: Pivot
+                Components:
+                    ff0cd2412ac46e69ab67ae8c14a5b9b5: !TransformComponent
+                        Id: fa3aa684-6b19-4080-9f21-2f804e714825
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            e1c67f5c348798bc834dd7d9691f7f7c: ref!! 4fe2bb03-dbef-4c1b-a274-c5a6fa084e40
         -   Entity:
                 Id: 22c0d580-023a-456b-a5b0-843e362479af
                 Name: Wall0x2x2Window
@@ -1331,7 +1351,7 @@ Hierarchy:
                 Components:
                     ae9d48810854f64c90736b8aa80ccd32: !TransformComponent
                         Id: 3a28baae-6e75-4d51-9d8f-d457e16e6d9b
-                        Position: {X: 9.0, Y: 1.0, Z: -12.0}
+                        Position: {X: 9.0, Y: 1.0, Z: -34.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.5, Y: 1.5, Z: 1.5}
                         Children: {}
@@ -1698,7 +1718,7 @@ Hierarchy:
                 Components:
                     53601749b70e4446921511393e38a000: !TransformComponent
                         Id: 49176053-0eb7-4644-9215-11393e38a000
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -1725,7 +1745,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 14888c7c-f5ed-4c16-833e-996fc9936f75
-                        Position: {X: -20.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -20.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -1817,11 +1837,93 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: a51fc306-bfcc-4060-9ce7-f547584af6a0
-                        Position: {X: -10.0, Y: 0.0, Z: -20.0}
+                        Position: {X: -10.0, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             4eecb3c27affe3478bcc584553d59e41: ref!! f0e22924-f648-40d7-93be-f660d93bcaef
+        -   Folder: null
+            Entity:
+                Id: 31828965-20a7-41af-bcf8-aeebf6f43d75
+                Name: LockedDoor
+                Components:
+                    51472fcc44e5774ec9e7eb3e28722faa: !TransformComponent
+                        Id: b1f99ee2-f7d1-48bb-bdf0-16e32523b8ac
+                        Position: {X: 9.002409, Y: 1.3803978, Z: -23.24065}
+                        Rotation: {X: 0.0, Y: 0.014927551, Z: 0.0, W: 0.9998886}
+                        Scale: {X: 0.26239678, Y: 1.5, Z: 1.0}
+                        Children:
+                            3cf60faccc0f99c1fbb313ac79425d25: ref!! a50dd6f8-1eeb-4eb8-88f6-955f186643d1
+                    b518d377626b97aae5ce54b75b0e1092: !Furia.Interaction.DoorScript,Furia.Game
+                        Id: cb342b59-7b3c-40d3-bd86-cfc8893207a9
+                        idDoor: 1
+                        openAngle: 90.0
+                        isOpen: false
+                        isLocked: true
+                        door: ref!! a50dd6f8-1eeb-4eb8-88f6-955f186643d1
+                        openDoorSound: d35205ec-c290-425e-9128-79da90580aec:DefaultResources/Audio/Door/DoorOpenSound
+                        closeDoorSound: 8a0e9b3f-6811-4c37-bee6-1cbdb6a53ac5:DefaultResources/Audio/Door/DoorCloseSound
+                        lockedDoorSound: ae99a05a-61b1-4541-a0ba-c0fd3d7107f0:DefaultResources/Audio/Door/DoorLockedSound
+                        doorCollider: ref!! e986ea55-493c-4678-8afd-b5d027d7e9f7
+                    03a04fe90ef4dc3c6351b2885f2f7124: !Furia.Player.AudioManager,Furia.Game
+                        Id: dee84722-64a6-477e-bb8e-8eb06c52429b
+        -   Entity:
+                Id: 31eb3a5b-a120-4fee-a3c3-ed97e3c0efbc
+                Name*: DialogueSystem
+                Components:
+                    a2d6ca1adcf6ec41a4c7d29eb46ea480: !TransformComponent
+                        Id: b204a513-1531-43ed-8a03-dd82c62e9d84
+                        Position*: {X: 13.467997, Y: 1.4809911, Z: -20.555319}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.71197456, W: 0.7022053}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8fff9564224e164bbfeeb200886985b1: !ModelComponent
+                        Id: 1dcebfe8-80d3-4fa1-b0bf-090900939379
+                        Model: 3f9d7055-5b0f-40d6-b18e-6919d6336b8d:Models/Box3x1x1
+                        Materials:
+                            b268898b2f56a525462d5651c67e5380~0: cc2fe6c9-1543-4a66-a383-c0d2f3f57bbc:Materials/Emissive
+                    d85b2b6e072fba4f9eac30a89cde96ea: !StaticColliderComponent
+                        Id: d1d77eb5-e52e-496b-8bde-9f1139e80bc4
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            e444ebaf79902340b6f52785555515ef: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    512ec6cc8c744c4603466961e0d8fdaa: !Furia.Interaction.DialogueSystem,Furia.Game
+                        Id: 06333d68-215b-4a78-8d8f-31d53b6bafa7
+                        rotate: false
+                        isManualInteraction: true
+                        dialogueInterval: 1.0
+                        dialogues:
+                            2f0bddc46f1851fd2cc36714e5af286a: Hello
+                            b925407b82b3cb3ed139bd096e87fea6: I am an object
+                            450f79837130fdb77b1d6a0b19fec396: And this is a test
+                            83b366f7dfe09226ccf3bcc8393992ae: Goodbye
+                        dialogueSound: {}
+                    00a3d6564aa7742f6c13cecec2a14f7c: !Furia.Player.AudioManager,Furia.Game
+                        Id: 618f08ec-087f-461c-9939-27210a953011
+                    d194bad2cd7bb2fb9fd2d376d7a4bf38: !Furia.Player.AudioManager,Furia.Game
+                        Id: ed2ae6de-f5c8-45ea-8c27-ad134f776e9d
+        -   Entity:
+                Id: 3237036a-191b-4e53-af04-c54d9ef8780e
+                Name: PickWeapon
+                Components:
+                    2a6bed74cfb66c8ec52c5f8e7672afc7: !TransformComponent
+                        Id: fce31df8-52fe-4cc0-819e-06d207b3bd38
+                        Position: {X: 6.443969, Y: 0.6280223, Z: -39.049244}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a894680b2315860346d04cdec60a8d64: ref!! fa2ad5a0-3b66-4306-815b-8542d48de27b
         -   Entity:
                 Id: 32c287d0-7fa8-4510-9b40-a773eca87ee4
                 Name: Box3x1x1 (5)
@@ -2905,7 +3007,7 @@ Hierarchy:
                 Components:
                     51472fcc44e5774ec9e7eb3e28722faa: !TransformComponent
                         Id: 112e691d-b766-459d-b294-3bac3c348312
-                        Position: {X: 3.305975, Y: 1.3803978, Z: -2.014158}
+                        Position: {X: 3.305975, Y: 1.3803978, Z: -24.436865}
                         Rotation: {X: 0.0, Y: 0.014927551, Z: 0.0, W: 0.9998886}
                         Scale: {X: 0.26239678, Y: 1.5, Z: 1.0}
                         Children:
@@ -3089,6 +3191,42 @@ Hierarchy:
                 BasePartAsset: c7dcdd06-d013-4ea1-a09a-eefbefc6e5af:BlocksPrefabs/Wall0x2x2
                 BasePartId: f73cb16c-30b9-4200-b872-56885e7023e2
                 InstanceId: 4937faba-8d85-455e-a4c7-749182c48c4b
+        -   Folder: null
+            Entity:
+                Id: 54e9e6e5-e978-4f3c-8037-c83e71e38f31
+                Name: Box1x1x1
+                Components:
+                    cafed28ac2678c4e84c546d7570eabd3: !TransformComponent
+                        Id: 48a23cc7-ddbf-455c-875f-cc14498023f7
+                        Position*: {X: -0.20743248, Y: 0.5, Z: 5.945355}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7807e4f88759f5408bc713431dfc8978: !ModelComponent
+                        Id: b2cba817-b1a3-4dba-a57f-1e00254fd1bc
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials:
+                            1f66d7610cd6dc4c9b32d800d312e162~0: db8e115d-73b8-4f74-b910-ef5f9a8ff222:Materials/GridMTPlatform
+                    793d2ad2924e3a48a2a869b11f5df718: !StaticColliderComponent
+                        Id: 2a3a78fa-fd90-4b37-ac90-b31e79b3b6f8
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            16348c7905caf14d82d3668b90f0c07b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 95906119-5e14-487c-bfec-43071c696c61:BlocksPrefabs/Box1x1x1
+                BasePartId: 496dab69-b03b-4272-a196-8e81329ce249
+                InstanceId: a0b3cd45-4519-420a-b329-9a01d7e5baad
         -   Entity:
                 Id: 55691876-da29-4c3c-a0d0-987c26fd72de
                 Name: Box3x1x1
@@ -3166,7 +3304,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 4882fa74-43f2-4b1a-a69c-d4feef04a72b
-                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -32.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3256,7 +3394,7 @@ Hierarchy:
                 Components:
                     6cd8639c35566d49a4fdec0a9e37c355: !TransformComponent
                         Id: 9c63d86c-5635-496d-a4fd-ec0a9e37c355
-                        Position: {X: -3.0, Y: 0.0, Z: -3.0}
+                        Position: {X: -3.0, Y: 0.0, Z: -25.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3357,6 +3495,42 @@ Hierarchy:
                         Children:
                             674fdd1fb2513d41ab88936773660929: ref!! cdf738cd-f665-4da1-ae8b-a8e8d1be77cb
         -   Entity:
+                Id: 5a4539b0-dfb3-4c18-ac99-df71ebccb249
+                Name: Box1x1x1
+                Components:
+                    cafed28ac2678c4e84c546d7570eabd3: !TransformComponent
+                        Id: 4fe2bb03-dbef-4c1b-a274-c5a6fa084e40
+                        Position*: {X: 0.07511443, Y: -0.097704366, Z: 0.5114766}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 0.14858727, Y: 1.6049732, Z: 1.0}
+                        Children: {}
+                    7807e4f88759f5408bc713431dfc8978: !ModelComponent
+                        Id: 60f2dab3-99ba-4fbf-8874-7729281feffa
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials:
+                            1f66d7610cd6dc4c9b32d800d312e162*~0: dfea8371-f5d1-4080-8f4c-0dc3327e7671:Materials/GridMTPlatform (2)
+                    bcea3c730cdde51a46f31db88c694a30*: !StaticColliderComponent
+                        Id: e986ea55-493c-4678-8afd-b5d027d7e9f7
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            7ebc2c1647feae974ae55389b94a7e89: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    793d2ad2924e3a48a2a869b11f5df718: ~(Deleted)
+            Base:
+                BasePartAsset: 95906119-5e14-487c-bfec-43071c696c61:BlocksPrefabs/Box1x1x1
+                BasePartId: 496dab69-b03b-4272-a196-8e81329ce249
+                InstanceId: 4ad7b8ac-1132-422f-84a1-8c8e42154557
+        -   Entity:
                 Id: 5af2dd2d-8ad2-48a8-9252-a456ffacc966
                 Name: Wall0x2x5Window
                 Components:
@@ -3440,7 +3614,7 @@ Hierarchy:
                 Components:
                     6995cff9e3635543a32f91a31f6b6b7a: !TransformComponent
                         Id: f9cf9569-63e3-4355-a32f-91a31f6b6b7a
-                        Position: {X: -4.7683716E-07, Y: 0.0, Z: 20.0}
+                        Position: {X: -4.7683716E-07, Y: 0.0, Z: -2.4227066}
                         Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -3776,17 +3950,50 @@ Hierarchy:
                 Components:
                     a29c27277e79294b3fc0a0100bba0380: !TransformComponent
                         Id: 2696eef2-941f-4b9f-82c7-c6d4017cb7fb
-                        Position: {X: -0.023116007, Y: 0.025984854, Z: 0.02935753}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 6.896519, Y: 6.896519, Z: 6.896519}
                         Children: {}
                     086cead27902791df374cd430d9a3c03: !SpriteComponent
-                        Id: 600ea6e5-f7a4-4fac-bdb4-927f725d926e
+                        Id: f53a937c-c17f-4d0c-8ca0-1eebb92b8fc6
                         SpriteProvider: !SpriteFromSheet
                             Sheet: c80bd455-56d1-4c31-a928-df85a0009980:DefaultResources/UI_icons/SpriteSheet
                             CurrentFrame: 1
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
+            Base:
+                BasePartAsset: cb0e21ba-2707-4829-bb38-e9b11d39d45d:Prefabs/PickAmmo
+                BasePartId: 818eb9a3-05e3-43bd-89c9-f1c5ced8eb7a
+                InstanceId: 2e0e5d50-33c1-49b1-9c2b-68642e35458c
+        -   Entity:
+                Id: 627dbb88-c838-4f83-98cf-c91366fd37b4
+                Name: PickWeapon
+                Components:
+                    fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
+                        Id: fa2ad5a0-3b66-4306-815b-8542d48de27b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            378b85391965da67643d7c8bba1dbbd4: ref!! dbd13f10-ed8f-4ef3-996e-8f1b463e5650
+                    6389326936f4bd5123d3239c90a0a28e: !ModelComponent
+                        Id: 0ae96cdc-b5c7-439c-aee2-5842a9f84592
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
+                        Id: 1bdb0029-44ef-4857-b0c4-8bb414bd7d80
+                    2b649958b1e2337b7132df9ad34092a8: !Furia.Interaction.ItemScript,Furia.Game
+                        Id: 9664c52e-b65a-403d-a13f-fe9231f8ed54
+                        itemRotation: true
+                        giveAmount: 25
+                        weapon: null
+                        amountType: Health
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
+            Base:
+                BasePartAsset: 720bbef9-99a6-4c1e-8e33-a817dcf4e35d:Prefabs/PickWeapon
+                BasePartId: 0bb08cde-99ac-4e74-8cae-535734255d7f
+                InstanceId: e616808c-4a3c-4403-ac24-ec157a64ce73
         -   Entity:
                 Id: 639673bd-ffe7-4082-a1b4-c94bf88587a5
                 Name: GridBase10x10
@@ -3869,11 +4076,11 @@ Hierarchy:
                             cfce75d38d66e24fae426d1f40aa4f8a: ref!! 4114d3a2-80bf-4535-8775-0f56edf13110
         -   Entity:
                 Id: 644eeab8-2696-4cd4-a2dc-82284d9ede70
-                Name: Enemy
+                Name: Wizard
                 Components:
                     3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
                         Id: c0939c05-2af7-48a2-9fbe-2b8bba3593f0
-                        Position: {X: -16.664177, Y: 0.9554226, Z: -15.797443}
+                        Position: {X: -5.8109465, Y: 0.9554226, Z: -38.22015}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
                         Children:
@@ -3892,9 +4099,13 @@ Hierarchy:
                         movementSpeed: 100.0
                         damage: 10.0
                         attackRate: 1.0
-                        stoppingDistance: 1.5
+                        stoppingDistance: 15.0
                         detectRange: 10.0
-                        isRangeNPC: false
+                        isRangeNPC: true
+                        Projectiles:
+                            cae0550ff40e5f32aa7264e24535c981: 2591db0c-45f4-45fd-a6e3-4634b99047bb:Prefabs/Projectile
+                        probabilityOfLoot: 25
+                        accuracy: 25
                         attackSound: null
                         hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
@@ -3987,6 +4198,36 @@ Hierarchy:
                 BasePartId: f73cb16c-30b9-4200-b872-56885e7023e2
                 InstanceId: 9df314c7-9437-47b7-83ec-b80a28027635
         -   Entity:
+                Id: 680206fe-d06a-40e5-b9a9-5613db94e683
+                Name: SpriteSheet
+                Components:
+                    cd63069ae84d76618915677691db0294: !TransformComponent
+                        Id: 7a1ca908-2793-4093-a8f6-222a1ea26473
+                        Position: {X: 0.0, Y: 0.01011852, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.8274503, Y: 1.8274503, Z: 1.8274503}
+                        Children: {}
+                    1d9f8ea7bc070c56316272276a6001c7: !SpriteComponent
+                        Id: bbef7143-d4d4-44b1-9fc6-054a1df27c73
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 6a93dc12-904d-47fc-8079-c2ebd480fd99:DefaultResources/Enemies/SpriteSheet
+                            CurrentFrame: 8
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+                    122d9396dee9b26239ed286fbc23b4ed: !Furia.NPC.Animation.Npc2dAnimationController,Furia.Game
+                        Id: 3beae8be-8312-4d37-bf88-05c6f3ca6578
+                        animationSpeed: 12
+                        idleStartFrame: 8
+                        idleEndFrame: 8
+                        attackStartFrame: 9
+                        attackEndFrame: 10
+                        walkStartFrame: 4
+                        walkEndFrame: 7
+                        deathStartFrame: 0
+                        deathEndFrame: 3
+                        hitStartFrame: 8
+                        hitEndFrame: 8
+        -   Entity:
                 Id: 68693810-ca82-4463-8a17-601f3facc486
                 Name: Box3x1x1
                 Components:
@@ -4039,7 +4280,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: a532d45c-be3d-484f-892e-fb6697fd3462
-                        Position: {X: -10.0, Y: 0.0, Z: 0.0}
+                        Position: {X: -10.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4231,7 +4472,7 @@ Hierarchy:
                 Components:
                     9b2b6ce83ee08c4db6f4b48e349de97f: !TransformComponent
                         Id: e86c2b9b-e03e-4d8c-b6f4-b48e349de97f
-                        Position: {X: 0.0, Y: 32.539055, Z: -9.101348E-07}
+                        Position: {X: 0.0, Y: 32.539055, Z: -22.422707}
                         Rotation: {X: -0.5540323, Y: 0.21201216, Z: 0.1484525, W: 0.7912401}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4374,7 +4615,7 @@ Hierarchy:
                 Components:
                     70e9bb04d768b54998613e8ceefea848: !TransformComponent
                         Id: 059153a5-5641-47a1-8ccf-969a7a8f2a65
-                        Position: {X: 3.000001, Y: 4.0, Z: -3.0}
+                        Position: {X: 3.000001, Y: 4.0, Z: -25.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.5, Y: 1.5, Z: 1.5}
                         Children: {}
@@ -4445,7 +4686,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 6c1ad7bd-7f85-45b3-9ff5-e355691911d3
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4513,7 +4754,7 @@ Hierarchy:
                 Components:
                     04bebcb2336e473b97e3c948fcaa9740: !TransformComponent
                         Id: c3f4044e-48b5-465a-8e4e-5aee5e230dfa
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4523,6 +4764,18 @@ Hierarchy:
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.28, Y: 0.72, Z: 1.0}
                         RenderGroup: Group1
+        -   Entity:
+                Id: 798979c8-9022-4bfd-b608-409cc9cd99ca
+                Name: Frame
+                Components:
+                    21e6a0cd19270e44a27defee6d7cb7be: !TransformComponent
+                        Id: a50dd6f8-1eeb-4eb8-88f6-955f186643d1
+                        Position: {X: 0.0, Y: 0.0, Z: -0.48376265}
+                        Rotation: {X: 0.0, Y: 0.003981805, Z: 0.0, W: 0.9999921}
+                        Scale: {X: 0.26239678, Y: 1.0439918, Z: 1.0}
+                        Children:
+                            f03588e7da479660a7fc7f9b6010bde3: ref!! fa3aa684-6b19-4080-9f21-2f804e714825
+                            3ed51b9ccdfbc924d92f3c86793a1801: ref!! c6a861e8-bc89-4847-8af4-f3a42e8d5f40
         -   Entity:
                 Id: 79992318-8073-4045-908a-a4342a1f75c0
                 Name: Box3x1x1
@@ -4778,7 +5031,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 0400eb1a-0a00-4d1a-810e-ab4c25eb0087
-                        Position: {X: -10.0, Y: 0.0, Z: -10.0}
+                        Position: {X: -10.0, Y: 0.0, Z: -32.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4790,7 +5043,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 77b63cef-a992-497c-8d4d-d25708d129e6
-                        Position: {X: 9.999999, Y: 0.0, Z: -20.0}
+                        Position: {X: 9.999999, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4801,7 +5054,7 @@ Hierarchy:
                 Components:
                     5f235171ad6697821498c8a92d0afb66: !TransformComponent
                         Id: 224fba0b-dd19-4c22-9433-34ab35acb7b2
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -4810,6 +5063,10 @@ Hierarchy:
                         Priority: -1
                         showEnemyHealthBars: false
                         player: ref!! 59c28a45-950f-4f3f-b472-42e21b3e420f
+                        ui: ref!! 6d1dd95f-20af-41a9-bbad-1f48827c5edb
+                        dropableLoot:
+                            221a6c16ae41bc7920974ba18c9cbc48: cb0e21ba-2707-4829-bb38-e9b11d39d45d:Prefabs/PickAmmo
+                            0ce8bbabbfe41e3c387075bb40ddafde: 2259ee07-df97-44ea-b32f-3d5a30e1290d:Prefabs/PickHealth
         -   Entity:
                 Id: 84277299-6b9d-4038-99e2-1f903e1a0e53
                 Name: Wall0x2x2
@@ -4867,6 +5124,51 @@ Hierarchy:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: b4ea938b-25e4-4f13-811e-9781e348c1ff
+        -   Entity:
+                Id: 8cdcf255-0634-4190-91ab-fd393e333feb
+                Name: Projectile
+                Components:
+                    6ff30cfa102524865246fbc7e25dbac1: !TransformComponent
+                        Id: 4360f36c-9996-4a1c-9c15-8128f5bfa524
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.25, Y: 0.25, Z: 0.25}
+                        Children: {}
+                    40158c637cc7092ce6d2cd75d96b284a: !ModelComponent
+                        Id: a02c30ee-3c06-4fa5-a6d8-f802e1ada681
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    c36b25979179d04c5d389f8c141181b2: !RigidbodyComponent
+                        Id: 2d4668d2-f964-40be-8da2-4f1c0c0655f0
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            2bcb5c29b17dd603aaa3946218af9de8: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    d5888a0062917b7a04b8dbaf57c6ff81: !Furia.Interaction.ProjectileScript,Furia.Game
+                        Id: ab411385-555f-4611-be7a-ca1f4fc7b105
+                        speed: 200.0
+                        lifeTime: 7.0
+                        damage: 10.0
+            Base:
+                BasePartAsset: 2591db0c-45f4-45fd-a6e3-4634b99047bb:Prefabs/Projectile
+                BasePartId: 30d930e6-3ba6-4307-a28e-e24b338f7465
+                InstanceId: f18e9ab4-552f-446b-97a3-4acd073a94c7
         -   Folder: Ground/Grid
             Entity:
                 Id: 8d668a37-caf7-4bb4-9392-8609535e9f87
@@ -4874,7 +5176,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 36a8dd56-3bf2-4f66-a4a1-bb4c1a85893f
-                        Position: {X: -20.0, Y: 0.0, Z: -20.0}
+                        Position: {X: -20.0, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -4914,6 +5216,59 @@ Hierarchy:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: dadb4dc0-efe1-4c2d-8426-43929f60f768
+        -   Folder: null
+            Entity:
+                Id: 8e625263-abd9-4181-ab69-d8df3f10cdf6
+                Name: Enemy
+                Components:
+                    3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
+                        Id: 3c97e148-4157-405b-bcbf-ba8f9ffec07f
+                        Position: {X: -16.664177, Y: 0.9554226, Z: -38.22015}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
+                        Children:
+                            1efcc68f74ecdc145314f92306e40ec7: ref!! 7a1ca908-2793-4093-a8f6-222a1ea26473
+                    4821840a198b8a60303039b66d559f06: !ModelComponent
+                        Id: ce61d449-a178-44c0-a6e9-7df1bd6c595d
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    ef81fdb978d04c8a3781cc4dc75c7606: !Furia.NPC.Controller.NpcAiController,Furia.Game
+                        Id: 619aaefa-6688-4c66-bdbd-ac3d8234ee1b
+                    5d25341c88a870a04796906b01a8da52: !Furia.NPC.Stats.NpcStats,Furia.Game
+                        Id: 11d8f929-8d20-4055-b106-b91278a03eac
+                        npcName: (optional)
+                        health: 100.0
+                        movementSpeed: 100.0
+                        damage: 10.0
+                        attackRate: 1.0
+                        stoppingDistance: 1.5
+                        detectRange: 10.0
+                        isRangeNPC: false
+                        Projectiles: {}
+                        probabilityOfLoot: 25
+                        accuracy: 25
+                        attackSound: null
+                        hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
+                    dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
+                        Id: b56803d2-49a8-44c1-aeae-8ee4d1aea4d5
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: {X: 0.0, Y: -10.0, Z: 0.0}
+                        ColliderShapes:
+                            d5e0ab8d9594be3406296630e8a16603: !CapsuleColliderShapeDesc
+                                Length: 0.75
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    22f02fe7cf76212187a00d63264afad9: !Furia.Player.AudioManager,Furia.Game
+                        Id: 4f211601-d501-4c9e-bd51-7f9fcc3825a0
         -   Entity:
                 Id: 8e712f42-8af0-4b6b-8f06-95ee1d21ab77
                 Name: Wall0x2x5
@@ -5021,7 +5376,7 @@ Hierarchy:
                 Components:
                     6995cff9e3635543a32f91a31f6b6b7a: !TransformComponent
                         Id: 7c45fcb6-b766-4e5f-9274-c5a56061718e
-                        Position: {X: 20.000002, Y: 0.0, Z: 0.0}
+                        Position: {X: 20.000002, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5083,6 +5438,63 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c444819e77a60441a6144bd7bd8a4a23: ref!! 9e8144c4-a677-4104-a614-4bd7bd8a4a23
+        -   Folder: null
+            Entity:
+                Id: 9160044e-6388-4fe2-9ba0-f99c8445cf0f
+                Name: Key
+                Components:
+                    fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
+                        Id: e981f4d1-3924-4570-960f-be326ecc14e7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            378b85391965da67643d7c8bba1dbbd4: ref!! d3b801a3-2e08-4fc2-a18a-f9e7f857901d
+                    6389326936f4bd5123d3239c90a0a28e: !ModelComponent
+                        Id: b6896e89-b341-4a0b-9135-b1956343d012
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
+                        Id: 2223a485-1bb1-48ca-811c-5008e665c28e
+                    61b42df40f5983cab8d4091e1944b37c: !Furia.Interaction.KeyScript,Furia.Game
+                        Id: e79165ac-62ec-4bfb-925c-78f0bfa43988
+                        idKey: 1
+                        itemRotation: true
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
+            Base:
+                BasePartAsset: bdc22300-e666-420b-84a3-a97ca0dd22c8:Prefabs/Key
+                BasePartId: 6e50d0bb-0b47-4eb4-af78-68a50394bb99
+                InstanceId: 2ea30afb-8bed-4326-bb7a-79edfc596805
+        -   Entity:
+                Id: 91d1f8a0-a22b-45aa-801d-771af6cd6433
+                Name: PickWeapon
+                Components:
+                    fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
+                        Id: a208f70f-d024-471d-a18f-ebee72b8dd25
+                        Position*: {X: 0.0, Y: 0.48574063, Z: -8.4622965}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            378b85391965da67643d7c8bba1dbbd4: ref!! 772bf26e-c27c-484f-b773-92a4d26e0b53
+                    6389326936f4bd5123d3239c90a0a28e: !ModelComponent
+                        Id: fb13236e-ec11-4e4a-bc63-fc69bfa9fe47
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
+                        Id: 9ba41aeb-e943-462d-a0ce-82844f7c3c3a
+                    2b649958b1e2337b7132df9ad34092a8: !Furia.Interaction.ItemScript,Furia.Game
+                        Id: db9d5b6c-2980-4e42-8690-4d10ede0ba0e
+                        itemRotation: true
+                        giveAmount: 25
+                        weapon*: !TransformComponent ref!! 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
+                        amountType: Health
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
+            Base:
+                BasePartAsset: 720bbef9-99a6-4c1e-8e33-a817dcf4e35d:Prefabs/PickWeapon
+                BasePartId: 0bb08cde-99ac-4e74-8cae-535734255d7f
+                InstanceId: 4d98d6e1-de1f-4d95-873f-b5fa1758a99d
         -   Entity:
                 Id: 92d564ea-a959-40ba-a909-13b58357ea97
                 Name: Stairs1x1x1_50
@@ -5127,6 +5539,27 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             9bd6c2826922c24ba23d41e3a7a958f6: ref!! 3804efde-28bd-4ddd-a6b1-50075664594a
+        -   Entity:
+                Id: 957039a2-69f8-4850-a319-822d2841b8c1
+                Name: SpriteSheet
+                Components:
+                    a29c27277e79294b3fc0a0100bba0380: !TransformComponent
+                        Id: dbd13f10-ed8f-4ef3-996e-8f1b463e5650
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 5.0669866, Y: 5.0669866, Z: 5.0669866}
+                        Children: {}
+                    086cead27902791df374cd430d9a3c03: !SpriteComponent
+                        Id: 77a84211-638b-4037-b1af-6d4ea8a9816f
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: c80bd455-56d1-4c31-a928-df85a0009980:DefaultResources/UI_icons/SpriteSheet
+                            CurrentFrame: 3
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+            Base:
+                BasePartAsset: 720bbef9-99a6-4c1e-8e33-a817dcf4e35d:Prefabs/PickWeapon
+                BasePartId: f2d6b127-addc-4fb6-bef4-f857af1f4653
+                InstanceId: e616808c-4a3c-4403-ac24-ec157a64ce73
         -   Entity:
                 Id: 95878084-b49b-4aee-a03b-19d113ca8f61
                 Name: Stairs1x1x1_25
@@ -5278,7 +5711,7 @@ Hierarchy:
                 Components:
                     458ac2590f953f4fb47242e21b3e420f: !TransformComponent
                         Id: 59c28a45-950f-4f3f-b472-42e21b3e420f
-                        Position: {X: -14.999999, Y: 0.0, Z: 14.999999}
+                        Position: {X: -14.999999, Y: 0.0, Z: -7.4227076}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5340,6 +5773,16 @@ Hierarchy:
                         hitSound: 3076297a-33d3-4980-8360-3f68521231f3:DefaultResources/Audio/PlayerHitSound
                     9224d4d3999588de828f5773b5e0576d: !Furia.Player.AudioManager,Furia.Game
                         Id: ddddc987-f1be-43e9-ae76-a30cfb08412f
+                    ba6311e99be734064a130e02cd95fdc4: !Furia.Player.InventoryManager,Furia.Game
+                        Id: db2f0a22-2946-445f-bfea-d0351172696c
+                        keys: {}
+                    06361a02763361e2e706903bb1b9f846: !Furia.Player.FootstepsSystem,Furia.Game
+                        Id: 075f8846-03e4-4c0b-9112-b84b9f547ce3
+                        soundSpeed: 0.25
+                        sounds:
+                            af62e9babd933cbb290594440aef42ef: e8bfc9ec-7ea7-41f4-ab4f-3b11255a1735:DefaultResources/Audio/Footsteps/0
+                            24eb5f5405b0a1598c736cba8b68c809: 5e7217b5-a4f6-490c-a44b-0c7617b31a73:DefaultResources/Audio/Footsteps/1
+                            b16a55a301d702ef427a977fbbb3c263: e5c55713-0f6c-4a7a-8765-6f6e447659f8:DefaultResources/Audio/Footsteps/2
         -   Entity:
                 Id: 9758b4f8-356a-4443-9a06-4001ccb9e7c4
                 Name: Wall0x2x5
@@ -5375,6 +5818,21 @@ Hierarchy:
                 BasePartAsset: 2b2365b4-1733-4839-ba8a-0f166f32f288:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: d0907d88-5b87-4f54-8122-72e391baaedc
+        -   Entity:
+                Id: 9785251b-1105-45dc-bc22-efbf336659aa
+                Name: Trigger
+                Components:
+                    5a3bea0535381464a07043291efe9e02: !TransformComponent
+                        Id: c6a861e8-bc89-4847-8af4-f3a42e8d5f40
+                        Position: {X: 0.0, Y: 0.0, Z: 0.50612766}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 4.0971327, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1deccc3cfaeb2845ed6569018463db00: !ModelComponent
+                        Id: 75d67332-fe09-4f9c-b7af-cddd4ea9e18c
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
         -   Folder: Ground
             Entity:
                 Id: 97ce9347-c06c-42db-ae3e-e366341c3eda
@@ -5382,7 +5840,7 @@ Hierarchy:
                 Components:
                     6995cff9e3635543a32f91a31f6b6b7a: !TransformComponent
                         Id: 946bcb69-b407-48fa-99e8-7956b6e86f3c
-                        Position: {X: -19.999998, Y: 0.0, Z: 0.0}
+                        Position: {X: -19.999998, Y: 0.0, Z: -22.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5625,7 +6083,7 @@ Hierarchy:
                 Components:
                     70e9bb04d768b54998613e8ceefea848: !TransformComponent
                         Id: dc733dd2-ae4a-4ed2-82b4-56e350a4f68a
-                        Position: {X: -8.999999, Y: 2.0, Z: -3.0}
+                        Position: {X: -8.999999, Y: 2.0, Z: -25.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
@@ -5694,7 +6152,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 3782e053-0038-4a77-9996-8ceb701aada0
-                        Position: {X: 10.0, Y: 0.0, Z: 10.000001}
+                        Position: {X: 10.0, Y: 0.0, Z: -12.422706}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -5822,6 +6280,42 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             8fbe3ebebaeba648ad66f1522376dd74: ref!! be3ebe8f-ebba-48a6-ad66-f1522376dd74
+        -   Folder: null
+            Entity:
+                Id: a730dfc7-1459-4f91-9e0d-e0516f5050c1
+                Name: Box1x1x1
+                Components:
+                    cafed28ac2678c4e84c546d7570eabd3: !TransformComponent
+                        Id: aabe09d1-9c6c-4386-b13b-722eeeed4d5b
+                        Position*: {X: -0.20743248, Y: 2.5170798, Z: 5.945355}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7807e4f88759f5408bc713431dfc8978: !ModelComponent
+                        Id: 0c296ba6-1c3a-4cdd-8c1a-44af72b704d4
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials:
+                            1f66d7610cd6dc4c9b32d800d312e162~0: db8e115d-73b8-4f74-b910-ef5f9a8ff222:Materials/GridMTPlatform
+                    793d2ad2924e3a48a2a869b11f5df718: !StaticColliderComponent
+                        Id: 42a3e0aa-8b21-4239-9564-0d5dd8ea945a
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            16348c7905caf14d82d3668b90f0c07b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 95906119-5e14-487c-bfec-43071c696c61:BlocksPrefabs/Box1x1x1
+                BasePartId: 496dab69-b03b-4272-a196-8e81329ce249
+                InstanceId: 6aea24f8-d04b-47a9-8e20-8d06fe6afdcc
         -   Entity:
                 Id: a740246b-546c-4bed-a65d-757191cf85aa
                 Name: BulletCount
@@ -6017,11 +6511,32 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 5108692c-8fbe-47d9-93a3-4168f0872f91
-                        Position: {X: -10.0, Y: 0.0, Z: 10.000001}
+                        Position: {X: -10.0, Y: 0.0, Z: -12.422706}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             4eecb3c27affe3478bcc584553d59e41: ref!! 62150304-a0fb-4c3d-818c-49993c8cc1b5
+        -   Entity:
+                Id: a9cbd0c5-cbf0-459a-9ab5-aed62a1c4d65
+                Name: SpriteSheet
+                Components:
+                    a29c27277e79294b3fc0a0100bba0380: !TransformComponent
+                        Id: d3b801a3-2e08-4fc2-a18a-f9e7f857901d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 6.896519, Y: 6.896519, Z: 6.896519}
+                        Children: {}
+                    086cead27902791df374cd430d9a3c03: !SpriteComponent
+                        Id: bf0ec04d-3f9b-4376-a25a-90af52ee6780
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 0d2fc5d2-be15-4c4c-9cd3-8370abb285fe:DefaultResources/UI_icons/SpriteSheet_2
+                            CurrentFrame: 1
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+            Base:
+                BasePartAsset: bdc22300-e666-420b-84a3-a97ca0dd22c8:Prefabs/Key
+                BasePartId: 01bd0781-e831-4515-9661-083e788719a2
+                InstanceId: 2ea30afb-8bed-4326-bb7a-79edfc596805
         -   Entity:
                 Id: aad66409-dd2e-4daf-be54-a7a93743df7e
                 Name: Box3x1x1
@@ -6319,7 +6834,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 1e505aec-dff5-4cfb-8974-29f5ce40939b
-                        Position: {X: -20.0, Y: 0.0, Z: 10.000001}
+                        Position: {X: -20.0, Y: 0.0, Z: -12.422706}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6511,7 +7026,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: be8e5a46-b04e-4443-bc14-4efa1ff0211f
-                        Position: {X: -20.0, Y: 0.0, Z: -10.0}
+                        Position: {X: -20.0, Y: 0.0, Z: -32.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6556,7 +7071,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: a3fdf4d2-eded-4ea7-ab38-7ec7084d2562
-                        Position: {X: 0.0, Y: 0.0, Z: 10.000001}
+                        Position: {X: 0.0, Y: 0.0, Z: -12.422706}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6697,6 +7212,42 @@ Hierarchy:
                 BasePartAsset: c7dcdd06-d013-4ea1-a09a-eefbefc6e5af:BlocksPrefabs/Wall0x2x2
                 BasePartId: f73cb16c-30b9-4200-b872-56885e7023e2
                 InstanceId: 162d8bb9-8409-4fa0-9486-73c532ffe97f
+        -   Folder: null
+            Entity:
+                Id: cc1f5e97-b4b6-495e-ba00-1d0095b042ab
+                Name: Box1x1x1
+                Components:
+                    cafed28ac2678c4e84c546d7570eabd3: !TransformComponent
+                        Id: ce678564-33f4-41fa-a0f8-b88ddeaf9cd9
+                        Position*: {X: 1.822262, Y: 0.5, Z: 5.945355}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7807e4f88759f5408bc713431dfc8978: !ModelComponent
+                        Id: 8392f52c-8e16-4f33-bc33-a447c856b3ec
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials:
+                            1f66d7610cd6dc4c9b32d800d312e162~0: db8e115d-73b8-4f74-b910-ef5f9a8ff222:Materials/GridMTPlatform
+                    793d2ad2924e3a48a2a869b11f5df718: !StaticColliderComponent
+                        Id: cf77b09c-f96b-41ab-8d06-0a0a99d3ff65
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            16348c7905caf14d82d3668b90f0c07b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 95906119-5e14-487c-bfec-43071c696c61:BlocksPrefabs/Box1x1x1
+                BasePartId: 496dab69-b03b-4272-a196-8e81329ce249
+                InstanceId: 88079487-a0e5-495e-b654-728b99ce9954
         -   Entity:
                 Id: cc30b18a-5711-476e-9878-f1e14531cf12
                 Name: Wall0x2x2 (3)
@@ -6719,6 +7270,42 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             674fdd1fb2513d41ab88936773660929: ref!! 293659c6-5fc8-45d6-9a9d-caa7e4c6b80b
+        -   Folder: null
+            Entity:
+                Id: ce6bd728-d00f-4495-8794-6ac1528c66cd
+                Name: Box1x1x1
+                Components:
+                    cafed28ac2678c4e84c546d7570eabd3: !TransformComponent
+                        Id: 1bb431b4-2968-428c-8b9a-1c79fdf2252c
+                        Position*: {X: 1.822262, Y: 1.5186244, Z: 5.945355}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7807e4f88759f5408bc713431dfc8978: !ModelComponent
+                        Id: 2212e79c-1e0a-450b-ae28-935435fd481d
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials:
+                            1f66d7610cd6dc4c9b32d800d312e162~0: db8e115d-73b8-4f74-b910-ef5f9a8ff222:Materials/GridMTPlatform
+                    793d2ad2924e3a48a2a869b11f5df718: !StaticColliderComponent
+                        Id: 4aade772-c8a4-419d-aeb8-e7c7c05b5832
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            16348c7905caf14d82d3668b90f0c07b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 95906119-5e14-487c-bfec-43071c696c61:BlocksPrefabs/Box1x1x1
+                BasePartId: 496dab69-b03b-4272-a196-8e81329ce249
+                InstanceId: 347de917-6e22-4712-a7db-327963fa9f75
         -   Entity:
                 Id: cea2a55e-2e02-41af-ba3b-fda36bfefafa
                 Name: Box3x1x1
@@ -6838,7 +7425,7 @@ Hierarchy:
                 Components:
                     6995cff9e3635543a32f91a31f6b6b7a: !TransformComponent
                         Id: e19f94d2-4270-4bf5-8d93-3c76da08c700
-                        Position: {X: 2.1457672E-06, Y: 0.0, Z: -20.0}
+                        Position: {X: 2.1457672E-06, Y: 0.0, Z: -42.422707}
                         Rotation: {X: 0.0, Y: -0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -6884,17 +7471,57 @@ Hierarchy:
                 Components:
                     a29c27277e79294b3fc0a0100bba0380: !TransformComponent
                         Id: a1de2002-685f-449f-a34a-965949e2d828
-                        Position: {X: -0.023116007, Y: 0.025984854, Z: 0.02935753}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 5.0669866, Y: 5.0669866, Z: 5.0669866}
                         Children: {}
                     086cead27902791df374cd430d9a3c03: !SpriteComponent
-                        Id: 228b4d65-4267-4e09-a9c9-4816c2e4e183
+                        Id: bfcdc975-fdc0-45cc-b73f-672e1e1470e3
                         SpriteProvider: !SpriteFromSheet
                             Sheet: c80bd455-56d1-4c31-a928-df85a0009980:DefaultResources/UI_icons/SpriteSheet
                             CurrentFrame: 3
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                         Sampler: PointClamp
+            Base:
+                BasePartAsset: 720bbef9-99a6-4c1e-8e33-a817dcf4e35d:Prefabs/PickWeapon
+                BasePartId: f2d6b127-addc-4fb6-bef4-f857af1f4653
+                InstanceId: 90191607-0bc8-4c5d-8753-968291071ef5
+        -   Folder: null
+            Entity:
+                Id: d6dc4588-56cb-40c5-94d3-74c865ade451
+                Name: Box1x1x1
+                Components:
+                    cafed28ac2678c4e84c546d7570eabd3: !TransformComponent
+                        Id: ca1642cd-3c64-46ce-86c7-e9a0f3180fb8
+                        Position*: {X: 1.822262, Y: 2.5170798, Z: 5.945355}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7807e4f88759f5408bc713431dfc8978: !ModelComponent
+                        Id: 12db45ee-3294-4042-83ae-d204e384a81f
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials:
+                            1f66d7610cd6dc4c9b32d800d312e162~0: db8e115d-73b8-4f74-b910-ef5f9a8ff222:Materials/GridMTPlatform
+                    793d2ad2924e3a48a2a869b11f5df718: !StaticColliderComponent
+                        Id: ee1d7e5f-4809-41e7-8c5f-a4aafc0010ba
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            16348c7905caf14d82d3668b90f0c07b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 95906119-5e14-487c-bfec-43071c696c61:BlocksPrefabs/Box1x1x1
+                BasePartId: 496dab69-b03b-4272-a196-8e81329ce249
+                InstanceId: 34127b1b-4e2d-4216-ba3a-0827735e044f
         -   Entity:
                 Id: d73cabef-fe9b-47a8-8879-017e088d614e
                 Name: Wall0x2x2
@@ -6983,25 +7610,29 @@ Hierarchy:
                 Components:
                     fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
                         Id: 77e60605-8916-4eb2-9c8d-05b139ee8d4e
-                        Position: {X: 3.6416783, Y: 0.5908705, Z: 13.160736}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             378b85391965da67643d7c8bba1dbbd4: ref!! e9f7d84c-dee1-43c5-89b2-ec173d6c4f38
                     6389326936f4bd5123d3239c90a0a28e: !ModelComponent
-                        Id: 7c1e707c-da9f-432c-befa-abd6d3172587
+                        Id: 571d2a02-b080-4119-8281-887cf46f8d72
                         Enabled: false
                         Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
                         Materials: {}
                     eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
-                        Id: bf2fd1b6-a6d2-4ae3-b8c9-e7666bc4abbc
+                        Id: e5859c99-a055-4a78-9995-bbe45d4ef63b
                     2b649958b1e2337b7132df9ad34092a8: !Furia.Interaction.ItemScript,Furia.Game
-                        Id: f037128d-fe92-45e2-b1f3-79f72bca3177
+                        Id: c6b5ef6a-156a-42c4-b2a1-24ead6ec5e0b
                         itemRotation: true
                         giveAmount: 25
                         weapon: null
                         amountType: Health
-                        pickUpSound: null
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
+            Base:
+                BasePartAsset: 2259ee07-df97-44ea-b32f-3d5a30e1290d:Prefabs/PickHealth
+                BasePartId: fe53d743-75cf-4a20-a991-912281e44db2
+                InstanceId: d753fdd9-9f35-47e2-8196-5d2612b8b091
         -   Entity:
                 Id: dac72e5a-ffc1-4d2f-bb9c-9ea3c8816458
                 Name: Trigger
@@ -7059,7 +7690,7 @@ Hierarchy:
                 Components:
                     b0d1edd9a8132645a0d25f44658b463a: !TransformComponent
                         Id: 8c9ceaed-e718-435d-9d5d-d8f28a47e407
-                        Position: {X: 9.536743E-07, Y: 1.0, Z: -12.999999}
+                        Position: {X: 9.536743E-07, Y: 1.0, Z: -35.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.5, Y: 1.5, Z: 1.5}
                         Children: {}
@@ -7489,7 +8120,7 @@ Hierarchy:
                 Components:
                     3105c4151ffdd6e9ba32201c619d3215: !TransformComponent
                         Id: 3040658d-a2cd-4bc3-ba85-bd052bca2669
-                        Position: {X: -11.932127, Y: 0.9554226, Z: -15.797443}
+                        Position: {X: -11.932127, Y: 0.9554226, Z: -38.22015}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.7549675, Z: 1.0}
                         Children:
@@ -7511,6 +8142,9 @@ Hierarchy:
                         stoppingDistance: 5.0
                         detectRange: 10.0
                         isRangeNPC: true
+                        Projectiles: {}
+                        probabilityOfLoot: 25
+                        accuracy: 25
                         attackSound: c4139b9f-8f10-41df-aa00-db87b3993ef3:DefaultResources/Audio/ShotSound
                         hitSound: cb0c7219-1240-435a-8a39-f3fdc66b2ab5:DefaultResources/Audio/MonsterHitSound
                     dd034111bf4ef610fa2e2e99a4b5e09c: !CharacterComponent
@@ -7560,25 +8194,29 @@ Hierarchy:
                 Components:
                     fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
                         Id: 626b30a8-dc39-4fc8-9358-c9e68f72ccfb
-                        Position: {X: 0.0, Y: 0.5908705, Z: 13.160736}
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             378b85391965da67643d7c8bba1dbbd4: ref!! a1de2002-685f-449f-a34a-965949e2d828
                     6389326936f4bd5123d3239c90a0a28e: !ModelComponent
-                        Id: d196c3a9-797b-4a65-ad3f-1171de858652
+                        Id: bfc7934e-9cc5-4a33-a786-c1f4d561ae9e
                         Enabled: false
                         Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
                         Materials: {}
                     eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
-                        Id: c6d3d973-4db0-4bb5-bc9a-52f0dcf1e557
+                        Id: 4d9d0063-2b43-466b-b4ee-d26262f57540
                     2b649958b1e2337b7132df9ad34092a8: !Furia.Interaction.ItemScript,Furia.Game
-                        Id: 8a212696-59c4-4f49-9388-4ddacc010f39
+                        Id: 10532308-8286-4feb-864e-aa4175a6fa3e
                         itemRotation: true
                         giveAmount: 25
-                        weapon: !TransformComponent ref!! 1ef6b7ce-f0dd-4989-a6d9-00a50a031016
+                        weapon: null
                         amountType: Health
-                        pickUpSound: null
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
+            Base:
+                BasePartAsset: 720bbef9-99a6-4c1e-8e33-a817dcf4e35d:Prefabs/PickWeapon
+                BasePartId: 0bb08cde-99ac-4e74-8cae-535734255d7f
+                InstanceId: 90191607-0bc8-4c5d-8753-968291071ef5
         -   Folder: Ground/Grid
             Entity:
                 Id: ec88afd3-134a-4f30-a4f3-e9099b3bda3d
@@ -7586,7 +8224,7 @@ Hierarchy:
                 Components:
                     8aa97d8d12fc214c9096b4cff2e27bea: !TransformComponent
                         Id: 9f1161bf-f206-49f2-8b3d-e6c197d45918
-                        Position: {X: 10.0, Y: 0.0, Z: -10.0}
+                        Position: {X: 10.0, Y: 0.0, Z: -32.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -7694,7 +8332,7 @@ Hierarchy:
                 Components:
                     6cd8639c35566d49a4fdec0a9e37c355: !TransformComponent
                         Id: 8264c9c8-6766-440a-9f73-d73f1015a3bc
-                        Position: {X: 4.0, Y: 0.0, Z: 3.0}
+                        Position: {X: 4.0, Y: 0.0, Z: -19.422707}
                         Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -7812,6 +8450,27 @@ Hierarchy:
                         Children:
                             c444819e77a60441a6144bd7bd8a4a23: ref!! ca056b63-d161-4eda-a025-6afc04c23b37
         -   Entity:
+                Id: f01aaaf5-b413-41f9-b41f-e66b45e29ca1
+                Name: SpriteSheet
+                Components:
+                    a29c27277e79294b3fc0a0100bba0380: !TransformComponent
+                        Id: 772bf26e-c27c-484f-b773-92a4d26e0b53
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 5.0669866, Y: 5.0669866, Z: 5.0669866}
+                        Children: {}
+                    086cead27902791df374cd430d9a3c03: !SpriteComponent
+                        Id: 5ea3d372-5004-4c15-b36c-371c159689c4
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: c80bd455-56d1-4c31-a928-df85a0009980:DefaultResources/UI_icons/SpriteSheet
+                            CurrentFrame: 3
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+            Base:
+                BasePartAsset: 720bbef9-99a6-4c1e-8e33-a817dcf4e35d:Prefabs/PickWeapon
+                BasePartId: f2d6b127-addc-4fb6-bef4-f857af1f4653
+                InstanceId: 4d98d6e1-de1f-4d95-873f-b5fa1758a99d
+        -   Entity:
                 Id: f1bf040d-7b6b-4f88-86a7-df4c15ee7713
                 Name: Wall0x2x5
                 Components:
@@ -7903,7 +8562,7 @@ Hierarchy:
                 Components:
                     b0d1edd9a8132645a0d25f44658b463a: !TransformComponent
                         Id: 8a1dc202-0da7-4c04-bb25-becfb89ee759
-                        Position: {X: 15.0, Y: 1.0, Z: 3.0}
+                        Position: {X: 15.0, Y: 1.0, Z: -19.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
@@ -8128,7 +8787,7 @@ Hierarchy:
                 Components:
                     8d16c996d7c9c54eb5a2d12ea4ba3d7c: !TransformComponent
                         Id: 96c9168d-c9d7-4ec5-b5a2-d12ea4ba3d7c
-                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Position: {X: 0.0, Y: 2.0, Z: -24.422707}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}

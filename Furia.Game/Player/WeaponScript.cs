@@ -185,6 +185,16 @@ namespace Furia.Player
                     rigidBody.ApplyImpulse(forward * ShootImpulse);
                     rigidBody.ApplyTorqueImpulse(forward * ShootImpulse + new Vector3(0, 1, 0));
                 }
+
+                //If the weapon is melee, push back the enemy
+                if (weaponManager.currentWeaponStats.isMelee)
+                {
+                    var character = result.Collider as CharacterComponent;
+                    if (character != null)
+                    {
+                        character.SetVelocity(forward * 50);
+                    }
+                }
             }
 
             // Broadcast the fire event

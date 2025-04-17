@@ -1,0 +1,49 @@
+!PrefabAsset
+Id: bdc22300-e666-420b-84a3-a97ca0dd22c8
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 6e50d0bb-0b47-4eb4-af78-68a50394bb99
+    Parts:
+        -   Entity:
+                Id: 01bd0781-e831-4515-9661-083e788719a2
+                Name: SpriteSheet
+                Components:
+                    a29c27277e79294b3fc0a0100bba0380: !TransformComponent
+                        Id: ec909c10-8029-43ac-b44c-3439895b6cb5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 6.896519, Y: 6.896519, Z: 6.896519}
+                        Children: {}
+                    086cead27902791df374cd430d9a3c03: !SpriteComponent
+                        Id: 9ab90d3b-9802-4ead-9c60-4ca6ac79c552
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: 0d2fc5d2-be15-4c4c-9cd3-8370abb285fe:DefaultResources/UI_icons/SpriteSheet_2
+                            CurrentFrame: 1
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp
+        -   Folder: null
+            Entity:
+                Id: 6e50d0bb-0b47-4eb4-af78-68a50394bb99
+                Name: Key
+                Components:
+                    fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
+                        Id: 35440bdb-f1b6-4cb2-86e9-b5bf89c08049
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            378b85391965da67643d7c8bba1dbbd4: ref!! ec909c10-8029-43ac-b44c-3439895b6cb5
+                    6389326936f4bd5123d3239c90a0a28e: !ModelComponent
+                        Id: 1b9a3d7d-5d8f-40b7-9054-fc2096a86acf
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
+                        Id: 5ba70ee7-47a6-4fc4-bee9-4c59809741fe
+                    61b42df40f5983cab8d4091e1944b37c: !Furia.Interaction.KeyScript,Furia.Game
+                        Id: c9dc985f-5877-4f94-964c-4ef2c7b357e9
+                        idKey: 1
+                        itemRotation: true
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound

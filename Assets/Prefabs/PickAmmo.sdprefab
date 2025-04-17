@@ -1,0 +1,51 @@
+!PrefabAsset
+Id: cb0e21ba-2707-4829-bb38-e9b11d39d45d
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! 56bea2de-15c3-4e47-b021-cd09caf0fcec
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 56bea2de-15c3-4e47-b021-cd09caf0fcec
+                Name: PickAmmo
+                Components:
+                    fe34ee5a2c7acb14a66042a3d78176e1: !TransformComponent
+                        Id: 15352e29-b428-4da5-9682-df70124b8c03
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            378b85391965da67643d7c8bba1dbbd4: ref!! 8b09f39b-43ce-43e9-b247-dc44e1439784
+                    6389326936f4bd5123d3239c90a0a28e: !ModelComponent
+                        Id: 58cac9e9-7d86-4b39-a798-2aa7bebe491e
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    eb16dcb7a9cac52153aecd886d451710: !Furia.Player.AudioManager,Furia.Game
+                        Id: da07e77e-de42-4b7e-916f-097ad23b3006
+                    2b649958b1e2337b7132df9ad34092a8: !Furia.Interaction.ItemScript,Furia.Game
+                        Id: 5dbda274-b16a-4884-84c5-ccc0811f5f25
+                        itemRotation: true
+                        giveAmount: 25
+                        weapon: null
+                        amountType: Ammo
+                        pickUpSound: 63bb48e4-3f96-4508-a699-c24271882328:DefaultResources/Audio/pickUpSound
+        -   Entity:
+                Id: 818eb9a3-05e3-43bd-89c9-f1c5ced8eb7a
+                Name: SpriteSheet
+                Components:
+                    a29c27277e79294b3fc0a0100bba0380: !TransformComponent
+                        Id: 8b09f39b-43ce-43e9-b247-dc44e1439784
+                        Position*: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 6.896519, Y: 6.896519, Z: 6.896519}
+                        Children: {}
+                    086cead27902791df374cd430d9a3c03: !SpriteComponent
+                        Id: 03063e51-7d0d-4d39-968f-dbe2e6733964
+                        SpriteProvider: !SpriteFromSheet
+                            Sheet: c80bd455-56d1-4c31-a928-df85a0009980:DefaultResources/UI_icons/SpriteSheet
+                            CurrentFrame: 1
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Sampler: PointClamp

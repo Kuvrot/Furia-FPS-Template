@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,7 @@ using Vortice.Vulkan;
 using Stride.Rendering.Sprites;
 using Stride.Graphics;
 using SharpDX.Direct3D11;
+using Silk.NET.OpenXR;
 
 namespace Furia.NPC.Animation
 {
@@ -26,19 +27,14 @@ namespace Furia.NPC.Animation
         private float clock = 0;
 
         //Animation state machine
-        /*
-        -1 = death 
-        0 = idle
-        1 = walk
-        2 = attack 
-        */
-
+        
         //Components
         private SpriteComponent spriteComponent;
         private SpriteFromSheet spriteSheet;
 
         public override void Start()
         {
+            CheckComponents();
             //This is how you are supposed to set sprite frames https://doc.stride3d.net/4.0/en/manual/sprites/use-sprites.html
             spriteComponent = Entity.Get<SpriteComponent>();
             spriteSheet = spriteComponent.SpriteProvider as SpriteFromSheet;
@@ -88,6 +84,11 @@ namespace Furia.NPC.Animation
         {
             if (Counter())
             {
+                if (spriteSheet.CurrentFrame > currentEndFrame || spriteSheet.CurrentFrame < currentStartFrame)
+                {
+                    spriteSheet.CurrentFrame = currentStartFrame;
+                }
+
                 if (spriteSheet.CurrentFrame < currentEndFrame)
                 {
                     spriteSheet.CurrentFrame += 1;
@@ -137,6 +138,14 @@ namespace Furia.NPC.Animation
             clock += 1 * (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
             return false;
+        }
+
+        private void CheckComponents()
+        {
+            if (spriteComponent == null || spriteSheet == null)
+            {
+                DebugText.Print(Entity.Name + " has null components!!", new Int2(500, 300));
+            }
         }
     }
 }

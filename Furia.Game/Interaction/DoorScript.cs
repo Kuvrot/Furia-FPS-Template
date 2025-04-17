@@ -5,6 +5,7 @@ using Stride.Physics;
 using Furia.Player;
 using Stride.Audio;
 using Furia.Core;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Furia.Interaction
 {
@@ -22,13 +23,14 @@ namespace Furia.Interaction
         public override void Start()
         {
             audioManager = Entity.Get<AudioManager>();
+            CheckComponents();
         }
 
         public override void Update()
         {
             if (GetPlayerDistance() < 2.5f)
             {
-                DebugText.Print(GetPlayerDistance().ToString(), new Int2(500, 300));
+                DebugText.Print("Press E to open", new Int2(500, 300));
 
                 if (Input.IsKeyPressed(Keys.E))
                 {
@@ -41,8 +43,13 @@ namespace Furia.Interaction
         {
             if (isLocked)
             {
-                audioManager.PlaySound(lockedDoorSound);
-                return;
+               if (!IsKeyInPlayerInventory())
+                {
+                    audioManager.PlaySound(lockedDoorSound);
+                    return;
+                }
+
+               isLocked = false;
             }
 
             if (!isOpen)
@@ -67,6 +74,27 @@ namespace Furia.Interaction
         private float GetPlayerDistance()
         {
             return Vector3.Distance(GameManager.instance.player.Position, Entity.Transform.Position);
+        }
+
+        private bool IsKeyInPlayerInventory ()
+        {
+            for (int i = 0; i < GameManager.instance.player.Entity.Get<InventoryManager>().keys.Count; i++)
+            {
+                if (GameManager.instance.player.Entity.Get<InventoryManager>().keys[i] == idDoor)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private void CheckComponents()
+        {
+            if (audioManager == null || doorCollider == null)
+            {
+                DebugText.Print(Entity.Name + " has null components!!", new Int2(500, 300));
+            }
         }
     }
 }

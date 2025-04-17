@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Stride.Core.Mathematics;
-using Stride.Input;
 using Stride.Engine;
 using Stride.Physics;
 using Furia.NPC.Animation;
 using Furia.NPC.Stats;
 using Furia.Core;
 using Furia.Player;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Furia.NPC.Controller
 {
@@ -30,7 +24,6 @@ namespace Furia.NPC.Controller
         private bool aggresiveMode = false;
 
         private double clock = 0;
-        private float distance = 0;
 
         public override void Start()
         {
@@ -40,6 +33,31 @@ namespace Furia.NPC.Controller
             characterComponent = Entity.Get<CharacterComponent>();
             clock = new Random().NextDouble() * (stats.attackRate - 0.0f) + 0.0f;
             audioManager = Entity.Get<AudioManager>();
+
+            if (animationController == null)
+            {
+                throw new ArgumentException("No animation controller was founded at " + Entity.Name);
+            }
+
+            if (stats == null)
+            {
+                throw new ArgumentException("No stats component was founded at " + Entity.Name);
+            }
+
+            if (target == null)
+            {
+                throw new ArgumentException("There is no target assingned to " + Entity.Name);
+            }
+
+            if (characterComponent == null)
+            {
+                throw new ArgumentException("No character controller was founded at " + Entity.Name);
+            }
+
+            if (audioManager == null)
+            {
+                throw new ArgumentException("No audio manager was founded at " + Entity.Name);
+            }
         }
 
         public override void Update()
@@ -87,7 +105,22 @@ namespace Furia.NPC.Controller
         {
             StopMoving();
             animationController.PlayDeathAnimation();
+
+            if (characterComponent.Enabled)
+            {
+                if (new Random().Next(0, 100) <= stats.probabilityOfLoot)
+                {
+                    int index = GameManager.instance.dropableLoot.Count;
+                    int random = new Random().Next(0, index);
+                    var loot = GameManager.instance.dropableLoot[random].Instantiate();
+                    loot[0].Transform.Position = Entity.Transform.Position;
+                    Entity.Scene.Entities.AddRange(loot);
+                }
+            }
+
             characterComponent.Enabled = false;
+            
+            
         }
 
         public void EnemyAiSystem ()
@@ -96,12 +129,30 @@ namespace Furia.NPC.Controller
             {
                 if (GetDistance() >= stats.stoppingDistance)
                 {
-                    MoveToTarget(this.target);
+                    //This allows setting the NPC velocity from the WeaponScript class for one frame so that the enemy can be pushed back after gertting hit.
+                    if (!GetHit())
+                    {
+                        MoveToTarget(this.target);
+                    }
+                    else
+                    {
+                        SetHit(false);
+                    }
+
                     animationController.PlayWalkAnimation();
                 }
                 else
                 {
-                    StopMoving();
+                    //This allows setting the NPC velocity from the WeaponScript class for one frame so that the enemy can be pushed back after gertting hit.
+                    if (!GetHit())
+                    {
+                        StopMoving();
+                    }
+                    else
+                    {
+                        SetHit(false);
+                    }
+
                     animationController.PlayAttackAnimation();
                     
                     if (Counter())
@@ -114,9 +165,18 @@ namespace Furia.NPC.Controller
                         }
                         else
                         {
-                            if (new Random().Next() * (100 - 0) + 0 <= 25) // If it is a range npc, then his shots will have a 25% chance of impact
+                            if (stats.Projectiles.Count > 0)
                             {
-                                GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                                var projectile = stats.Projectiles[0].Instantiate();
+                                projectile[0].Transform.Position = Entity.Transform.Position;
+                                Entity.Scene.Entities.AddRange(projectile);
+                            }
+                            else
+                            {
+                                if (new Random().Next(0, 100) <= stats.accuracy) // If it is a range npc, then his shots will have a 25% chance of impact
+                                {
+                                    GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                                }
                             }
                         }
                     }
@@ -142,7 +202,7 @@ namespace Furia.NPC.Controller
 
         private float GetDistance()
         {
-            return distance = Vector3.Distance(Entity.Transform.Position, target.Position);
+            return Vector3.Distance(Entity.Transform.Position, target.Position);
         }
 
         private bool Counter()
@@ -156,6 +216,17 @@ namespace Furia.NPC.Controller
             clock += 1 * (float)Game.UpdateTime.Elapsed.TotalSeconds;
 
             return false;
+        }
+
+        private bool hit = false;
+
+        public void SetHit(bool hit)
+        {
+            this.hit = hit;
+        }
+        public bool GetHit ()
+        {
+            return this.hit;
         }
     }
 }

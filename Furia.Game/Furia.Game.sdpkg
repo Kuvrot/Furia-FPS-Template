@@ -9,7 +9,7 @@ Meta:
     Dependencies: null
 AssetFolders:
     -   Path: !dir ../Assets
-    -   Path: !dir Effects
+    -   Path: !dir D:/GameEngines/StrideProjects/Furia/Assets
 ResourceFolders:
     - !dir ../Resources
 OutputGroupDirectories: {}

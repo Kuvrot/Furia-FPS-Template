@@ -1,0 +1,8 @@
+!Sound
+Id: e8bfc9ec-7ea7-41f4-ab4f-3b11255a1735
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../../../Resources/DefaultResources/Audio/Footsteps/0.ogg
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: false

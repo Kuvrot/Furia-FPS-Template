@@ -2,7 +2,6 @@
 using Stride.Input;
 using Stride.Engine;
 using Furia.Stats;
-using static Stride.Graphics.GeometricPrimitives.GeometricPrimitive;
 
 namespace Furia.Player
 {
