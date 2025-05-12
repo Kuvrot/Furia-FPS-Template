@@ -1,5 +1,5 @@
 # FURIA
-A Stride template for making retro FPS games.
+A ![Stride](https://github.com/stride3d) template for making retro FPS games.
 
 Furia makes developing a retro FPS game easier, from a fast-paced boomer shooter to an immersive retro-style FPS, by providing a stable and flexible template built on top of Stride, offering modern tools for classic gameplay.
 
