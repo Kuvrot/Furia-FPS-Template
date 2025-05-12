@@ -53,6 +53,7 @@ Hierarchy:
         - ref!! 3237036a-191b-4e53-af04-c54d9ef8780e
         - ref!! 8cdcf255-0634-4190-91ab-fd393e333feb
         - ref!! 91d1f8a0-a22b-45aa-801d-771af6cd6433
+        - ref!! 9113ce10-fd79-4ee4-9f87-b1043fce1a2d
     Parts:
         -   Entity:
                 Id: 0157316b-840c-4bb8-aed8-aaeee66c7b90
@@ -2188,6 +2189,9 @@ Hierarchy:
                                 Size: {X: 10.0, Y: 0.3, Z: 10.0}
                                 LocalOffset: {X: 0.0, Y: -0.15, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    4443275a6e6b94983db4a9e0a4e8a30c*: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
+                        Id: d3a2acc5-73ab-4bed-8a15-60f6b61be6c4
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
             Base:
                 BasePartAsset: 3c52f7bb-30ff-4597-9d1f-eaae6884e1cd:BlocksPrefabs/GridBase10x10
                 BasePartId: b045349c-565e-4488-9130-a795b0e3b229
@@ -5438,6 +5442,25 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             c444819e77a60441a6144bd7bd8a4a23: ref!! 9e8144c4-a677-4104-a614-4bd7bd8a4a23
+        -   Entity:
+                Id: 9113ce10-fd79-4ee4-9f87-b1043fce1a2d
+                Name: r
+                Components:
+                    c4e860aca0e3a59c7a869176bf87ff57: !TransformComponent
+                        Id: c3407a88-33cf-4db1-af38-6500c6efcf55
+                        Position: {X: 2.935341, Y: 7.1932487, Z: -35.349342}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 16.299507, Y: 16.299507, Z: 16.299507}
+                        Children: {}
+                    14943149aeee6d1165339a775bc97c9b: !ModelComponent
+                        Id: f979aa81-169c-4484-8981-f878358fc965
+                        Enabled: false
+                        Model: bd1b6a83-02e1-4a75-af89-d275cfc3f72e:Models/Box1x1x1
+                        Materials: {}
+                    f58f89d607a91f96927e5b6b947a94d3: !NavigationComponent
+                        Id: e82d1bb6-f93f-443d-b044-8e8873db9c11
+                        NavigationMesh: e2ab627c-674b-46ad-aab3-4830e89f11bf:NavigationMesh
+                        GroupId: 00000000-0000-0000-0000-000000000000
         -   Folder: null
             Entity:
                 Id: 9160044e-6388-4fe2-9ba0-f99c8445cf0f

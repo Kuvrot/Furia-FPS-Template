@@ -13,7 +13,7 @@ Defaults:
         ColorSpace: Linear
         DisplayOrientation: LandscapeRight
     - !Stride.Assets.EditorSettings,Stride.Assets
-        RenderingMode: HDR
+        RenderingMode: LDR
     - !Stride.Assets.Textures.TextureSettings,Stride.Assets
         TextureQuality: Fast
     - !Stride.Physics.PhysicsSettings,Stride.Physics
