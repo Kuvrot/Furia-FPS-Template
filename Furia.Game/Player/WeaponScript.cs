@@ -175,7 +175,7 @@ namespace Furia.Player
                 var _entity = result.Collider as CharacterComponent;
                 if (_entity != null)
                 {
-                    _entity.Entity.Get<NpcStats>().GetHit(weaponManager.currentWeaponStats.damage);
+                    _entity.Entity.Get<NpcStats>()?.GetHit(weaponManager.currentWeaponStats.damage);
                 }
 
                 var rigidBody = result.Collider as RigidbodyComponent;
