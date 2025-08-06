@@ -1,16 +1,6 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Stride.Core.Mathematics;
-using Stride.Input;
+﻿using Stride.Core.Mathematics;
 using Stride.Engine;
-using Vortice.Vulkan;
 using Stride.Rendering.Sprites;
-using Stride.Graphics;
-using SharpDX.Direct3D11;
-using Silk.NET.OpenXR;
 
 namespace Furia.NPC.Animation
 {

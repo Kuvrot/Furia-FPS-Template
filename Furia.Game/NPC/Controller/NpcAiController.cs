@@ -157,26 +157,37 @@ namespace Furia.NPC.Controller
                     
                     if (Counter())
                     {
-                        audioManager?.PlaySound(stats.attackSound);
+                       
 
                         if (!stats.isRangeNPC)
                         {
                             GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                            audioManager?.PlaySound(stats.attackSound);
                         }
                         else
                         {
-                            if (stats.Projectiles.Count > 0)
+                            //Check if friendly fire is possible
+                            HitResult hit = this.GetSimulation().Raycast(Entity.Transform.Position + new Vector3(0f,0.5f,0f), target.Position + new Vector3(0f, 1f, 0f));
+
+                            //If player is behind a wall don't shoot
+                            if (hit.Collider != null && hit.Collider.Entity.Get<PlayerController>() != null)
                             {
-                                var projectile = stats.Projectiles[0].Instantiate();
-                                projectile[0].Transform.Position = Entity.Transform.Position;
-                                Entity.Scene.Entities.AddRange(projectile);
-                            }
-                            else
-                            {
-                                if (new Random().Next(0, 100) <= stats.accuracy) // If it is a range npc, then his shots will have a 25% chance of impact
+                                audioManager?.PlaySound(stats.attackSound);
+
+                                if (stats.Projectiles.Count > 0)
                                 {
-                                    GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                                    var projectile = stats.Projectiles[0].Instantiate();
+                                    projectile[0].Transform.Position = Entity.Transform.Position;
+                                    Entity.Scene.Entities.AddRange(projectile);
                                 }
+                                else
+                                {
+                                    if (new Random().Next(0, 100) <= stats.accuracy) // If it is a range npc, then his shots will have a 25% chance of impact
+                                    {
+                                        GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
+                                    }
+                                }
+
                             }
                         }
                     }

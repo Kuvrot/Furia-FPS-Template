@@ -2189,9 +2189,6 @@ Hierarchy:
                                 Size: {X: 10.0, Y: 0.3, Z: 10.0}
                                 LocalOffset: {X: 0.0, Y: -0.15, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    4443275a6e6b94983db4a9e0a4e8a30c*: !Stride.Navigation.NavigationBoundingBoxComponent,Stride.Navigation
-                        Id: d3a2acc5-73ab-4bed-8a15-60f6b61be6c4
-                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
             Base:
                 BasePartAsset: 3c52f7bb-30ff-4597-9d1f-eaae6884e1cd:BlocksPrefabs/GridBase10x10
                 BasePartId: b045349c-565e-4488-9130-a795b0e3b229
