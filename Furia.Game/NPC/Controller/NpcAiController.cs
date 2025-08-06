@@ -157,8 +157,6 @@ namespace Furia.NPC.Controller
                     
                     if (Counter())
                     {
-                       
-
                         if (!stats.isRangeNPC)
                         {
                             GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
@@ -187,7 +185,6 @@ namespace Furia.NPC.Controller
                                         GameManager.instance.player.Entity.Get<PlayerStats>().GetHit(stats.damage);
                                     }
                                 }
-
                             }
                         }
                     }
